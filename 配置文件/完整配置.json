@@ -1,0 +1,2453 @@
+{
+    "sitesConfig": [
+        {
+            "type": "搜索",
+            "icon": "search",
+            "description": "搜索引擎主分类",
+            "sites": [
+                {
+                    "name": "Google",
+                    "url": "https://www.google.com/search?q=%s&ie=utf-8&oe=utf-8",
+                    "match": "https://www\\.google\\..*/search(?!.*tbm=isch)",
+                    "shortcut": "KeyG",
+                    "alt": true
+                },
+                {
+                    "name": "谷歌高级搜索",
+                    "url": "https://www.google.com/search?q=%s%input{请输入限制文件类型, filetype:doc/ filetype:ppt/ filetype:xls/ filetype:pdf}%input{限制语言/简体中文/繁体中文/中文/英文,&lr=lang_zh-CN/&lr=lang_zh-TW/&lr=lang_zh-CN|lang_zh-TW/&lr=lang_en}%input{请输入限制日期/过去一小时/过去一天/过去一周/过去一个月/过去一年,&as_qdr=h1/&as_qdr=d1/&as_qdr=w1/&as_qdr=m1/&as_qdr=y1}&ie=utf-8&oe=utf-8",
+                    "description": "不需要的参数可清空",
+                    "match": "https://www\\.google\\..*/search",
+                    "nobatch": true,
+                    "hideNotMatch": true
+                },
+                {
+                    "name": "百度",
+                    "url": "https://www.baidu.com/s?wd=%s&ie=utf-8",
+                    "keywords": "(?:wd|word)=(.*?)(&|$)",
+                    "match": "https?://(www|m)\\.baidu\\.com/.*(wd|word)=",
+                    "shortcut": "KeyB",
+                    "alt": true
+                },
+                {
+                    "name": "百度高级搜索",
+                    "url": "https://www.baidu.com/s?wd=%s%input{请输入限制文件类型, filetype:doc/ filetype:ppt/ filetype:xls/ filetype:pdf}%input{请输入限制日期/过去一小时/过去一天/过去一周/过去一个月/过去一年,&gpc=stf%3D%date{/1000-3600}%2C%date{/1000}%7Cstftype%3D1/&gpc=stf%3D%date{/1000-86400}%2C%date{/1000}%7Cstftype%3D1/&gpc=stf%3D%date{/1000-604800}%2C%date{/1000}%7Cstftype%3D1/&gpc=stf%3D%date{/1000-2592000}%2C%date{/1000}%7Cstftype%3D1/&gpc=stf%3D%date{/1000-31536000}%2C%date{/1000}%7Cstftype%3D1}",
+                    "match": "https://www\\.baidu\\.com/(s|baidu)",
+                    "nobatch": true,
+                    "hideNotMatch": true,
+                    "openInNewTab": false
+                },
+                {
+                    "name": "SearX",
+                    "url": "https://searx.work/search?q=%s",
+                    "icon": "https://searx.work/static/themes/simple/img/favicon.png"
+                },
+                {
+                    "name": "You",
+                    "url": "https://you.com/search?q=%s",
+                    "icon": "https://you.com/favicon/favicon-32x32.png",
+                    "nobatch": true
+                },
+                {
+                    "name": "头条搜索",
+                    "url": "https://so.toutiao.com/search/?dvpf=%c&keyword=%s"
+                },
+                {
+                    "name": "必应",
+                    "url": "https://www.bing.com/search?q=%s",
+                    "match": "^https://(www|cn|global)\\.bing\\.com/search"
+                },
+                {
+                    "name": "DuckDuckGo",
+                    "url": "https://duckduckgo.com/?q=%s",
+                    "nobatch": true
+                },
+                {
+                    "name": "360",
+                    "url": "https://www.so.com/s?ie=utf-8&q=%s",
+                    "match": "(www|m)\\.so\\.com/s\\?.*[&\\?]q="
+                },
+                {
+                    "name": "搜狗",
+                    "url": "https://www.sogou.com/web?query=%s",
+                    "keywords": "(?:query|keyword)=(.*?)(&|$)",
+                    "match": "(www|wap|m)\\.sogou\\.com/(web|web/searchList\\.jsp).*(query|keyword)="
+                },
+                {
+                    "name": "Yandex",
+                    "url": "https://yandex.com/search/?text=%s"
+                },
+                {
+                    "name": "Startpage",
+                    "url": "https://www.startpage.com/sp/search?query=%s",
+                    "icon": "https://www.startpage.com/sp/cdn/favicons/favicon-16x16--default.png"
+                },
+                {
+                    "name": "F搜",
+                    "url": "https://fsoufsou.com/search?q=%s",
+                    "nobatch": true
+                },
+                {
+                    "name": "Qwant",
+                    "url": "https://www.qwant.com/?q=%s",
+                    "nobatch": true
+                },
+                {
+                    "name": "Ecosia",
+                    "url": "https://www.ecosia.org/search?method=index&q=%s",
+                    "icon": "https://cdn-static.ecosia.org/static/icons/favicon.ico"
+                },
+                {
+                    "name": "谷歌完全匹配",
+                    "url": "https://www.google.com/search?q=%22%s%22",
+                    "match": "https://www\\.google\\..*/search",
+                    "nobatch": true,
+                    "hideNotMatch": true
+                },
+                {
+                    "name": "Brave",
+                    "url": "https://search.brave.com/search?q=%s",
+                    "icon": "https://cdn.search.brave.com/serp/v1/static/brand/16c26cd189da3f0f7ba4e55a584ddde6a7853c9cc340ff9f381afc6cb18e9a1e-favicon-32x32.png",
+                    "nobatch": true
+                },
+                {
+                    "name": "中国搜索",
+                    "url": "https://www.chinaso.com/newssearch/all/allResults?q=%s",
+                    "nobatch": true
+                },
+                {
+                    "name": "Search Encrypt",
+                    "url": "https://www.searchencrypt.com/search?q=%s",
+                    "nobatch": true
+                },
+                {
+                    "name": "Wolfram|Alpha",
+                    "url": "https://www.wolframalpha.com/input?i=%s",
+                    "icon": "https://www.wolframalpha.com/_next/static/images/favicon_1zbE9hjk.ico",
+                    "nobatch": true
+                },
+                {
+                    "name": "Peekier",
+                    "url": "https://peekier.com/#!%s",
+                    "icon": "https://peekier.com/assets/favicon.png",
+                    "nobatch": true
+                },
+                {
+                    "name": "Infospace",
+                    "url": "https://infospace.com/serp?q=%s",
+                    "icon": "https://infospace.com/static/search.infospace.com/favicon-32x32.png",
+                    "nobatch": true
+                },
+                {
+                    "name": "WebCrawler",
+                    "url": "https://www.webcrawler.com/serp?q=%s",
+                    "icon": "https://www.webcrawler.com/static/www.webcrawler.com/favicon-32x32.png",
+                    "nobatch": true
+                },
+                {
+                    "name": "Dogpile",
+                    "url": "https://www.dogpile.com/serp?q=%s",
+                    "icon": "https://www.dogpile.com/static/info.dogpile.com/favicon-32x32.png",
+                    "nobatch": true
+                },
+                {
+                    "name": "NAVER",
+                    "url": "https://search.naver.com/search.naver?query=%s",
+                    "icon": "https://www.naver.com/favicon.ico?1",
+                    "nobatch": true
+                },
+                {
+                    "name": "雅虎",
+                    "url": "https://search.yahoo.com/search;?p=%s",
+                    "icon": "data:image/ico;base64,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",
+                    "match": "search\\.yahoo\\.com/search",
+                    "nobatch": true
+                },
+                {
+                    "name": "Poe - Sage AI Chat",
+                    "url": "https://poe.com/#p{sleep(1000)&footer textarea=%s&click([class*\\=ChatMessageSendButton])}"
+                },
+                {
+                    "name": "微信搜索",
+                    "url": "https://weixin.sogou.com/weixin?ie=utf8&type=2&query=%s"
+                },
+                {
+                    "name": "搜狗知乎",
+                    "url": "https://www.sogou.com/sogou?query=%s&_ast=1690444285&_asf=www.sogou.com&w=01029901&pid=sogou-wsse-ff111e4a5406ed40&duppid=1&cid=&s_from=result_up&insite=zhihu.com&ie=utf8"
+                },
+                {
+                    "name": "知乎",
+                    "url": "https://www.zhihu.com/search?q=%s&type=content"
+                },
+                {
+                    "name": "开发者搜索",
+                    "url": "https://kaifa.baidu.com/searchPage?wd=%s",
+                    "icon": "https://kaifa.baidu.com/assets/favicon.ico"
+                }
+            ]
+        },
+        {
+            "type": "百科",
+            "icon": "book-open-reader",
+            "sites": [
+                {
+                    "name": "维基",
+                    "url": "https://zh.wikipedia.org/wiki/%s"
+                },
+                {
+                    "name": "百度百科",
+                    "url": "https://baike.baidu.com/search/word?pic=1&sug=1&word=%s",
+                    "match": "baike\\.baidu\\.com/search/"
+                },
+                {
+                    "name": "百度文库",
+                    "url": "https://wenku.baidu.com/search?word=%s&ie=utf-8"
+                },
+                {
+                    "name": "豆丁文档",
+                    "url": "https://www.docin.com/search.do?searchcat=2&searchType_banner=p&nkey=%s"
+                },
+                {
+                    "name": "爱问知识",
+                    "url": "https://iask.sina.com.cn/search?searchWord=%s"
+                },
+                {
+                    "name": "萌娘百科",
+                    "url": "https://zh.moegirl.org.cn/Special:?search=%s",
+                    "icon": "https://zh.moegirl.org.cn/favicon.ico"
+                },
+                {
+                    "name": "果壳",
+                    "url": "https://www.guokr.com/search/all/?wd=%s"
+                },
+                {
+                    "name": "Quora",
+                    "url": "https://www.quora.com/search?q=%s"
+                },
+                {
+                    "name": "Metacritic",
+                    "url": "https://www.metacritic.com/search%p{search_term=%s&search_filter=all}",
+                    "icon": "https://www.metacritic.com/MC_favicon.png"
+                },
+                {
+                    "name": "豆瓣",
+                    "url": "https://www.douban.com/search?source=suggest&q=%s.replace(/\\./g,\" \")"
+                },
+                {
+                    "name": "Bangumi 番组计划",
+                    "url": "https://bgm.tv/subject_search%p{cat=all&search_text=%s}",
+                    "icon": "https://bgm.tv/img/favicon.ico"
+                }
+            ]
+        },
+        {
+            "type": "网盘",
+            "icon": "cloud-download",
+            "sites": [
+                {
+                    "name": "百度网盘",
+                    "url": "https://pan.baidu.com/disk/home?#/search?key=%s",
+                    "icon": "https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico"
+                },
+                {
+                    "name": "大力盘",
+                    "url": "https://www.dalipan.com/search?keyword=%s"
+                },
+                {
+                    "name": "大圣盘",
+                    "url": "https://www.dashengpan.com/search?keyword=%s"
+                },
+                {
+                    "name": "罗马盘",
+                    "url": "https://www.luomapan.com/search?keyword=%s"
+                },
+                {
+                    "name": "小白盘",
+                    "url": "https://www.xiaobaipan.com/list-%s.html?from=1",
+                    "icon": "https://www.xiaobaipan.com/static/assets/ico/favicon.png"
+                },
+                {
+                    "name": "56网盘",
+                    "url": "https://www.56wangpan.com/search/kw%s"
+                },
+                {
+                    "name": "凌风云",
+                    "url": "https://www.lingfengyun.com/Search/Search?wd=%s"
+                },
+                {
+                    "name": "优聚搜",
+                    "url": "https://v3.ujuso.com/#/main?kw=%s",
+                    "icon": "https://cdn-1251935463.file.myqcloud.com/jujuso/favicon-32x32.png"
+                },
+                {
+                    "name": "夸克网盘搜索",
+                    "url": "https://kzurl01.cn/LfJrE#p{#search=%s&click(#submitSearch)}",
+                    "match": "http://kl\\.kelezj\\.com/apps/index\\.html\\?"
+                },
+                {
+                    "name": "小猪快盘，网盘搜索",
+                    "url": "https://www.xiaozhukuaipan.com/s/search?q=%s",
+                    "icon": "https://www.xiaozhukuaipan.com/media/img/logo/favicon.ico"
+                },
+                {
+                    "name": "盘么么",
+                    "url": "http://www.panmeme.com/query?key=%s"
+                },
+                {
+                    "name": "网盘搜索-小白盘",
+                    "url": "https://www.xiaobaipan.com/?k=%s",
+                    "icon": "https://www.xiaobaipan.com/static/assets/ico/favicon.png"
+                },
+                {
+                    "name": "热盘搜",
+                    "url": "http://www.repanso.com/q?wd=%s"
+                },
+                {
+                    "name": "好去网",
+                    "url": "https://www.haogow.com/search?keyword=%s",
+                    "icon": "https://www.haogow.com/template/default/images/favicon.ico"
+                },
+                {
+                    "name": "V盘搜",
+                    "url": "http://www.vpansou.com/query?wd=%s"
+                },
+                {
+                    "name": "百度网盘搜索",
+                    "url": "https://aizhaomu.com/search/kw%p{keyword=%s}"
+                },
+                {
+                    "name": "搜度网",
+                    "url": "http://www.sodu123.com/sodu/so.php?q=%s"
+                },
+                {
+                    "name": "盘搜网",
+                    "url": "http://www.pansou.com/?q=%s"
+                },
+                {
+                    "name": "fastsoso网盘搜索",
+                    "url": "https://www.fastsoso.cn/search?k=%s"
+                },
+                {
+                    "name": "51搜盘",
+                    "url": "http://www.51sopan.cn/search?&time=2keywords=%s",
+                    "icon": "http://www.51sopan.cn/img/favicon.ico"
+                },
+                {
+                    "name": "两仪鸟搜索",
+                    "url": "http://www.baiduyunsousou.com/search?kw=%s",
+                    "icon": "http://www.baiduyunsousou.com/dist/images/logo/e_m.png"
+                },
+                {
+                    "name": "微盘搜索",
+                    "url": "http://www.vpanso.com/s?wd=%s"
+                },
+                {
+                    "name": "云盘搜索大师",
+                    "url": "https://www.xxhh360.com/search?q=%s"
+                },
+                {
+                    "name": "盘大大",
+                    "url": "https://www.pandada.net/all/s-ypzdn%s.html",
+                    "icon": "https://static.pandada.net/img/favicon.ico"
+                },
+                {
+                    "name": "众人搜索网",
+                    "url": "http://wangpan.renrensousuo.com/jieguo?q=%s"
+                },
+                {
+                    "name": "猪猪盘",
+                    "url": "http://www.zhuzhupan.com/search?query=%s"
+                },
+                {
+                    "name": "猫狸盘搜",
+                    "url": "https://www.alipansou.com/search?k=%s"
+                },
+                {
+                    "name": "小马盘",
+                    "url": "https://www.xiaomapan.com/#/main/search?keyword=%s"
+                },
+                {
+                    "name": "来搜一下",
+                    "url": "https://www.laisoyixia.com/s/search?q=%s",
+                    "icon": "https://www.laisoyixia.com/media/image/logo/favicon.ico"
+                }
+            ]
+        },
+        {
+            "type": "图片",
+            "icon": "image",
+            "sites": [
+                {
+                    "name": "百度图片",
+                    "url": "https://image.baidu.com/search/index?tn=baiduimage&ie=utf-8&word=%s"
+                },
+                {
+                    "name": "谷歌图片",
+                    "url": "https://www.google.com/search?q=%s&tbm=isch",
+                    "match": "www\\.google\\..*tbm=isch"
+                },
+                {
+                    "name": "图片聚合搜索",
+                    "url": "https://www.google.com/search?tbm=isch&as_q=%s%20(site:www.pexels.com%20OR%20site:pixabay.com%20OR%20site:unsplash.com%20OR%20site:stocksnap.io%20OR%20site:pxhere.com%20OR%20site:www.hippopx.com%20OR%20site:foter.com%20OR%20site:freepik.com%20OR%20site:colorhub.me)"
+                },
+                {
+                    "name": "必应图片",
+                    "url": "https://www.bing.com/images/search?q=%s"
+                },
+                {
+                    "name": "搜狗图片",
+                    "url": "https://pic.sogou.com/pics?query=%s"
+                },
+                {
+                    "name": "pixiv",
+                    "url": "https://www.pixiv.net/search.php?word=%s"
+                },
+                {
+                    "name": "flickr",
+                    "url": "https://www.flickr.com/search/?q=%s",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAqFBMVEUAAAD///////////////////////////////////8AY9z/AIT7/f///P6bwvIkeuL/JJbj7/z/6/aEtO//1exqpetZmuk4huUvgeMSb+D/nND/hMX/WK//OKD/L5zw9v3s9P3q8/3Y6PrS5Pn/8Pi61farzPT/5fP/4PGPu/B0quxGjub/ut4IaN7/q9f/mc7/j8n/db3/bbn/Z7b/Rqb/Fo//D4z/CIgsCp8LAAAACXRSTlMA89zZpYpVUQXYTJ6mAAABHUlEQVRYw+2XV67CMBBFJ4UkthMS4NHL6/Re978zBBYkOAYJ7gcI5Xx65CO5jXzpiOfYlsHuwLBsx6MzrskewHSJJDn2ILl4PmJwGYBL5JmIwPTIYRAO2ZjAJgsTWGRgAoMYSCbIBG8q8P/Lo1q1kv9mCsVGq91ZL8fBbUE35JLJ8JMl+FvshCSa3hD4ZR4T/sSFj0jErIKrggpPUi+cxvsbkaR1TTDgl9R8OR50xCVzveCrzhXysjATCtuiVlDiKqEsREKlqRVUeYrf4w6KFG2dwOeS1BoaIk2gERQ0gtKh0NQIerAAXgK6ifAxwhcJvcroY4KfM9hQ0Jb28l05E2SC5wjgzzb83YcDBxx54NCFxj40eOLRFw/fcPzfA423mmMlx29+AAAAAElFTkSuQmCC"
+                },
+                {
+                    "name": "花瓣",
+                    "url": "https://huaban.com/search?q=%s"
+                },
+                {
+                    "name": "Pinterest",
+                    "url": "https://www.pinterest.com/search/pins/?q=%s&rs=typed&term_meta"
+                },
+                {
+                    "name": "yandex",
+                    "url": "https://yandex.com/images/search?text=%s"
+                },
+                {
+                    "name": "pixabay",
+                    "url": "https://pixabay.com/images/search/%s/",
+                    "icon": "https://pixabay.com/favicon-32x32.png"
+                },
+                {
+                    "name": "unsplash",
+                    "url": "https://unsplash.com/s/photos/%s"
+                },
+                {
+                    "name": "500px",
+                    "url": "https://500px.com/search?q=%s"
+                },
+                {
+                    "name": "Deviantart",
+                    "url": "https://www.deviantart.com/browse/all/?q=%s"
+                },
+                {
+                    "name": "Wallhaven",
+                    "url": "https://wallhaven.cc/search?q=%s"
+                },
+                {
+                    "name": "Pixabay",
+                    "url": "https://pixabay.com/zh/images/search/?manual_search=1&q=%s&hp=&order=&cat=&min_width=&min_height=",
+                    "icon": "https://pixabay.com/favicon-32x32.png"
+                },
+                {
+                    "name": "Backiee",
+                    "url": "https://backiee.com/search/%s",
+                    "icon": "https://backiee.com/assets/favicon/favicon-32x32.png"
+                },
+                {
+                    "name": "ChatGPT搜索GIF",
+                    "url": "https://poe.com/ChatGPT#p{sleep(1000)&[class*\\='ChatMessageInputContainer'] textarea=hey ChatGPT. hope you're having a great day. From now on you will respond to anything I say with the perfect gif response. Once you know what gif you want to use, compile the most accurate and perfect search phrase that will result in the specific gif you want to send. respond with url: \" Sure, I'm happy to help you!\\n http://scythe-spot-carpenter.glitch.me/search?search_term\\=<SEARCH+PHRASE>.gif \n%s&click(button[class*\\='ChatMessageSendButton_sendButton'])}",
+                    "openInNewTab": true
+                }
+            ]
+        },
+        {
+            "type": "开发",
+            "icon": "code",
+            "sites": [
+                {
+                    "name": "MDN",
+                    "url": "https://developer.mozilla.org/zh-CN/search?q=%s"
+                },
+                {
+                    "name": "stackoverflow",
+                    "url": "https://stackoverflow.com/search?q=%s"
+                },
+                {
+                    "name": "掘金",
+                    "url": "https://juejin.im/search?query=%s&type=all"
+                },
+                {
+                    "name": "Can I Use",
+                    "url": "https://caniuse.com/#search=%s",
+                    "icon": "https://caniuse.com/img/favicon-128.png"
+                },
+                {
+                    "name": "GitHub",
+                    "url": "https://github.com/search?q=%s",
+                    "match": "https://github\\.com/search.*[&\\?]q="
+                },
+                {
+                    "name": "w3c",
+                    "url": "https://www.runoob.com/?s=%s"
+                },
+                {
+                    "name": "GreasyFork",
+                    "url": "https://greasyfork.org/zh-CN/scripts?q=%s&utf8=✓",
+                    "icon": "https://greasyfork.org/packs/media/images/blacklogo96-b2384000fca45aa17e45eb417cbcbb59.png"
+                },
+                {
+                    "name": "Unicode字符大全",
+                    "url": "https://unicode-table.com/cn/search/?q=%s"
+                },
+                {
+                    "name": "npm",
+                    "url": "https://www.npmjs.org/search?q=%s",
+                    "icon": "https://static.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png"
+                },
+                {
+                    "name": "AI生成正则",
+                    "url": "https://poe.com/ChatGPT#p{sleep(1000)&textarea[class^\\='ChatMessageInput']=Can you help me to write a RegExp which can detect %input{Target,Email address/Phone number} on `%s`&click([class^\\='ChatMessageInputView_sendButton']>button)}",
+                    "openInNewTab": true
+                }
+            ]
+        },
+        {
+            "type": "词典",
+            "icon": "language",
+            "sites": [
+                {
+                    "name": "百度翻译",
+                    "url": "https://fanyi.baidu.com/#auto/zh/%s"
+                },
+                {
+                    "name": "DeepL",
+                    "url": "https://www.deepl.com/translator#zh/en/%s",
+                    "icon": "https://www.deepl.com/img/favicon/favicon_96.png"
+                },
+                {
+                    "name": "谷歌翻译",
+                    "url": "https://translate.google.com/?text=%s",
+                    "match": "translate\\.google\\.com.*\\btext="
+                },
+                {
+                    "name": "有道词典",
+                    "url": "https://dict.youdao.com/search?q=%s",
+                    "icon": "https://shared.ydstatic.com/images/favicon.ico"
+                },
+                {
+                    "name": "必应翻译",
+                    "url": "https://cn.bing.com/dict/search?q=%s"
+                },
+                {
+                    "name": "Forvo发音",
+                    "url": "https://zh.forvo.com/search/%s"
+                },
+                {
+                    "name": "CNKI翻译",
+                    "url": "https://dict.cnki.net/index#p{[name\\='translateArea']=%s&click(.hanlder-left-right>button)}"
+                },
+                {
+                    "name": "汉典",
+                    "url": "https://www.zdic.net/hans/%s"
+                },
+                {
+                    "name": "海词",
+                    "url": "https://dict.cn/%s"
+                },
+                {
+                    "name": "金山词霸",
+                    "url": "https://www.iciba.com/word?w=%s",
+                    "icon": "https://cdn.iciba.com/www/img/www/favicon.ico"
+                },
+                {
+                    "name": "词源词根词典",
+                    "url": "https://www.etymonline.com/index.php?term=%s"
+                },
+                {
+                    "name": "沪江",
+                    "url": "https://dict.hjenglish.com/w/%s"
+                },
+                {
+                    "name": "Urban Dictionary",
+                    "url": "https://www.urbandictionary.com/search.php%p{term=%s}"
+                },
+                {
+                    "name": "POE",
+                    "url": "https://poe.com/ChatGPT#p{sleep(1000)&[class*\\='ChatMessageInputContainer']>textarea=Please help me to translate \\`%s\\` to English, please return only translated content not include the origin text&click(button[class*\\='ChatMessageSendButton_sendButton'])}"
+                },
+                {
+                    "name": "ChatGPT翻译",
+                    "url": "https://pandapy.com/#p{textarea[data-id\\='root']=Please help me to translate \\`%s\\` to Chinese, please return only translated content not include the origin text&click(.send-btn)}"
+                },
+                {
+                    "name": "Ludwig",
+                    "url": "https://ludwig.guru/s/%s",
+                    "icon": "https://ludwig.guru/icons/icon_192x192.png"
+                },
+                {
+                    "name": "Linggle",
+                    "url": "https://linggle.com/?q=%s"
+                },
+                {
+                    "name": "瀚堂典藏数据库系统",
+                    "url": "https://www.hytung.cn/%p{__EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=%2FwEPDwUJNTI1Njk3MDAwDxYCHhNWYWxpZGF0ZVJlcXVlc3RNb2RlAgEWBAIBD2QWAgILDxYCHgRocmVmBRYvQ3NzL1Jldmlldy9SZXZpZXcuY3NzZAIDD2QWBgIXDw8WAh4EVGV4dAUPMjIyLjE4NS4wODQuMTQzZGQCGQ8PFgIeB1Zpc2libGVnZGQCHw9kFgJmD2QWCgIRDxYCHwNoZAITD2QWAgIDDxBkZBYAZAIVDxYCHglpbm5lcmh0bWwF5AI8cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI%2BPGEgaHJlZj0iaHR0cHM6Ly93ZWliby5jb20vdS82NDUzODAxMzAxIiB0YXJnZXQ9Il9ibGFuayI%2B5pWs5b%2BD5LuB6KGT77yM6Z2S6YqF56Ct6YqY77ya5ZCB5Zef5LmO77yM5pWsIHwg5a6P5rqQ5pel6KqyIEVQICZtZGFzaDsgMTQwPC9hPjwvcD4NCjxwIHN0eWxlPSJ0ZXh0LWFsaWduOiBjZW50ZXI7Ij48YnIgLz4NCjxpbWcgc3JjPSIvQ01TL1VwbG9hZEZpbGVzL2ltYWdlL2p4cmVuc2h1LmpwZyIgaGVpZ2h0PSIzNjAiIGFsdD0i44CKSlcuMTE5OTgmbWlkZG90O%2BmdkumKheegreOAi%2FCruoPwoY%2Bm8KuKnfCiv6nvvIjlkIHll5%2FkuY7vvIzmlazvvInjgIIiIC8%2BPC9wPmQCHQ9kFgQCAQ8QZGQWAGQCAw8QZGQWAGQCHw9kFgQCAw88KwAJAGQCBw88KwAJAGRkOfNp7ZHm%2BLCyqdGc4ejQh1Sz5b2rdvmJRmnt6k2mFcg%3D&__VIEWSTATEGENERATOR=CA0B0334&AllCheckedNodes=&hidebid=&hideBookCode=&hideSearchResults=0&date=&date1=&TxtUserName=&TxtPassword=&DropDownSearchField=FullText&TxtKeyword=%s&rbtnlst=Exact&HiddenCategoryCode=&HiddenCurrPageIndex=1}",
+                    "icon": "https://www.hytung.cn/Images/favicon.ico"
+                }
+            ]
+        },
+        {
+            "type": "影视",
+            "icon": "video",
+            "sites": [
+                {
+                    "name": "bilibili",
+                    "url": "https://search.bilibili.com/all?keyword=%s"
+                },
+                {
+                    "name": "腾讯视频",
+                    "url": "https://v.qq.com/x/search/?q=%s"
+                },
+                {
+                    "name": "爱奇艺",
+                    "url": "https://so.iqiyi.com/so/q_%s",
+                    "icon": "https://www.iqiyi.com/favicon.ico"
+                },
+                {
+                    "name": "youtube",
+                    "url": "https://www.youtube.com/results?search_query=%s"
+                },
+                {
+                    "name": "优酷",
+                    "url": "https://so.youku.com/search_video/q_%s",
+                    "icon": "https://img.alicdn.com/tfs/TB1WeJ9Xrj1gK0jSZFuXXcrHpXa-195-195.png"
+                },
+                {
+                    "name": "AcFun",
+                    "url": "https://www.acfun.cn/search?keyword=%s"
+                },
+                {
+                    "name": "搜狐",
+                    "url": "https://so.tv.sohu.com/mts?wd=%s"
+                },
+                {
+                    "name": "niconico",
+                    "url": "https://www.nicovideo.jp/search/%s"
+                },
+                {
+                    "name": "樱花动漫",
+                    "url": "http://www.dm88.me/search.asp?searchword=%s",
+                    "icon": "data:image/ico;base64,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",
+                    "charset": "gbk"
+                },
+                {
+                    "name": "在线之家",
+                    "url": "https://www.zxzj.org/vodsearch/-------------.html?wd=%s",
+                    "icon": "https://zxzj.vip/statics/img/favicon.ico"
+                },
+                {
+                    "name": "小苹果影院",
+                    "url": "https://www.163kp.cc/index.php?m=vod-search&wd=%s&submit="
+                },
+                {
+                    "name": "谍影网",
+                    "url": "https://www.tvdie.cc/search.html%p{searchword=%s}",
+                    "icon": "https://www.tvdie.cc/favicon.ico"
+                },
+                {
+                    "name": "茶杯狐",
+                    "url": "https://cupfox.app/s/%s",
+                    "icon": "https://p0.meituan.net/dpgroup/cd088044f183d2719f3f9fe56d5c34204207.png"
+                },
+                {
+                    "name": "HOHO TV",
+                    "url": "https://www.hoho.tv/vod/search.html%p{wd=%s}",
+                    "icon": "https://www.hoho.tv/img/left_logo.png"
+                },
+                {
+                    "name": "西瓜视频",
+                    "url": "https://www.ixigua.com/search/%s/",
+                    "icon": "https://sf1-cdn-tos.douyinstatic.com/obj/eden-cn/lpqpflo/ixigua_favicon.ico"
+                },
+                {
+                    "name": "555电影",
+                    "url": "https://55dy1.vip/vodsearch/-------------.html?wd=%s"
+                }
+            ]
+        },
+        {
+            "type": "音乐",
+            "icon": "music",
+            "sites": [
+                {
+                    "name": "网易音乐",
+                    "url": "https://music.163.com/#/search/m/?s=%s",
+                    "icon": "https://s1.music.126.net/style/favicon.ico"
+                },
+                {
+                    "name": "一听",
+                    "url": "https://so.1ting.com/all.do?q=%s"
+                },
+                {
+                    "name": "QQ音乐",
+                    "url": "https://y.qq.com/portal/search.html#page=1&searchid=1&remoteplace=txt.yqq.top&t=song&w=%s"
+                },
+                {
+                    "name": "百度音乐",
+                    "url": "https://music.91q.com/search?ie=utf-8&oe=utf-8&key=%s"
+                },
+                {
+                    "name": "酷我音乐",
+                    "url": "https://www.kuwo.cn/search/list?key=%s"
+                },
+                {
+                    "name": "酷狗",
+                    "url": "http://search.5sing.kugou.com/?keyword=%s",
+                    "icon": "https://5sing.kugou.com/favicon.ico"
+                }
+            ]
+        },
+        {
+            "type": "阅读",
+            "icon": "book-open",
+            "sites": [
+                {
+                    "name": "BookLink.Me",
+                    "url": "https://booklink.me/after_search.php%p{name=%s}"
+                },
+                {
+                    "name": "起点中文网",
+                    "url": "https://www.qidian.com/soushu/%s.html",
+                    "icon": "https://qidian.gtimg.com/qd/favicon/qd_icon.ico"
+                },
+                {
+                    "name": "创世中文",
+                    "url": "https://chuangshi.qq.com/search/searchindex?type=all&wd=%s",
+                    "icon": "https://img1.chuangshi.qq.com/chuangshi/p1/ico/c_mini_logo.ico"
+                },
+                {
+                    "name": "纵横中文网",
+                    "url": "http://search.zongheng.com/s?keyword=%s"
+                },
+                {
+                    "name": "笔趣阁",
+                    "url": "https://www.xbiquge.so/modules/article/search.php?searchkey=%s",
+                    "charset": "GBK"
+                },
+                {
+                    "name": "微信读书",
+                    "url": "https://weread.qq.com/#p{click(.navBar_home_inputText)&.search_input_text=%s&click(.search_input_right)}"
+                },
+                {
+                    "name": "轻小说文库",
+                    "url": "https://www.wenku8.net/so.php%p{searchtype=articlename&searchkey=%s&charset=gbk}",
+                    "charset": "GBK"
+                },
+                {
+                    "name": "轻之国度",
+                    "url": "https://www.lightnovel.us/cn/search?keywords=%s"
+                },
+                {
+                    "name": "哔哩轻小说",
+                    "url": "https://www.linovelib.com/S6/%p{searchkey=%s&searchtype=all}",
+                    "description": "日本动漫轻小说在线阅读"
+                },
+                {
+                    "name": "魔笔小说",
+                    "url": "https://www.mobinovels.com/?s=%s",
+                    "description": "轻小说 资源收集"
+                },
+                {
+                    "name": "jiumodiary",
+                    "url": "https://www.jiumodiary.com/#p{#SearchWord=%s}",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAABi0lEQVR4nJ2VsU4CQRRFzy66GCtLrWysjMbEyi+wNFHBmGDpH1jYWJtAq5WxpoFEorXxB6xs1CBBI4WJVhpNoPBayMAuuzOw3FcwvMe5eTOzy0OYIGCHMk3ayBJf3FMmTxCieotN6lZwMOpsRQzIUBwZNlEk0zdIjwtR7BqQGwsXIicg4HVsgxYBFGzlGS1pepjFHlSSCiUZ/ehQS9rVerJB1eOZeUKapINNXjz14jMbzdhxWImn5oi2dCa3FuObCH85HoJL0o3mIgYeMt0o3qBVbaZ659LlfpOOyCHza5/ewsPjKJXJv0L7ORjhDIwSDnGi+/kxAv6QfAsIvY+At5SxGSxbkEshtKqanpS1PwcmGgN4xfE6hZ4DowXqlitLkh9PlVJe42e8rYvIBr4dG6ANj0mF/ZBBw2Xw7HOX1NY5Hlfd9b2r/1ufmq22gcc18OYyqA39U53Smr3aIosg7zJwRt4MltJYeEn0R9tJavw0NNqEYDvVcM31uH6WgAJVmnSsYIcmVQrh8f4HufpcPqh3SFcAAAAASUVORK5CYII=",
+                    "match": "https://www\\.jiumodiary\\.com"
+                },
+                {
+                    "name": "Z-Library",
+                    "url": "https://zh.usa1lib.org/s/?q=%s"
+                },
+                {
+                    "name": "小说搜搜",
+                    "url": "https://www.xssousou.com/s/?wd=%s"
+                }
+            ]
+        },
+        {
+            "type": "电子书",
+            "icon": "book",
+            "description": "电子书下载",
+            "sites": [
+                {
+                    "name": "Library Genesis",
+                    "url": "http://libgen.rs/search.php?req=%s",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADfElEQVR4nM2XQWgbRxSGv5SFncNSDXQhexB4aQUVRhARDBFOwSEt2PRSU3pI6CFJL8mtLTmEnEoOxYRSQm/pLaE15FCa9NCSQy+FYmQwRQFTVmCCAqJsQIQR7GEWBtrDaFeqsaVdieI+GObtaPa9f2b+9+/o1KtXvb85QXvtJJP/LwA4ZSbv7Bsu33mEEIJACgJfUl+SrDVDLja9uQCcKsuBW/f3ebD9G3gC9Hg8CCs8/uoSb/qmFIDSR3D3RgNZPW0fPEDYFkcv+Wa7XTbcfBy4sBKCBikrBIFtSMHTvV7pWKWPYNJel9XcV0oT9RXL1XJHUJiEz2OHXqyIlUYbjdaA6ZMaS4SKZ0mplGC1UZzbhWaeufYDcX9oHwxgtO2zt3NfWE44sPXpOp9sVI+I9m8rdAQ7keHy7UdonYJwbcIMfpbcpIBr/SRFBhW63300E0AhEq7WHe7d2rBlZwBS+0PmG8Bxx2MCtNZHRJoTAMCHLZ9mawl0apOZ1LYESFIYDG2v7VgYyEJxSynhlXebdJ5281VKv0IYSKQnEA5oA/FAEUUv2VyrF4pZugy/eLC/kPQuDCCzP/sO8cCWpUo0w0QjRvvpCoEUEPhyJtCZR/BLO2E36tHpxvQGGqUUOhkRT2twxHhyXhHjcem7PL539ViBmroD17/e48n3u1bzHWGDZ5Az1h9ejjnUD4a03nmbn7beOzLH1B349uYKwRuC+9u74LnjWp80M1kV2VgGwgVP0IvVsTlmluGdqw1ufHwOBlnyUfnlySdAOIz6CbHCVsfcADIQuQbAeMWOa0GJETCyXZoAZCD05WIAALauXxh57pgLJp0QIcYA9chPUhhoNs6Fx8YtLERnaw71xhLRXjcnpAwqNGsBzbcClqqS0JdIKZCeQCWaqBfzoq/4/FJtcQAAV9brPEw0G2t11lshZ2tHvW7Y2Y9ZbXgsV33AnxpzoQvJYfvx9wEPf+7Q/rXLZzfXuT1l5ZmV2oFJex479AaKZwcx7WcxnShGxUMb0RMoVexrWBjAX8rj2pdP7I1Ia5QaES9TPYHVCgdQKULMCFgWgEo0nb0XNhHYMvMgr4r8nmA1YG0lLBS3cBkuVw1B7TRkWzspRnp8DyAesrl5houNYl/LUiT848Bwd7tNdBATJzpXO+kJAl9QDwM+OB/yfms68+cG8F/Yif85/QdlMHLuJQQjHQAAAABJRU5ErkJggg=="
+                },
+                {
+                    "name": "读书小站 – 悦读不孤读",
+                    "url": "https://ibooks.org.cn/?s=%s",
+                    "icon": "https://ibooks.org.cn/wp-content/uploads/2021/07/1625331935-%E8%B5%84%E6%BA%90-1.png"
+                },
+                {
+                    "name": "SoBooks",
+                    "url": "https://sobooks.net/search/%s"
+                },
+                {
+                    "name": "知轩藏书",
+                    "url": "http://zxcs.me/index.php?keyword=%s",
+                    "description": "藏尽网络中最好的精校小说"
+                },
+                {
+                    "name": "Mox.moe",
+                    "url": "https://mox.moe/list.php?s=%s",
+                    "icon": "https://mox.moe/img/mox-logo-256.png",
+                    "description": " [Kindle漫畫|Kobo漫畫|epub漫畫]"
+                },
+                {
+                    "name": "书享家",
+                    "url": "http://www.shuxiangjia.cn/search.php?q=%s"
+                },
+                {
+                    "name": "Anna’s Archive",
+                    "url": "https://annas-archive.org/search?q=%s",
+                    "icon": "https://annas-archive.org/favicon-32x32.png",
+                    "match": "annas\\-archive\\.org/search"
+                },
+                {
+                    "name": "无名图书",
+                    "url": "https://www.book123.info/list?key=%s"
+                },
+                {
+                    "name": "Hallowlib",
+                    "url": "https://bk.hallowlib.org/#p{#searchText input=%s&click(#sBtn)}"
+                },
+                {
+                    "name": "Freembook",
+                    "url": "https://freembook.com/#p{#search-input=%s&click([aria-label=search])}"
+                },
+                {
+                    "name": "知搜",
+                    "url": "https://zhiso.top/search/?q=%s",
+                    "icon": "https://zhiso.top/static/image/favicon.ico"
+                },
+                {
+                    "name": "苦瓜书盘",
+                    "url": "https://kgbook.com/e/search/index.php%p{keyboard=%s&show=title,booksay,bookwriter&tbname=download&tempid=1}"
+                }
+            ]
+        },
+        {
+            "type": "学术",
+            "icon": "graduation-cap",
+            "sites": [
+                {
+                    "name": "谷歌学术",
+                    "url": "https://scholar.google.com/scholar?hl=zh-CN&q=%s"
+                },
+                {
+                    "name": "百度学术",
+                    "url": "https://xueshu.baidu.com/s?wd=%s"
+                },
+                {
+                    "name": "万方",
+                    "url": "https://s.wanfangdata.com.cn/paper?q=%s",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJ0lEQVQ4jdWSvY4BURhAPwoS8TuTqESC3lN4DZGYVqGTaPQa4g1UYjqxdN5EoURI/CQ0M9/ZYnYya9fsRrHFFqe5Jzm5936ftEXatog9EZm+ii1iy1xkQbUKlgXNpodlQb0O8TjUao/O940GJJPIRGRKr4fCd0wTXa2eO4BK5SPQ6XiHqh6Ans+oYaCz2aPz/e0GpdJfBk4nL7BcPn+C60K5/MsNTBMdj9HDAd1uA3Y7dLOBYvGHwPWKFgqoSCiI/BC4XNB8HrUsdDRCB4OA4RDt98EwwgOcz2guFzpG/sEYXwp0uziuq59x73d1DEOdxUK/Osd11XUcDfag1UKPx2DO+z2s194nhuwB/h7MRd6IxSCbhXTaI5OBVAoiEUgkHp1PKgXRKO8NfBp7UCxd2QAAAABJRU5ErkJggg=="
+                },
+                {
+                    "name": "EBSCO",
+                    "url": "http://web.b.ebscohost.com/ehost/results?sid=8e76c941-084d-4b93-b05a-d5f182196017%40sessionmgr102&vid=1&hid=128&bquery=%s",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACJ0lEQVQ4jZWT3UtTYRzHT+w4pzddeRFdBAbd1Z8giXtJz9mKvBDCxMqkrK57u6kEyx13zjHWIl8TEbMptaLpZMeMCgdBS8dSRC8WWAS9UJRS1j5d7AWnjuqB78UPHj58n+f7+wpFLp0il45Z1hBs7nVS0krPdoXM/YyEIpdOgaRSWt/JGZ9BvWeUOiXIUXWMxvZxGrQQTd4wTd4wrkv3sDh1LOsBYpVKaX0XPaEYmfPx6wqHlSAHLt/nlDdMZO4tyWSSHXUdmKrUXECxS0eUVIS9V3kYWQTAiCYQKlpT1itaESs9BKYWqHU/QrApuYDsYFMYnJwF4PH0G0RJxeLUKJQ1BKubbYdusvNIF2ZZzQOwKww9mcsCTJKKKKmU1PgoPzvElkoPBZK68RM3AxjRRMp++TWO6yFGns3nT2EzwIcvyzyILBB+mWD1128GJl7nvP2vgOjie6zn/Ow77+d5fInhp/P/BzCiCQSrG6GsBfsFP/1GHMHRhsX5j4BMCoWyxtaD19l1rBuzrGGWVYr3t+cH3Jmc2xijU8NU5UFwKFwZmGLPyb7sMmUBZllDKGvhbtrBxKv0ItmVlMpaqG4O8O7TN7bX3kKU1gDMskZJjY/G9nG+r/wEYPnHKg1aCMfFYaqbA6gjLwCYX/pMYdpVFmCq9LD7xG36jTg9oRgdwWm6x2L0heN0js7QOx5jcHKW3lCM0zcMxPVdyKmzdY3SFc6ptKMtJ4U/fkBXz/LD6BYAAAAASUVORK5CYII="
+                },
+                {
+                    "name": "WOS",
+                    "url": "http://apps.webofknowledge.com/UA_GeneralSearch.do?fieldCount=3&action=search&product=UA&search_mode=GeneralSearch&max_field_count=25&max_field_notice=Notice%3A+You+cannot+add+another+field.&input_invalid_notice=Search+Error%3A+Please+enter+a+search+term.&input_invalid_notice_limits=+%3Cbr%2F%3ENote%3A+Fields+displayed+in+scrolling+boxes+must+be+combined+with+at+least+one+other+search+field.&sa_img_alt=Select+terms+from+the+index&value(input1)=%s&value%28select1%29=TI&value%28hidInput1%29=initVoid&value%28hidShowIcon1%29=0&value%28bool_1_2%29=AND&value%28input2%29=&value%28select2%29=AU&value%28hidInput2%29=initAuthor&value%28hidShowIcon2%29=1&value%28bool_2_3%29=AND&value%28input3%29=&value%28select3%29=SO&value%28hidInput3%29=initSource&value%28hidShowIcon3%29=1&limitStatus=collapsed&expand_alt=Expand+these+settings&expand_title=Expand+these+settings&collapse_alt=Collapse+these+settings&collapse_title=Collapse+these+settings&SinceLastVisit_UTC=&SinceLastVisit_DATE=×panStatus=display%3A+block&timeSpanCollapsedListStatus=display%3A+none&period=Range+Selection&range=ALL&ssStatus=display%3Anone&ss_lemmatization=On&ss_query_language=&rsStatus=display%3Anone&rs_rec_per_page=10&rs_sort_by=PY.D%3BLD.D%3BVL.D%3BSO.A%3BPG.A%3BAU.A&rs_refinePanel=visibility%3Ashow",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABr0lEQVQ4jZ2TPYobQRCFvyNUMpGTjgQbGAqBEZs1i5AD4VWzBoNgF1cihB0NONyk1/mgEwxzgmFuMHMD6Sa7RxgHQ8uzI+HAFRXUT79+7xVMQjPUO/zxFyfv8ONcM3Tafw4nuHZPlxZM62lBu6dzgrsYNsWKNQcA/YAW9xyKew5xSSy/UhWfh1qx5mCKvVsS74ivz7wB2CcsrogAAiIgmqGmWP+bHuD1mbd4N/RgitVbGic4zdBwQxAQm2NxSSwfqI4/OYUZwRSrv9FohtZbGlOMckPVv9ALSP1IAxA+EsYQNUPTYPs08NS/0JcbKvIFeZgRNEM1Q53gwg1hSqIpZoqVG6roiWFGyBfk9JG+j/Te4cOMkN+SX5PLO3x+OzzmHT7NnRFETyw3VKZYviC/QDAfmE9IzwgSB+P/HXecxiic4GyOAdSPNAJy5mCsQvtEFz1RM/S451RvaeKSmIZtjnmHF5CzClMftN/pTDHN0OQDgLj6u+idD5JMyYkCUj5QFevBhcUXDnE1oBKQ5MQLop3g2h1dgnlNBZtj7e7KLYwjHVP7gy5dY8r/eY3/G38A1vO4VlociLQAAAAASUVORK5CYII="
+                },
+                {
+                    "name": "JSTOR",
+                    "url": "http://www.jstor.org/action/doAdvancedSearch?q0=%s",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADl0lEQVQ4jS2RS0zbdQCA/3cvJh71ollMICN0FhpwbBlZx+Zg0NdC3/23pbQ8B91YGQOtCAOZJQrIaillLVDgJ6+BPMTJU91Bl7mwOBQQjEuGzJMHTbx8HvD+5Uu+fFLGSy/XlipVQlaohC1NKeT0TOFSZgm3MlvYUtOF+ViKMB9LEbbUdOFWZgk5TXnEKVRCTkkTkkeRMb/cEGS+sZb1T5r54sZVRpwuhq1ONsUU+6tr7C2v8jg5TtLh5uv2Bta7mllqaWDRX49kS1OKe9eqCBvP0u+8RNynI+rIp/nEcdqyT/HX4Qv+/fsfomYnd4xq4j4NAyWFDFboSJjsSLbjSjEbqKXPdpGBEi19lgJWoteZD1XRVZTD1uoyz59uM1hup18uoM9eSMSSz0CJjmGHG0lWqETCZKfPns9Mq5fuwrOETRfpNeQRNqp5srjEwdYO4zfKGasz06vPY/ZWGZ3nThHTWpBsqQqx8tF7DFYYmGnx0u8o5MPT2UwFS2jPUbI5t8Qf27vEnBbW4wG++tSPCNiZft9DTP+/YLUzyFCFHlHvYK6jgpD6FBFrAWHTeX76coXDnT169VrmbvuYD1VyS6Uk5iwiZrAiyYpMMSK7GHAXMtHkouN0FiN+MzOtpfTocvnt4fc839ohJpu569EwVFlM3GsgYslnrNSH5M7MEuELOlpU6QyU6Ih7DWwM3iTpNxPKO8mzzR85+GWXXq2GHl0uC53VDFYW06vPY+HdAJIt9S2xGAww21bK/fA1OvNOU/vKa/Ro1ISNeWx/84DD3T367UaGqi8T9+rp1qi5/urrDFqdSI40pZj2VzHR6GC2vYzlSB3JKya+TTYx0+Zh/4eHHGztcNdtZaJJRtTZWI3VE3UUEdWYkFxKlejXGmlVKYi5tEw0ygx4tIzV2bhzWc32xgN+f/yEhM9BxPIOwzUmQuocItZ8Rj1eJGuqQiwG61kIlSMCNrouFXA7921C5zL5rDifP/ee8WhqluYTGYiAlc8bZKKOIkZqTExUVx1tvN92kz7bBbo1ZxitvcLPa+tMNtSxtbzMi1/3GaupYbLJzr0PSrljOM90sIS4V0//UUKWGHN7SZQbGKoyErUU8V0iydOVNR7dmyPhKmPEb2Ej0cjoVTsfX8il48xJxhucDFncSNY33pxfvBJg1F3GbN11kg4Pw3Y3k9V+hK+SIYsT4a1gzFNBUi5lxFXGqLuMqepaplw+/gNcwmcGmhKGRAAAAABJRU5ErkJggg=="
+                },
+                {
+                    "name": "Springer",
+                    "url": "http://rd.springer.com/search?query=%s",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAuElEQVQ4jbWRsQ2EMAxFMwjFzULHJvR0GeAaKL2GV4jEANmBiorqOipf5ejH+Dg46b5kRYLv5x8niKNl3SQSC6fs/a4UvOamG0pxyrKs231A24+H8xKg7cdi1ukKjcTngEhcjBobT72SC0ADmjA6pyxNN/gApHPKEoklElcAHYJLDRpdjXaJNrL9FjCaNnrTTwEK0RfAl7gMsCBPH3eAzfYaWN5eDgnuqgLs8ySv5+Nr7fP0J8AvegOhkGr6AYHSEgAAAABJRU5ErkJggg=="
+                },
+                {
+                    "name": "中文维基",
+                    "url": "https://zh.wikipedia.org/w/index.php?search=%s&button=&title=Special%3ASearch"
+                },
+                {
+                    "name": "英文维基",
+                    "url": "https://en.wikipedia.org/w/index.php?search=%s&button=&title=Special%3ASearch"
+                },
+                {
+                    "name": "日本维基",
+                    "url": "https://ja.wikipedia.org/w/index.php?search=%s&button=&title=Special%3ASearch"
+                },
+                {
+                    "name": "Google Book",
+                    "url": "https://www.google.com/search?q=%s&btnG=搜索图书&tbm=bks&tbo=1&hl=zh-CN&gws_rd=ssl"
+                },
+                {
+                    "name": "中国知网",
+                    "url": "https://kns.cnki.net/KNS8/DefaultResult/Index?dbcode=CFLS&kw=%s"
+                },
+                {
+                    "name": "爱学术",
+                    "url": "https://www.ixueshu.com/search/index.html?search_type=&q=%s",
+                    "icon": "https://www.ixueshu.com/static/favicon.ico"
+                },
+                {
+                    "name": "维普",
+                    "url": "http://lib.cqvip.com/Qikan/Search/Index?from=Qikan_Search_Index/%p{isNoteHistory=1&isLog=1&indexIdentifier=U&indexKey=%s}"
+                },
+                {
+                    "name": "krugle",
+                    "url": "http://opensearch.krugle.org/document/search/#query=%s",
+                    "icon": "https://opensearch.krugle.org/media/images/favicon.ico"
+                },
+                {
+                    "name": "中国大学MOOC",
+                    "url": "https://www.icourse163.org/search.htm?search=%s",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0ZDc0ZGVlMC03ODg2LTNiNDMtYjA3Yy0xZGFmNzdiMGIyNjMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODMzRTc0MDA1NEQwMTFFN0IyOTBFMzZDRUNCNjQyM0MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODMzRTczRkY1NEQwMTFFN0IyOTBFMzZDRUNCNjQyM0MiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0ZDc0ZGVlMC03ODg2LTNiNDMtYjA3Yy0xZGFmNzdiMGIyNjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NGQ3NGRlZTAtNzg4Ni0zYjQzLWIwN2MtMWRhZjc3YjBiMjYzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+b0LPpwAAA6tJREFUeNrsm81PE0EYh9+2fJSvHlAxERAwAYkhCkRDDBjxIHoxKjdPxgPxqn+GF4KJwRAOmmhiopFoNEbxAlFUOAgBg0UhFQpiS4tAgba73a6/abeKDdDwse20u2/yZJclsLxPZ96dnRkMsiyTlsNIGg9dgC5AF6DtMLR01Qk4zoBpBTuYAlbwnZ13NvfLqSwgVnI+8A18AUPgMxiElHmtCNgobOADeA/egdFkbCk7ERAdbvAWvAbdkDGrNQHRwbrKE/AMMqxaFLA2RsAD8JC3lhEvAZEIgjegHbyCjKDWBKyNH+AO6ICI5UT8AdVtPYZECojEArgN2iBiYZcTZAO9YlABKsFB5esiUMjgQUAkFsEt0AoR/m0km49DLahRqALlwMxrF9goJsBNSHixWdPF4Qg4BRpAPShNthoQK56D6xDhUJI+gEMTOA/OgvzduEkax2OUi25P6Znjrdd6A8bKQqV573pwJ2DZt5dsv2rIvWghUfBbMrKMF7It6t2PCwEy3sqnnLVknysh72qk/vnjcu+EChClLBqz15Nz3kKSJMQt6YQL8It59NXeQK7fmSQHA7giJOxDiKsAScqkUXsjOVxmkmUJVwIJ735xE2BznCDbTBEkiEwFN0VXdQErvj00OH6avF7WzEXunrWqCph2HSPrZBn6uUC8hlFdAWVKkSNtCkiG0AXoAnQBugBdgC5AF6AL0AVoNdjL0FEKLxSUUHhq+TCF59PZYkJ6ygvobO5nC5cj0d9o6aozKSKqKbzQEDnuSyUBhq3+AMSwlsIWIiILElUbdaVP1kvk8ezsbTAjaz9lWyr4EbCOEDZpfRI0gnNKK9GOgHWEFCgimvrHLl9ZWhJNmhKwNqrbeu5L4vJV0e8mhhRY4U6A6nOCpvTcEObcEgpKfhJ8TshwEcRw8xiM36DDlEnmnOIQQckHGXPAQcGAVxsC/pdh/isjIHpI8DpIhBBZVmUOkc3Ksr2ObOMn27A1qWDnYm0wLT0vhJx3KNQ9hNVZSFna7q9zgkEKb+ocUs7Hh240Sly1gHUrssFIGeaCEKxg+ld/4tqmdZptshqmfxs2+5DoVFJ0gZjFMy0H1b88+rKsfKJsM2Yv+IiEPUlZA7bYpNnWum4GEnamRBGMEazvdoGX7BxJq7aNhycBA+AxSxwJ21L+MajEKHjEQNITWhkHLCpJ30PSA1oaCfaBu+ApEvfxNCOkZrABfwdoR9LDXE6I6P85qvHQBegCdAHajj8CDAA+KV0RpjxJTwAAAABJRU5ErkJggg=="
+                },
+                {
+                    "name": "訓詁工具書查詢",
+                    "url": "http://www.kaom.net/book_xungu8.php%p{word=%s}",
+                    "icon": "data:image/x-icon;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWzbJCls2ySJbNslSWzbIdFs2yGBbNsmEWzbJcFs2yWJbNslkWzXIXFs2yVhaNclqWzbIdFs2yZRbNcikWzbIpls2yZJbNsl4WzbJflo1yZRaNcigWzbJnls2yVRbNskqWzXITls2yV5bNsmUWzbJXFs2yQIAAAAAAAAAAFs2yQJaNsmUWzbJ0ls2ydJbNsn2WzbJ+ls2yf9aNsn/WzbJ/1s2yfpaNsn8WzbJ/Fs2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WjbJ/Fs2yfhbNsj8WzbJ/1s2yf9bNsnkWzbJjls2yUgAAAAAWzXJBFs2yaRaNsj4WzbJ+Fs2yfZbNsn6WjbJ/1s2yfxbNsn/WzbJ9Fs2yf9bNsn/WzbJ/1s2yf9pR83/bEvO/2VCzP9cN8n/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yfZbNsnmWzbJlls2yQJbNskqWzbJ1ls2yeBbNcn0WzXJ9ls2yfhbNsn/WzbJ/Fs2yf9bNsn6WzbJ/2xLzv+hi+D/187x//Tx+//28/z/8/D7/+rl+P/Ow+7/oo3g/21Mz/9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9aNsjKWzbJFFs2yUxbNsngWzbI4ls2yf9bNsn/WzbJ+Fs2yf9bNsn/WzbJ/2tKzv+3p+f/8/D7//7+/v/////////////////////////////////+/v7/8/D7/6uY4/9fO8r/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yfpbNslyWzXJZFs2yeRaNsnwWzbJ+Fs1yPxbNsn6WzbJ/1s2yf+HbNf/7Of4//////////////////7+/v/18vv/8u/6//Lv+v/49vz//v7+/////////////v7+/8Gz6v9fO8r/WzbJ/1o2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ+ls1yZhbNslOWzbJxls2ydZbNsn0WjXJ/Fo1yPxbNsn/kHfa//bz/P////////////v6/f/SyPD/kHba/21Nz/9qSM7/aknO/3JS0P+Vfdz/2tLz//7+/v///////v7+/62a5P9bN8n/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNcn8WjXJbFs1yXBbNsn4WzbJ+ls2yf9bNsn/WzbJ/3pc0//08vv///////7+/v/l3/b/hGnW/1w3yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9fO8r/qJTi//v6/f//////+vj9/4Jm1v9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yfxbNsmgWzbJcls2yf9bNsn8WzbJ/1s2yf9eOcr/0cfw///////+/v7/29Pz/2lHzf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/m4Xe//z8/v//////1s3x/146yv9bNsn/WzbJ/1s2yf9aNcn/WzbJ5ls1yVhbNsl0WzbJ/Fs2yf9bNsn/WzbJ/4Jm1v/8/P7//////+zo+P9qSc7/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/xLfr///////8/P7/e13T/1s2yf9bNsn/WzbJ/1s2yfxaNcnoWzbIWls2yXhbNsn8WzbJ/1s2yf9bNsn/wLLq////////////oYzg/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf+Pdtr//v7+//////+unOT/WzbJ/1s2yf9bNsn/WzbJ/1s2yehbNsk2WzbJHFs1yPZbNsn8WzbJ/2VCzP/s6Pn///////7+/v+YgN3/akjO/2lHzf9hPcr/WzbJ/1s2yf9bN8n/ZULM/187yv9bNsn/XDfJ/2VCzP9sS87/XDjJ/3td0//7+v3//////9jP8v9bN8n/WzbJ/1s2yf9bNsn2WzXIzls2yDxbNskmWjbJ+ls2yfxbNsn/e13T//39/v////////////z7/v/6+f3/+vj9//j3/P/18vv/6+f4/+bg9v/18/v/7en5/+3p+f/29fz/+fj9//r5/f/t6fn/9/X8//7+/v//////7+z5/2dFzf9bNsn/WzbJ9Fs2yeJbNsn0WzbJgFs2yVRbNsn6WzbJ/1s2yf+DZ9b//v7+///////////////////////////////////////////////////////////////////////////////////////////////////////9/f7/d1jS/1s2yf9bNsn/WzbJ/1s2yPZbNsk4WzbJYls2yfBbNsn/WzbJ/4Bj1f/+/v7////////////5+P3/7+v5//Ds+v/y8Pv/+Pf8//7+/v///////////////////////Pv+//Pw+//39fz/7+z5/93V8//z8Pv///////////+Lcdn/WzbJ/1s2yfxbNsn2WzbJmls2yR5bNslsWzbJ+ls2yf9bNsn/hmvX//7+/v//////2tHy/3FR0P9nRM3/Z0XN/2lHzf9tTc//im/Y//Ty+////////v7+/6CL3/9vT8//akjN/2xLzv9nRc3/XDjJ/H9i1P/59/3//////4102f9bNsn/WzbJ/Fs2yfxaNciyWzbJOFs2yVhbNsjgWzbJ+ls2yf9sS87/8u/6//////+tmuT/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9eOcn/5+H3///////9/f7/jXPZ/1s2yf9bNsn/WzbJ/1s2yf9cN8n/WzbJ/+Tf9v/9/f7/fWDU/1s1yf9bNsn/WzbJ/1s2ye5bNslEWjXIals2yd5bNsn6WzbJ/1s2yf+cht7/49z1/3dY0v9bNsn/WzbJ/1s2yf9fO8r/Yj/L/2RBy//j3fb///////7+/v+Sedv/Yj7L/187yv9cOMn/WzbJ/1s2yf9bNsn/gmbW/62b5P9gPMr/WjbJ/1s2yf9bNsn/WzbI+Fs2yUJbNsl6WjbI6ls2yNpbNsn8WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/ZELM/9bN8f/m4Pb/3db0//n3/f///////v7//+zn+P/m4fb/2tLy/5d/3P9cN8n/WjbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn6WzbJiFs2yTJbNcnYWjXJ7lo2yfJbNcn8WzbJ/1s2yf9bNsn/WzbJ/1s2yf93WNL//f3+/////////////////////////////v7+//7+///+/v//uqro/1s2yf9bNsn/WzbJ/1s3yf9dOcn/WzbJ/1s2yf9bNsn/WzbJ/1s2yfZbNsl4WzbJhls2yfJbNcn6WzXJ+Fs2yPxaNcn/WjbJ/1s2yf9aNsn/WzbJ/39i1f/+/v7////////////////////////////6+v3//v7////////Kvu3/WzbJ/1s2yf9bNsn/XDfJ/1o1yP9aNsn/WjXJ/1s2yf9bNsn/WzbJ/1s2yYhbNcmaWzbJ/1s2yf9bNsn/WjbJ/1s2yf9aNsn/WjXI+Fs2yfxbNsn/j3Xa//7+/v////////////////////////////v7/f/+/v///////8m97f9bNsn/WzfJ/1w3yf9cN8n/XDfJ/1o1yf9aNcn/WzbJ/1s2yf9bNsn/WjbInFs2yZBbNsn/WzbJ/1s2yfhaNsnwWjXJ+ls2yf9aNcj8WjXJ/1o1yf+Qd9r//v7+///////////////////////+/v7//v7+////////////t6fn/1s2yf9bNsn/WzbJ/1s2yf9aNcn/WjXJ/1s2yf9bNsn/WzbJ/1s2yf9bNsmYWjXJfls2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1o1yP9aNcn/WzXJ/3dY0v/8+/7///////////////////////7+/v/+/v7///////7+/v+kj+H/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2ybJbNslsWzbJ5ls2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/XTjJ/5Z/3P+oleL/qpjj//Tx+////////v7+/7en5/+hjN//pI/h/2pJzv9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1o1yf9bNsn/WzbJ/1s2yf9bNsn/WzbJrls1yWRbNsn8WzbJ/Fs2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9eOsr/7en5///////+/v7/jHPZ/1s2yf9aNcn/WjXJ/1s2yf9bNsn/WjXJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsmMWzbJWFs2yfhbNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/2NAy//t6fn///////7+/v+Pdtr/WzbJ/1o1yf9aNcn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yX5bNslaWzbJ/Fs2yfxbNsn/WzbJ/1s2yfxbNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsj/ZEHL/+fi9///////+/r9/35h1P9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1o1yf9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yf9aNcn6WjXIilo1yVRbNcj8WzbJ/1s2yf9bNsn/WzbJ/Fs1yP9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1o2yfRdOMn8wLLq//z8/v/d1vT/ZULM/1s2yf9bNsn/WzbJ/1s2yf9bNsj8WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsj/WzbJ/1s2yfxbNslsWjXJGFs2ydpbNsj/WzbJ/1s2yf9bNsn0WzbJ/1s2yf9bNsn/WzbJ/1s2yf9bNsn6WzXJ+ls2yf9gPMr/h2zX/2tKzv9bNsn/WzbJ/1s2yf9bNsn/WzbJ/1s2yfxbNsn/WzbJ/1s2yf9bNsn/WzXI/Fs2yfZbNsn6WzbJ5Fs1yWwAAAAAWzbJWlo2yfJbNsn4WzbJ8ls2ydJaNsnsWzbJ8ls2yfJbNsn8WzXJ/Fs2yfhaNsn/WzbJ/1s1yf9bNsn6WzXI/1s2yfxbNsn6WzbJ+ls2yPxbNsn4WzbJ+ls2yPhaNsjsWzbJ+Fs2yaxaNsnAWzbJzls2ybpbNslwWjXJEgAAAAAAAAAAWjXIJFs2yTxbNslIWzbJVFs2yYpbNsmoWzXJwFs2ybxbNsm6WzbJtlo1yKJbNsmmWzbJkls2yYRaNsmAWzXIaFo2yWhbNslYWzbJUls2yUZbNshgWzbJjlo2yXBbNsl8WzbJbls2yXBaNsk0WzXJJgAAAAAAAAAA/fwx74AAAAOAAAABgAAAAYAAAAGAAAAAgAAAAYAAAACAAAABgAAAAYAAAAGAAAABgAAAAIAAAAGAAAABgAAAAYAAAAGAAAABgAAAAIAAAAEAAAAAAAAAAAAAAACAAAAAgAAAAIAAAACAAAABgAAAAIAAAAGAAAABwAAAA/wAfv8="
+                },
+                {
+                    "name": "读秀知识",
+                    "url": "http://qw.duxiu.com/getPage?sw=%s&ecode=utf-8",
+                    "icon": "https://mycroftproject.com/updateos.php/id0/duxiu.ico"
+                },
+                {
+                    "name": "读秀书籍",
+                    "url": "http://book.duxiu.com/search?Field=all&channel=search&sw=%s&ecode=utf-8&edtype=&searchtype=1&view=0",
+                    "icon": "https://mycroftproject.com/updateos.php/id0/duxiu.ico"
+                },
+                {
+                    "name": "罗马图书馆",
+                    "url": "https://www.bibliotechediroma.it/opac/query/%s?context=catalogo",
+                    "icon": "https://www.bibliotechediroma.it/sebina/repository/sebinayou/temi/biblioteche_roma/img/favicon.png"
+                },
+                {
+                    "name": "籍合网",
+                    "url": "http://www.ancientbooks.cn/publishfulltextsearch?keyWord=%s",
+                    "icon": "http://www.ancientbooks.cn/images/favicon.ico"
+                },
+                {
+                    "name": "深圳文献港",
+                    "url": "http://m.szwxg.5read.com/search/goSearch.jspx%p{tag=qw&sw=%s}"
+                },
+                {
+                    "name": "高级检索",
+                    "url": "http://publish.ancientbooks.cn/docShuju/platformAdvanceSearchResult.jspx?libId=5%p{modelId=2&order=0&aa=&libId=5&column1=title&text1=%s&relation2=and&column2=txt&text2=&relation3=and&column3=book_title&text3=&relation4=and&column4=book_author&text4=&relation5=and&column5=book_author_arranger&text5=&relation6=and&column6=book_publisher&text6=&synonyms=on&properNouns=on&punc=on}"
+                },
+                {
+                    "name": "库问搜索",
+                    "url": "http://www.koovin.com/?q=%s",
+                    "description": "免费开源文献资源共享平台"
+                },
+                {
+                    "name": "掌桥科研",
+                    "url": "https://www.zhangqiaokeyan.com/search.html?sertext=%s"
+                },
+                {
+                    "name": "PubMed",
+                    "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%s",
+                    "icon": "https://cdn.ncbi.nlm.nih.gov/coreutils/nwds/img/favicons/favicon.ico"
+                },
+                {
+                    "name": "文津搜索",
+                    "url": "http://find.nlc.cn/search/doSearch?query=%s&secQuery=&actualQuery=%s"
+                },
+                {
+                    "name": "SCI影响因子",
+                    "url": "https://www.letpub.com.cn/index.php?page=journalapp%p{addcomment_s1_comments=&addcomment_s2_comments=&searchname=%s&addcomment_month=&addcomment_sorttype=&journalidcommentscenter=&journalnamecommentscenter=&addcomment_contributionflaghidden=}",
+                    "icon": "https://www.letpub.com.cn/images/favicon.ico"
+                },
+                {
+                    "name": "英文DOI",
+                    "url": "https://dx.doi.org/%p{hdl=%s}",
+                    "icon": "https://dx.doi.org/static/img/favicon.png"
+                },
+                {
+                    "name": "剑桥大学知识库",
+                    "url": "https://www.repository.cam.ac.uk/discover?scope=/&query=%s",
+                    "icon": "https://www.repository.cam.ac.uk/themes/Cambridge/images/favicon.ico"
+                },
+                {
+                    "name": "国学宝典",
+                    "url": "http://www.gxbd.com/#p{#entry_my_adv=%s&click(#entry_my_adv+input)}"
+                },
+                {
+                    "name": "汉语大词典",
+                    "url": "https://www.hanyudacidian.cn/#p{[type\\=search]=%s&click(#com-search-button)}"
+                },
+                {
+                    "name": "CALIS联合目录",
+                    "url": "http://opac.calis.edu.cn/opac/doSimpleQuery.do%p{condition=%s&query=(cql.anywhere=\"*%s*\")&pageno=1&pagingType=0&version=1.1&maximumRecords=50&startRecord=1}"
+                },
+                {
+                    "name": "影印古籍丛书",
+                    "url": "http://39.98.95.7:90/default/search#p{.search-query=%s&click(#search)}"
+                },
+                {
+                    "name": "以观书法",
+                    "url": "https://web.ygsf.com/#p{click(.m-navigator>li:last-child)&sleep(1000)&input.van-field__control=%s&click(.van-search__action>div)}"
+                },
+                {
+                    "name": "汉语大字典",
+                    "url": "http://www.homeinmists.com/hd/search2.html#p{#queryString1=%s&click(#queryString1+input)}"
+                },
+                {
+                    "name": "中华古籍",
+                    "url": "http://bib.ancientbooks.cn/docGuji/shuMuSearch.jspx%p{searchType=1&bookType=0&title=%s}#from{docGuji/}"
+                }
+            ]
+        },
+        {
+            "type": "新闻",
+            "icon": "newspaper",
+            "sites": [
+                {
+                    "name": "谷歌新闻",
+                    "url": "https://news.google.com/search?q=%s&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+                    "icon": "https://www.google.com/favicon.ico"
+                },
+                {
+                    "name": "百度新闻",
+                    "url": "https://news.baidu.com/ns?word=%s&tn=news&from=news&cl=2&rn=20&ct=1",
+                    "icon": "https://www.baidu.com/favicon.ico"
+                },
+                {
+                    "name": "网易-百度",
+                    "url": "https://www.baidu.com/s?wd=%s%20site%3Anews.163.com%20",
+                    "icon": "https://news.163.com/favicon.ico",
+                    "match": "site%3Anews\\.163\\.com"
+                },
+                {
+                    "name": "腾讯新闻",
+                    "url": "https://www.sogou.com/sogou?site=news.qq.com&query=%s",
+                    "icon": "https://news.qq.com/favicon.ico"
+                },
+                {
+                    "name": "凤凰新闻",
+                    "url": "https://so.ifeng.com/?q=%s&c=1"
+                },
+                {
+                    "name": "CNN",
+                    "url": "https://edition.cnn.com/search/?q=%s"
+                },
+                {
+                    "name": "BBC",
+                    "url": "https://www.bbc.co.uk/search?q=%s"
+                },
+                {
+                    "name": "今日头条",
+                    "url": "https://www.toutiao.com/search/?keyword=%s"
+                }
+            ]
+        },
+        {
+            "type": "Github",
+            "icon": "fa-brands fa-github  ",
+            "match": "github\\.com",
+            "selectLink": true,
+            "selectPage": true,
+            "openInNewTab": true,
+            "sites": [
+                {
+                    "name": "页面镜像 - Fastgit",
+                    "url": "%u.replace(/https:\\/\\/github\\.com/,\"https://hub.fastgit.xyz\")",
+                    "match": "https:\\/\\/github\\.com",
+                    "hideNotMatch": true
+                },
+                {
+                    "name": "Raw镜像 - Fastgit",
+                    "url": "%t.replace(/raw\\.githubusercontent\\.com/,\"raw.fastgit.org\").replace(/github.com(.*)\\/blob\\/(.*)/,\"raw.fastgit.org$1/$2\")",
+                    "match": "github.com.*\\/blob\\/",
+                    "hideNotMatch": true
+                },
+                {
+                    "name": "Assets镜像 - Fastgit",
+                    "url": "%t.replace(/github\\.githubassets\\.com/,\"assets.fastgit.orgz\")",
+                    "match": "github\\.githubassets\\.com",
+                    "hideNotMatch": true
+                },
+                {
+                    "name": "Download镜像- Fastgit",
+                    "url": "%t.replace(/github\\.com(.*\\/download\\/)/,\"download.fastgit.org$1\")",
+                    "match": "github\\.com.*\\/download\\/",
+                    "hideNotMatch": true
+                },
+                {
+                    "name": "Archive镜像- Fastgit",
+                    "url": "%t.replace(/github\\.com(.*\\/archive\\/)/,\"download.fastgit.org$1\")",
+                    "match": "github\\.com.*\\/archive\\/",
+                    "hideNotMatch": true
+                },
+                {
+                    "name": "Ghproxy镜像加速",
+                    "url": "https://ghproxy.com/%t"
+                }
+            ]
+        },
+        {
+            "type": "以图搜图",
+            "icon": "eye",
+            "selectImg": true,
+            "openInNewTab": true,
+            "sites": [
+                {
+                    "name": "谷歌以图搜图",
+                    "url": "https://www.google.com/searchbyimage?sbisrc=cr_1_0_0&image_url=%T"
+                },
+                {
+                    "name": "二维码解码",
+                    "url": "https://hoothin.com/qrdecode#%t",
+                    "icon": "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik02ODcuNTQyNzYzIDQ1My4wNjM2NzRzLTEyLjY1OTMzOS0zLjc5NzgwMi0xNC4wNjU5MzItMy43OTc4MDJINDAyLjcwNzYzN3YtNjIuNTkzMzk4YTEwNy4xODI0MDMgMTA3LjE4MjQwMyAwIDAgMSAxMDkuNzE0MjcxLTEwNC41MDk4NzUgMTA5LjI5MjI5MyAxMDkuMjkyMjkzIDAgMCAxIDEwMi42ODEzMDQgNjkuNDg1NzA0aDY4LjUwMTA5YTE3NC4yNzY4OTkgMTc0LjI3Njg5OSAwIDAgMC0xNzEuNjA0MzcyLTEzMi4yMTk3NjJjLTk2LjkxNDI3MiAwLTE3NS41NDI4MzMgNzQuODMwNzU5LTE3NS41NDI4MzMgMTY3LjI0MzkzM3Y2NS45NjkyMjJhNjIuODc0NzE3IDYyLjg3NDcxNyAwIDAgMC00My44ODU3MDkgNTkuMzU4MjM0djIyOS44MzczMzFhNjQuMjgxMzEgNjQuMjgxMzEgMCAwIDAgNjUuODI4NTYzIDYyLjczNDA1N2gzMDcuMTk5OTU4QTY0LjI4MTMxIDY0LjI4MTMxIDAgMCAwIDczMS40Mjg0NzEgNzQxLjgzNzI2MVY1MTEuOTk5OTNhNjIuODc0NzE3IDYyLjg3NDcxNyAwIDAgMC00My44ODU3MDgtNTguOTM2MjU2bS03Mi4yOTg4OTEgMTQ0LjMxNjQ2NGwtMTAwLjI5MDA5NyA5NS41MDc2NzlhMzQuNzQyODUyIDM0Ljc0Mjg1MiAwIDAgMS00Ni42OTg4OTQgMGwtNTkuMzU4MjM0LTU0Ljk5Nzc5NWEzMC42NjM3MzIgMzAuNjYzNzMyIDAgMCAxIDAtNDQuNDQ4MzQ1IDM0LjYwMjE5MyAzNC42MDIxOTMgMCAwIDEgNDYuNTU4MjM1IDBsMzUuMzA1NDkgMzIuMzUxNjQ0IDc4LjA2NTkyMy03My4wMDIxODhhMzQuNzQyODUyIDM0Ljc0Mjg1MiAwIDAgMSA0Ni41NTgyMzYgMCAzMC44MDQzOTEgMzAuODA0MzkxIDAgMCAxIDAgNDQuNDQ4MzQ1TTczLjE0Mjg0NyAyOTIuNTcxMzg4di03My4xNDI4NDdBMTQ2LjI4NTY5NCAxNDYuMjg1Njk0IDAgMCAxIDIxOS40Mjg1NDEgNzMuMTQyODQ3aDczLjE0Mjg0N1YwaC03My4xNDI4NDdBMjE5LjI4Nzg4MiAyMTkuMjg3ODgyIDAgMCAwIDAgMjE5LjQyODU0MXY3My4xNDI4NDd6TTczMS40Mjg0NzEgNzMuMTQyODQ3aDczLjE0Mjg0N2ExNDYuMjg1Njk0IDE0Ni4yODU2OTQgMCAwIDEgMTQ2LjI4NTY5NCAxNDYuMjg1Njk0djczLjE0Mjg0N2g3My4xNDI4NDd2LTczLjE0Mjg0N0EyMTkuMjg3ODgyIDIxOS4yODc4ODIgMCAwIDAgODA0LjU3MTMxOCAwSDczMS40Mjg0NzF6TTI5Mi41NzEzODggOTUwLjg1NzAxMmgtNzMuMTQyODQ3QTE0Ni4yODU2OTQgMTQ2LjI4NTY5NCAwIDAgMSA3My4xNDI4NDcgODA0LjU3MTMxOFY3MzEuNDI4NDcxSDB2NzMuMTQyODQ3YTIxOS4yODc4ODIgMjE5LjI4Nzg4MiAwIDAgMCAyMTkuNDI4NTQxIDIxOS40Mjg1NDFoNzMuMTQyODQ3ek05NTAuODU3MDEyIDczMS40Mjg0NzF2NzMuMTQyODQ3YTE0Ni4yODU2OTQgMTQ2LjI4NTY5NCAwIDAgMS0xNDYuMjg1Njk0IDE0Ni4yODU2OTRINzMxLjQyODQ3MXY3My4xNDI4NDdoNzMuMTQyODQ3YTIxOS4yODc4ODIgMjE5LjI4Nzg4MiAwIDAgMCAyMTkuNDI4NTQxLTIxOS40Mjg1NDFWNzMxLjQyODQ3MXogbTAgMCIgZmlsbD0iIzNEOEVGQSI+PC9wYXRoPjwvc3ZnPg=="
+                },
+                {
+                    "name": "谷歌翻译图片",
+                    "url": "https://translate.google.com/?op=images#p{input#ucj-11=%i}"
+                },
+                {
+                    "name": "WhatAnime",
+                    "url": "https://trace.moe/?url=%T",
+                    "icon": "https://trace.moe/favicon.png"
+                },
+                {
+                    "name": "SauceNAO",
+                    "url": "https://saucenao.com/search.php?db=999&url=%t"
+                },
+                {
+                    "name": "👁️ Picviewer CE+ 浏览",
+                    "url": "javascript:window.postMessage({messageID:'pv-0.5106795670312598',src:'%T',data:[],command:'open',buttonType:'actual'},'*');",
+                    "nobatch": true
+                },
+                {
+                    "name": "Lunapic",
+                    "url": "https://www.lunapic.com/editor/index.php?action=url&url=%t",
+                    "description": "使用 Lunapic 编辑图片",
+                    "nobatch": true
+                },
+                {
+                    "name": "Pixlr easy",
+                    "url": "https://pixlr.com/x/#p{click(#home-open-url)&#image-url=%t&click(.dialog>.buttons>a.button.positive)}",
+                    "description": "使用 Pixlr easy 编辑图片",
+                    "nobatch": true
+                },
+                {
+                    "name": "IQDB",
+                    "url": "https://iqdb.org/?url=%t"
+                },
+                {
+                    "name": "Yandex以图搜图",
+                    "url": "https://yandex.com/images/search?source=collections&rpt=imageview&url=%T"
+                },
+                {
+                    "name": "3D IQDB",
+                    "url": "https://3d.iqdb.org/?url=%t"
+                },
+                {
+                    "name": "百度以图搜图",
+                    "url": "https://graph.baidu.com/details?isfromtusoupc=1&tn=pc&carousel=0&promotion_name=pc_image_shituindex&extUiData%5bisLogoShow%5d=1&image=%T"
+                },
+                {
+                    "name": "必应以图搜图",
+                    "url": "https://www.bing.com/images/search?view=detailv2&iss=sbi&form=SBIVSP&sbisrc=UrlPaste&q=imgurl:%T"
+                },
+                {
+                    "name": "TinEye",
+                    "url": "https://www.tineye.com/search?url=%T"
+                },
+                {
+                    "name": "搜狗以图搜图",
+                    "url": "https://pic.sogou.com/ris?query=%T"
+                },
+                {
+                    "name": "KarmaDecay",
+                    "url": "http://karmadecay.com/%t",
+                    "icon": "data:image/ico;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAT3kAZW2FAIl2aQBNg44AZ4mdAImfogCfn58Ap7K8AL/f3wDq4NYA0ePsAOjl4wDm6usA7+zpAO/s6gDv7ekA8vDtAPXz8gDz8/MA9fTxAPj39QD4+PUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWBwQEBxYWFhYWFhYWFhYWFgQKCgQWFhYWFhYWFhYWFhYECQkEFhYBARYWFhYWFhYWBwQEBxYWAQABFhYWFhYWFhYWFhYWFhYBAAEWFhYWFhYHBAQHFhYWFgEAAQUCAgUIBAoKBBYWFhYWAQALDg4LAggJCQQWFhYWFgUMDQ4NDwwFBAQHFhYWFhYCEhAQEBASAhYWFhYWFhYWAhIRExMREgIEBAcWFhYWFgUMFRQUFAwGCgoEFhYWFhYIAwwSEgwDCAkJBBYWFhYWFggFAwMFCAcEBAcWFhYWFhYWFhYWFhYWFhYWFv//AAD/4QAA/+EAAP/hAACf4QAAj/8AAMfhAADgAQAA8AEAAPABAADwDwAA8AEAAPABAADwAQAA+AEAAP//AAA="
+                },
+                {
+                    "name": "360以图搜图",
+                    "url": "https://st.so.com/stu?imgurl=%t"
+                },
+                {
+                    "name": "二维码解析-微微",
+                    "url": "https://jiema.wwei.cn/url.html#p{#text-dm-url=%t&click(#jmqr_url_btn)}",
+                    "nobatch": true
+                },
+                {
+                    "name": "二维码解析-ZXing",
+                    "url": "https://zxing.org/w/decode?full=true&u=%t",
+                    "nobatch": true
+                },
+                {
+                    "name": "二维码解析-兔子",
+                    "url": "https://tuzim.net/decode/#p{input.ant-input=%t&click(button.ant-input-search-button)}",
+                    "nobatch": true
+                },
+                {
+                    "name": "二维码解析-SoJson",
+                    "url": "https://www.sojson.com/qr/deqr.html#p{#url=%t&click([lay-filter\\=\"subQr\"])}",
+                    "nobatch": true
+                },
+                {
+                    "name": "ImgOps",
+                    "url": "https://imgops.com/%b"
+                },
+                {
+                    "name": "Photopea",
+                    "url": "https://www.photopea.com/#%7B%22files%22:%5B%22%t%22%5D,%22environment%22:%7B%7D%7D",
+                    "nobatch": true
+                }
+            ]
+        },
+        {
+            "type": "社交",
+            "icon": "users",
+            "sites": [
+                {
+                    "name": "V2ex",
+                    "url": "https://www.sov2ex.com/?q=%s",
+                    "icon": "https://sov2ex.oss-cn-shanghai.aliyuncs.com/assets/favicon/apple-icon-57x57.png"
+                },
+                {
+                    "name": "推特",
+                    "url": "https://twitter.com/search?q=%s"
+                },
+                {
+                    "name": "百度贴吧",
+                    "url": "https://tieba.baidu.com/f/search/res?ie=utf-8&qw=%s",
+                    "keywords": "kw|qw",
+                    "match": "^https?://tieba\\.baidu\\.com/f"
+                },
+                {
+                    "name": "新浪微博",
+                    "url": "https://s.weibo.com/weibo?q=%s"
+                },
+                {
+                    "name": "脸书",
+                    "url": "https://www.facebook.com/search/results.php?q=%s"
+                }
+            ]
+        },
+        {
+            "type": "APP",
+            "icon": "archive",
+            "sites": [
+                {
+                    "name": "Play",
+                    "url": "https://play.google.com/store/search?q=%s"
+                },
+                {
+                    "name": "Coolapk",
+                    "url": "https://www.baidu.com/s?wd=%s%20site%3Acoolapk.com",
+                    "match": "coolapk\\.com"
+                },
+                {
+                    "name": "Apkpure",
+                    "url": "https://apkpure.com/cn/search?q=%s"
+                },
+                {
+                    "name": "APKMirror",
+                    "url": "https://www.apkmirror.com/?s=%s"
+                },
+                {
+                    "name": "Chrome Store",
+                    "url": "https://chrome.google.com/webstore/search/%s",
+                    "icon": "https://www.google.com/images/icons/product/chrome_web_store-32.png"
+                },
+                {
+                    "name": "牛麦子",
+                    "url": "https://niumaizi.cn/?s=%s",
+                    "icon": "http://niumaizi.cn/wp-content/uploads/2022/01/%E7%89%9B%E9%BA%A6%E5%AD%90-%E5%89%AF%E6%9C%AC.jpg"
+                },
+                {
+                    "name": "MSDN, 我告诉你",
+                    "url": "https://msdn.itellyou.cn/?keyword=%s"
+                },
+                {
+                    "name": "腾讯软件中心",
+                    "url": "https://pc.qq.com/?keyword=%s",
+                    "icon": "https://pc1.gtimg.com/finance/softweb/fav/favicon_32x32.ico"
+                }
+            ]
+        },
+        {
+            "type": "购物",
+            "icon": "shopping-cart",
+            "sites": [
+                {
+                    "name": "淘宝",
+                    "url": "https://s.taobao.com/search?q=%s",
+                    "icon": "https://www.taobao.com/favicon.ico"
+                },
+                {
+                    "name": "京东",
+                    "url": "https://search.jd.com/search?keyword=%s&enc=utf-8",
+                    "icon": "https://www.jd.com/favicon.ico"
+                },
+                {
+                    "name": "苏宁",
+                    "url": "https://search.suning.com/%s/"
+                },
+                {
+                    "name": "亚马逊",
+                    "url": "https://www.amazon.cn/s/ref=nb_sb_noss?field-keywords=%s",
+                    "icon": "https://www.amazon.cn/favicon.ico"
+                },
+                {
+                    "name": "天猫",
+                    "url": "https://list.tmall.com/search_product.htm?q=%s"
+                },
+                {
+                    "name": "值得买",
+                    "url": "https://search.smzdm.com/?c=home&s=%s"
+                },
+                {
+                    "name": "当当网",
+                    "url": "https://search.dangdang.com/?key=%s"
+                },
+                {
+                    "name": "1688",
+                    "url": "https://s.1688.com/selloffer/offer_search.htm?keywords=%s",
+                    "charset": "gbk"
+                },
+                {
+                    "name": "慢慢买",
+                    "url": "https://ss.manmanbuy.com/Default.aspx?key=%s",
+                    "charset": "GBK"
+                }
+            ]
+        },
+        {
+            "type": "福利",
+            "icon": "female",
+            "sites": [
+                {
+                    "name": "JAVlibrary",
+                    "url": "http://www.javlibrary.com/cn/vl_searchbyid.php?keyword=%s",
+                    "icon": "data:image/x-icon;base64,AAABAAEAEBAAAAAAIAA3AQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAP5JREFUeJylkzFKBDEUhr+3SQZdF8vFxmobwT2AtXgHCzsbQbyANuJVbLyAnR7BTlFBrGwUsRBcGdckz2JFd5zMzA7+Vf6Q9+XPSyIfc2fKP9RJznYNZncZpBkgpQQC2fvGjx3Pn7dLIP2seds6gD6N0YccgHj63AiwpQSrPbCC374injy2BHQN7mJtMnbp/v5VYZXZXPo1ruIKsg6yspAGYKeKTBpgj4fo7WgGQEUAffksllQC+g73uk7YukRHAfGKRiXs3dQApurtwYBwdI8Me4gAi5a4f1c+UjroROZwUPAhASj2II/w5iEP4PXbB/zOdeWTLv+FlprttdToC7F9R7urpLwHAAAAAElFTkSuQmCC"
+                },
+                {
+                    "name": "JAVbus",
+                    "url": "https://www.javbus.com/search/%s",
+                    "icon": "data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAMxWAADM2wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzNsAAMxWAADM2wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM2wAAzP8AAMz/AADM/wAAzP8AAMz/AADL/wAAzP8BAcz/AADL/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/BATN/0VF2v+Jief/kZHp/15e3/8PD8//AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADL/0hI2v/q6vv//Pz+//b2/f/6+v7/iIjn/wUFzf8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wEBzP+YmOr//////4uL6P9LS9v/4eH5/9zc+P8dHdL/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8CAsz/Skrb/39/5v8oKNT/DAzO/7+/8v/t7fv/Li7V/wAAy/8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAy/8AAMz/AADM/w0Nz/++vvL/7e38/zAw1v8AAMv/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8NDc//vr7y/+3t+/8wMNb/AADL/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/DQ3P/76+8v/t7fv/MDDW/wAAy/8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/w0Nz/++vvL/7e37/zAw1v8AAMv/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8NDc//urrx/+jo+v8vL9X/AADL/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/BATN/0BA2f9QUNz/EBDP/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMv/AADL/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzNsAAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzNsAAMxWAADM2wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzP8AAMz/AADM/wAAzNsAAMxWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+                },
+                {
+                    "name": "草榴",
+                    "url": "https://www.google.com/search?q=site:www.t66y.com %s",
+                    "icon": "data:image/x-icon;base64,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",
+                    "nobatch": true
+                },
+                {
+                    "name": "Jable",
+                    "url": "https://jable.tv/search/%s",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmklEQVQ4jWP4m9xX9y+p9+e/pL7/pOHen3+T++oYyNMMxz8ZKND8/19S33/CBmRM+v9v3dH//5qWkmlA/vT///////9v8d5RAxbvoacByf0IdvcaiAEzt5FgwPxd//89efP/351n////+v3//5uP///lTCXBgKKZkEDbcOz/vwW7///LnUZBSiSAKcxMvT8ZyM/OfT//J/fVAQB8gvyNVegtUAAAAABJRU5ErkJggg==",
+                    "nobatch": true
+                },
+                {
+                    "name": "PornHub",
+                    "url": "https://cn.pornhub.com/video/search?search=%s",
+                    "icon": "data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABorAAACAwAAwP8AAG+5AAA0VgAAUYkAAInkAAA/aQAAMFEAAJf/AABZlAAAmv8AAGSnAAAaLAAAERwAAKP/AABHZAAABAcAAC0xAACp/wAArP8AALL/AABDcAAAbowAAI/uAAAKEAAAht4AALv/AAAtSwAAiOEAAI3sAACV/wAAmP8AAJv/AAABAQAAnv8AAHrHAABlpwAA//8AAND/AACh/wAAiOIAAC9PAABqsgAApP8AAEVkAABJegAAp/8AADFSAACq/wAAGSoAAAECAACt/wAAM1UAAIjjAAA+aAAAfcgAALb/AAAdMAAAT4MAADpjAABAawAAuf8AAAsQAAC//wAAAAYAAML/AAADBgAACQ4AAMX/AACW/wAAmf8AADdcAACc/wAAn/8AABAcAABRhwAAov8AAIXdAADX/wAAqP8AAKv/AACQ8AAAWI0AAC5NAACx/wAAIEMAALT/AACF3gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISAxISEhISCIiSEgMIkhICkpWLSBIIUg1MEcgEDUiCk4ZCAQUSCQiMTwUNQ0xHxBSTwAvQ0sQSgAzWBw4AFkyUSoABjpOPykANihQCwA3UVEHAjRCRVQyD0wuETs0B1FRNyNVGAkAJh0CGkASAgdRUR4ALCdOAD0BVUFGTQA3UVIbAEQTAAA5AA4/Az4AWTJOUxcFV0klNSs8FDUNMR8QCkoWFhZYNSEVMEcgEDUiCkhIDAwMSEhIIiJISAwiSEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                    "nobatch": true
+                },
+                {
+                    "name": "JavDB",
+                    "url": "https://javdb.com/search?q=%s.replace(/\\-/,\"_\")"
+                },
+                {
+                    "name": "JavMenu",
+                    "url": "https://javmenu.com/search?wd=%s",
+                    "icon": "https://javmenu.com/assets/images/logo.png",
+                    "match": "^https://javmenu\\.com/.*search"
+                },
+                {
+                    "name": "MissAV",
+                    "url": "https://missav.com/search/%s",
+                    "icon": "https://cdn26.akamai-content-network.com/img/favicon.ico"
+                },
+                {
+                    "name": "nhentai",
+                    "url": "https://nhentai.net/search/?q=%s"
+                },
+                {
+                    "name": "ExHentai",
+                    "url": "https://exhentai.org/?f_search=%s"
+                }
+            ]
+        },
+        {
+            "type": "下载",
+            "icon": "download",
+            "sites": [
+                {
+                    "name": "海盗湾",
+                    "url": "https://thepiratebay.org/search/%s",
+                    "icon": "data:image/jpeg;base64,AAABAAEAEBAAAAAAIAA2AgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgCAAAAkJFoNgAAAf1JREFUeJx9kj9r8nAQxy8xLQatGmPtIoiigoKCoAZHyeQutEtBHHRpl7yELq6+AP+8AIcWOxURQRzMIDhEyeLilIKDQYUg+eWeIT48VujzWe4Ovtzd9zgKEeEvl/kVFEXZCWMHVVUlSTIMg6bpK6ndpV6vPz4+nmtE7Pf7v/W2qVQqtvI8gWHOyc3NDSGE4zhCyH6/BwDLshDx9vbWFvxYIJ1Oz+fz5+fnXq8ny3KtVnt/f282m5f2mMtFWZblef50Or2+vjqdTtM0X15eFEWx5/zzhIjtdtsuvV7v5cy7uzuHwwEAhULhdDoh4vVNdF0Ph8MulwsAEomEYRiEEAA4Ho9nD8vlUpIk0zTtToIg5PN5n88HAMViURAEjuMAIBgMMgxDCKHG43GpVHp7e3O73Q8PDxzHHQ4H0zTtVVmWpWmapulcLjcYDKbTKTMcDgFgPB5blhWJRDKZjCiKqVTKPvRut1utVqqqdrvdVquVTqepr6+vz89PRVEajcZiseh0OtvtNhAIxONxTdMMw4jFYqFQ6Pv7W9M0QgiFiJqmJZNJn88XjUbv7+89Hk8ikbAsS5ZlVVV5ns9msx8fH6IoVqtVQMT9fu/3+yVJ0nUdf6Lr+mQyeXp6AoDZbIaIgIimaY5Go+12i7+w2WzK5fJ6vUZE6j8vfQki2h/+B8UpLqpv9VygAAAAAElFTkSuQmCC"
+                },
+                {
+                    "name": "谷歌搜索",
+                    "url": "https://cse.google.com/?q=%s&newwindow=1&cx=006100883259189159113%3Atwgohm0sz8q",
+                    "icon": "https://www.google.com/favicon.ico"
+                },
+                {
+                    "name": "BTDigg",
+                    "url": "https://btdig.com/search?q=%s"
+                },
+                {
+                    "name": "Btsow",
+                    "url": "https://btsow.com/search/%s",
+                    "icon": "https://btsow.bar/app/bts/View/img/favicon.ico",
+                    "match": "btsow\\..*/search/"
+                },
+                {
+                    "name": "torrentkitty",
+                    "url": "https://www.torrentkitty.app/search/%s"
+                },
+                {
+                    "name": "idope",
+                    "url": "https://idope.se/torrent-list/%s",
+                    "icon": "https://idope.se/static/search/pc/img/favicon.ico"
+                },
+                {
+                    "name": "limetorrents.co",
+                    "url": "https://www.limetorrents.co/search/all/%s"
+                },
+                {
+                    "name": "limetorrents.asia",
+                    "url": "https://www.limetorrents.asia/search/all/%s"
+                },
+                {
+                    "name": "limetorrents.pro",
+                    "url": "https://www.limetor.pro/search/all/%s"
+                },
+                {
+                    "name": "cdsoso",
+                    "url": "https://www.cdsoso.cc/searches-%s-hot-1-null.html"
+                },
+                {
+                    "name": "zimuku",
+                    "url": "http://zimuku.org/search?q=%s",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABNVBMVEUbbZ3///8ZcKMDXpMBXZIUbKAALU0MY5b3+fo+WWkQZpgab6EXbJ37/P0OaJwAW5EHYZVwhpQKOFMXbqESa58bbZ4RaJsNZpoVa50WapsBV4v09/rz8/Jrnrxlm7wYcaempKQAXJULYZSDh4oKWooATYQ3YnpXaHIiU3ANSm0JRWc1U2UPRWQAPWQRO1QFM08BHzL1/P/5+fns8vbn7fP99PDf6O7W4+zd4+bl3dnK1Nmpx9m5yNGHtdCArcdbmLtYkrWjq7C4saw4fqgnd6YJaKBMgJ8oc58gb50AY51zjJuFkpmLkpeZlZM+c5MoapEYX4lCa4N8foBmdn9OanoAQ3oJTXVOZXMeU3M/WmpDW2k/WWkrUGYFQGJeX2AqSVsANlsiRVpFTE86Q0cAIUMAEjcAGC7yObe2AAABRElEQVQ4y62R53qCMBRAuaBiUxBaEdzbWuvs3nvvvfd8/0dobnBUaOyfnl/JPYd8QIQfKNo8RBWBj6QCLGg9An0OALZM11yRWlzO0KIgtVFsLwOPE4UFWW5QCQqIxg0e+9vBl8/JB51WO0EpJTqw6HSEBQrB5UZE7kLX6fTGfgdrNX14Ck7ye7mzEj0Byeajy65gOCBb6Bkhc8Ud4PEdyEOtNsjwvcbRP12xxzsEgyJiZBZRrzVk9G7I+jj6t2oq9KuP7KCebRCx+5Y1T4sC9enPXcneaZ4w89Og+pvEaBAfbW5UgGO8TmkCuAx5MYj9EYSPinf3fTbPYwAHZXt9e32eq7CPDRveFhkVYGCzuTEClutneDAIOIb/GBBCov4eAUkuJZLQI9CngHFh8E5I2EFd5ASRbdST7yQkcDD3i+X6i+nw36+CIHmvULjlAAAAAElFTkSuQmCC"
+                },
+                {
+                    "name": "射手网(伪)",
+                    "url": "https://assrt.net/sub/?searchword=%s"
+                },
+                {
+                    "name": "sub HD",
+                    "url": "https://subhd.la/search/%s",
+                    "icon": "https://img.huo720.com/favicon-32x32.png"
+                },
+                {
+                    "name": "Subscene",
+                    "url": "https://subscene.com/subtitles/searchbytitle:p{query=%s}"
+                },
+                {
+                    "name": "R3SUB",
+                    "url": "https://r3sub.com/search.php?s=%s"
+                },
+                {
+                    "name": "Torrentz2",
+                    "url": "https://www.torrentz2.xyz/?q=%s"
+                },
+                {
+                    "name": "Torrentz2k",
+                    "url": "https://torrentz2k.xyz/search/:p{q=%s&category=all}"
+                },
+                {
+                    "name": "1337x.to",
+                    "url": "https://www.1377x.to/search/%s/1/"
+                },
+                {
+                    "name": "Torlock",
+                    "url": "https://www.torlock2.com/all/torrents/%s.html"
+                },
+                {
+                    "name": "TD",
+                    "url": "https://www.torrentdownloads.me/search/?search=%s"
+                },
+                {
+                    "name": "rarbgprx",
+                    "url": "https://rarbgprx.org/torrents.php?search=%s"
+                },
+                {
+                    "name": "rarbgproxy",
+                    "url": "https://rarbgproxy.org/torrents.php?search=%s"
+                },
+                {
+                    "name": "kickass(镜像1)",
+                    "url": "https://kat.sx/search.php?q=%s",
+                    "icon": "https://kat.sx/kastatic/favicon.ico"
+                },
+                {
+                    "name": "kickasstorrents",
+                    "url": "https://kickasstorrents.to/usearch/%s"
+                },
+                {
+                    "name": "kickass1.to",
+                    "url": "https://kickass1.to/usearch/%s/"
+                },
+                {
+                    "name": "kat.am",
+                    "url": "https://kat.am/usearch/%s/"
+                },
+                {
+                    "name": "kickasstorrent.cr",
+                    "url": "https://kickasstorrent.cr/usearch/%s/"
+                },
+                {
+                    "name": "6v电影",
+                    "url": "https://www.hao6v.tv/e/search/index.php%p{show=title%2Csmalltext&tempid=1&keyboard=%s&tbname=article}",
+                    "charset": "GBK"
+                }
+            ]
+        },
+        {
+            "type": "ACG",
+            "icon": "gamepad",
+            "sites": [
+                {
+                    "name": "nyaa.si",
+                    "url": "https://nyaa.si/?f=0&c=0_0&q=%s",
+                    "icon": "https://nyaa.si/static/favicon.png"
+                },
+                {
+                    "name": "动漫花园",
+                    "url": "https://share.dmhy.org/topics/list?keyword=%s",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC1ElEQVR4nCXTyY7cRACA4b9c5a3tdi8z6e4JsygzTKJIcwJxyTPwfDwJnDjNBQgicCFESiRamSW9jt2r7barXBz43uETP02srSws04JD7tBUPv0RtHwAGC8tgxC+fyV4mMPNAMZryy9Lwd2TRu01VAeYTva8+e6YsoDbv1LiqMdun+HJkJeXHlHT8CJy+JxazjoOL2rBeC5QsxWkU8siaxjfafqx4OV1F7B0vA6ykdS1ZaYl/ZZhGCkeU83bj5pdblGzZcFwFHJ+McBRmnRnCbFIqSiNBXPAOIJ3D4ZAKk5VzqxUBL2Q/SJHbfca12wJByEEClNpssaQaUGaHohcwdmRywKXNKv48aHg8qsu89UWmgbneNgmLeHnX6fcTyzSkRS1x+0fcz5/qdkeJFFXIQr4+EmzLRLefdiQO22c0wRV19AKY6Ijh0KDdOH+3wkXF22+vW7DwfL7+wWLDBrj8eabFunGMF8tifMYB8ANBYd8QSM0xhquzk+oVw1uU+DFFiE6CNenn0ieJZrLkU9CyJFyUSjLdLzm9NmAr08UERWTnWCyXbOpz+j4lkHHkEQtzp9LTA1uy2KDkNqxqDKzXA18Li5CdjuN9jzu7kp6SUIImHXDsB3QTqB0DOVBMh8f2G+h7AWoOBBcn4ek2YFKeJCDFgIAzwKOZK/hyyMsVxnrrOLm9Qjh7OiXCnW/2PG87YGS1AZkY0iOFPapAqD2NL/9uSQXCa7oEokNw5Fks4tQyqB6wza3759wNLy+iYmkR7XLKfGQLpjG5eqqy9Oqpt2SXJ/3iY3huC/5NN6jAgkngx7T6YIo8FGqIokUs6xmU0CrbXl1EsDAASnAVJSVQgNRO8DphJZ+1wFASuh0PPbZmtNRl7d/PzDNGkoLbvh/z9z4PK5hNsnoJBLxwz/Wrraa+RPYpiA2UFiN348BeBznWEcTBz6HqqRxXOLQ5fTYJ+pI/gNDt17HeSMTvQAAAABJRU5ErkJggg=="
+                },
+                {
+                    "name": "Tokyotosho",
+                    "url": "https://www.tokyotosho.info/search.php?terms=%s"
+                },
+                {
+                    "name": "Mikan",
+                    "url": "http://mikanani.me/Home/Search?searchstr=%s"
+                },
+                {
+                    "name": "＊MioBT＊",
+                    "url": "http://www.miobt.com/search.php?keyword=%s",
+                    "icon": "http://www.miobt.com/images/favicon/miobt.ico"
+                },
+                {
+                    "name": "shana project",
+                    "url": "https://www.shanaproject.com/search/?title=%s"
+                },
+                {
+                    "name": "简单动漫",
+                    "url": "https://www.36dm.com/search.php?keyword=%s"
+                },
+                {
+                    "name": "KOTOMI RSS",
+                    "url": "https://moe4sale.in/?kw=%s"
+                },
+                {
+                    "name": "ACG.RIP",
+                    "url": "https://acg.rip/?term=%s"
+                },
+                {
+                    "name": "Sukebei",
+                    "url": "https://sukebei.nyaa.si/?f=0&c=0_0&q=%s",
+                    "icon": "data:image/png;base64,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"
+                },
+                {
+                    "name": "Glodls",
+                    "url": "https://glodls.to/search_results.php?search=%s"
+                },
+                {
+                    "name": "AniDex",
+                    "url": "https://anidex.info/?q=%s",
+                    "icon": "data:image/ico;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWiwAAG1IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2PeQti3vsaX7niAQE3VgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2Yggdi6P85z///Qq7n/wMDZYsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOmggdh6/84zP//Sr7s/xUuongAAAAAAAAAAAAAAAAAAAAAAAAAAzI0OEpKTVF8QUNHfBkbHUsAAAAAFRy8VTaF5f81zf//Sr7v/xMoqoIAAAAAAAAAAAAAAAAAAAAAODo9RXx+gNynpJ//ubOr/6+qov+HhIH/R0lKz2Zmgdra5d3/Xrru/w8ntYIAAAAAAAAAAAAAAAAAAAAAQEJFP56dnf/t387///Ld///14f//9uL//O7Z/7ywov+iopz/dniT1R4XwF0AAAAAAAAAAAAAAAAAAAAAAAAAEJSWl9n55tH///DW///s1f//69P//+vT///u2f//+N//uaqZ/zI0NNAAAAAAAAAAAAAAAAAAAAAAAAAAAFNZX5bRx73//+vL///nyv//48T//+LC///jw///5cj//+zT//3jxf9wa2b/AQMGSwAAAAAAAAAAAAAAAAAAAAB+hYv07NfD///ft///163//9Kj///RoP//0qP//9er///euv//6cb/mIl8/xQbIH0AAAAAAAAAAAAAAAAAAAAAhI2U+u/TvP//zpn//8uW///Mmf//zZv//82a///Ll///z5z//9uu/5yJe/8ZIih+AAAAAAAAAAAAAAAAAAAAAGVweKndx7r//8mR///UqP//16///9mz///YsP//1Kj//9Gf///Ej/+AdG7/Bw0SSwAAAAAAAAAAAAAAAAAAAAABBwocrq6w5f/Kp///3rj//+XI///jx///4sX//+LB///crv/RoID/VFlc4wAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAGFrb1TCuLX/+sKl///bwf//7tv//+vV//7Tsv/apYn/eXd3/xkgJEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYmxxWKqnqN3OraL+2ayd/9Gllf+xlIr9eHp80ScvM0MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeb3+GpIiUmPV9io/uUWFokwAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//kAAP/wAAD/4AAA/8EAAPCDAADABwAAgA8AAAAfAAAADwAAAA8AAAAPAAAADwAAAB8AAIAfAADAPwAA4H8AAA=="
+                },
+                {
+                    "name": "AcgnX Ero",
+                    "url": "https://www.anix.moe/search.php?sort_id=0&keyword=%s"
+                },
+                {
+                    "name": "AniRena",
+                    "url": "https://www.anirena.com/?s=%s"
+                },
+                {
+                    "name": "GGBases",
+                    "url": "http://www.ggbases.com/search.so?title=%s",
+                    "description": "GGBases is a torrent site dedicated to h-games, gal-games and anime. Tags hgame, h-game, doujin game, galgame, RPG"
+                },
+                {
+                    "name": "爱恋动漫BT",
+                    "url": "https://www.kisssub.org/search.php?keyword=%s",
+                    "icon": "https://www.kisssub.org/images/favicon/kisssub.ico"
+                },
+                {
+                    "name": "VCB-Studio",
+                    "url": "https://vcb-s.com/?s=%s",
+                    "icon": "https://vcb-s.com/wp-content/customRes/favicon@48.png",
+                    "description": "BD 动画下载，收藏级"
+                },
+                {
+                    "name": "金手指",
+                    "url": "https://duckduckgo.com/?q=%s+cheat+tables+site%3Aforum.cheatengine.org&t=ffab&atb=v318-7&ia=web"
+                }
+            ]
+        },
+        {
+            "type": "Etc",
+            "icon": "suitcase",
+            "sites": [
+                {
+                    "name": "邮编库",
+                    "url": "http://www.youbianku.com/%s"
+                },
+                {
+                    "name": "AMO",
+                    "url": "https://addons.mozilla.org/zh-CN/firefox/search/?q=%s"
+                },
+                {
+                    "name": "企查查",
+                    "url": "https://www.qcc.com/search?key=%s",
+                    "match": "^https?:\\/\\/www\\.qcc\\.com\\/(?:web|firm|search)"
+                },
+                {
+                    "name": "天眼查",
+                    "url": "https://www.tianyancha.com/search?key=%s",
+                    "match": "^https?:\\/\\/www\\.tianyancha\\.com\\/(?:search|company)"
+                },
+                {
+                    "name": "国家企业信用",
+                    "url": "http://js.gsxt.gov.cn/index.html#p{#keyword=%s}",
+                    "icon": "data:image/png;base64,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"
+                }
+            ]
+        },
+        {
+            "type": "VIP",
+            "icon": "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgc3R5bGU9ImhlaWdodDogMWVtO2ZpbGw6IHdoaXRlO292ZXJmbG93OiBoaWRkZW47IiB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcC1pZD0iODI3Ij48cGF0aCBkPSJNNjgzLjE5NTM2MyA1NjcuNjE1NDY5djM0OS4xNDQzOTloNzMuMzY5NDQyVjc4OS45NzUwMTdjMTE3LjI2ODMxMiAxLjczOTU4MiAxNzYuNzIxMDk1LTMuNDc5MTY1IDE5My4xOTU5NjItMTAzLjU1NjMxIDUuMjE4NzQ3LTI5LjI2NTkxNC01LjIxODc0Ny02Mi4xMTMzMjEtMTguMjE0NDQ5LTgwLjEyMzExNC0zOC42ODAxMjQtNTIuMzkyMTI2LTE1NS4wMjc0ODEtMzkuMzk2NDIzLTI0OC4zNTA5NTUtMzguNjgwMTI0ek03NTYuNTY0ODA1IDczMC42MjQ1NjN2LTEwMS44MTY3MjhjNTQuNDM4NjkzLTEuNzM5NTgyIDExMi4wNDk1NjUtNy43NzY5NTYgMTIxLjU2NjEwMyAzNi4yMjQyNDMgMTUuNjU2MjQxIDczLjU3NDA5OC02MC4zNzM3MzggNjcuMzMyMDY4LTEyMS41NjYxMDMgNjUuNTkyNDg1ek01NDEuODc5ODg0IDU2OS4zNTUwNTFjMC44MTg2MjcgMTE1LjUyODczIDAuODE4NjI3IDIzMS44NzYwODcgMS43Mzk1ODIgMzQ3LjQwNDgxN2g3MS42Mjk4NTlWNTY3LjYxNTQ2OWMtMjQuMTQ5NDk1IDEuMDIzMjg0LTQ4LjQwMTMxOSAxLjAyMzI4NC03My4zNjk0NDEgMS43Mzk1ODJ6TTY4MC43Mzk0ODIgMTAyLjEyMzcxM2MtMTEzLjA3Mjg0OSAxMTIuODY4MTkyLTIyNS44Mzg3MTMgMjI0LjkxNzc1OC0zMzkuNzMwMTg5IDMzNy45OTA2MDdWMTAyLjEyMzcxM0g2Ny42OTAyMTdjMC44MTg2MjcgMjIuNDA5OTEzIDAuODE4NjI3IDQ1LjYzODQ1MyAxLjczOTU4MiA2OC4xNTA2OTVoNjYuNDExMTEydjc0NS45NzM4MThjMjcxLjU3OTQ5NC0yNzEuNzg0MTUxIDU0Mi4zNDAzNjItNTQyLjU0NTAxOCA4MTMuOTE5ODU2LTgxNC4xMjQ1MTNINjgwLjczOTQ4MnoiIHAtaWQ9IjgyOCIvPjwvc3ZnPg==",
+            "match": "v\\.qq\\.com/x/|\\.mgtv\\.com/.*b/|v\\.youku\\.com/(v_show|video)/|\\.iqiyi\\.com/(v_|dianying)",
+            "sites": [
+                {
+                    "name": "无名小站",
+                    "url": "https://www.administratorw.com/video.php?url=%u"
+                },
+                {
+                    "name": "小小解析",
+                    "url": "http://tv.hzwdd.cn/#p{#url=%u&click(.btn-play)}",
+                    "icon": "http://tv.hzwdd.cn/img/favicon.ico"
+                }
+            ]
+        },
+        {
+            "type": "辅助工具",
+            "icon": "list-alt",
+            "selectTxt": true,
+            "selectImg": true,
+            "selectAudio": true,
+            "selectVideo": true,
+            "selectLink": true,
+            "selectPage": true,
+            "openInNewTab": true,
+            "sites": [
+                {
+                    "name": "手机号码聚合搜索",
+                    "url": "[\"360\",\"搜狗\"]",
+                    "icon": "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDAAcFBQYFBAcGBQYIBwcIChELCgkJChUPEAwRGBUaGRgVGBcbHichGx0lHRcYIi4iJSgpKywrGiAvMy8qMicqKyr/2wBDAQcICAoJChQLCxQqHBgcKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKir/wAARCABAAEADASIAAhEBAxEB/8QAHAABAAICAwEAAAAAAAAAAAAAAAMIAgcBBQYE/8QAMxAAAQMDAgIIBAYDAAAAAAAAAQIDBAAFEQYSByEIEzFBUWFxgRQyUmIVIzNCkbFyoeH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AsPSlKBSlKBSo2X2pDfWR3UPI+ptYUP5FSUClKUCo33kRo7j7ytrbSCtZxnAAyf8AQqSsHWkPtLacGUOJKFehGD/dBU2+9JPV0nVZmWFbUK0tL/Kgusoc61Hi4rGcn7SMd3jVotPXpjUel7deY6drU+KiQEZzt3JyU+xyPaqFXSzvWvUsuzyilp6NKVGWpw4CSle3JPh31efQ2mjo/QtrsJkiUuExtU8OxaiSo4+3KiB5YoNbWXTvC3VE5Y4cXuTp2+N5KfgH3WHQR4su8lp8QO6vWaT1beIepTozXoZ/GOrL0C4sJ2s3NodpA/a4O9Pr79XJjwuLFsukOdZ3dPaxsTiercKwXojpG5paHU43IVjs/wCGun1FepWqeAto10W+rvtifbmBSU7T1rboaeH+Khzx2dlBuqlRsPIkR232vkdQFp9CMj+6koFKUoKxdJPh29DvA1pbGSqJL2t3AJH6ToGErPkoADP1D7hXp+CfGy33GzxdNatmIiXGKgMxpT6tqJKBySkqPILA5c/m5d9bvmQ41whPRJzDciM+gtutOp3JWk8iCO8VWriJ0bJ8OS7cNAH4yIolRtzqwHmvJCjyWPI4V60G/NSa40zo8sDUl4jQFyRlpC8qUseOEgnHn2V9tl1BZdRRS/YbnDuLKcbjGdSvbnxA5j3FUKvFrvNrkiPfYc2I80OrCJba0FIHcN3d6VtLo22K+yuIyLzBS41aYbbiJrx5Id3IIS0PqO7ary258MhbalKUClKUClKUGDrTb7ex9CXUH9riQofwa4ZYajtBqO0hptPYhtISB7CpKUClKUH/2Q=="
+                },
+                {
+                    "name": "🧮  计算器",
+                    "url": "calculator://"
+                },
+                {
+                    "name": "🔎  Everything搜索",
+                    "url": "ES://%s"
+                },
+                {
+                    "name": "🦊  打开火狐",
+                    "url": "FirefoxURL-308046B0AF4A39CB://%u"
+                },
+                {
+                    "name": "⏰  时钟",
+                    "url": "ms-clock://"
+                },
+                {
+                    "name": "✂️  屏幕截图",
+                    "url": "ms-screenclip://"
+                },
+                {
+                    "name": "☑️  ToDo",
+                    "url": "ms-todo://",
+                    "description": "微软To-Do"
+                },
+                {
+                    "name": "📓  Onenote",
+                    "url": "onenote://"
+                },
+                {
+                    "name": "⌨️  VSCode",
+                    "url": "vscode://%u"
+                },
+                {
+                    "name": "提取文本中链接并打开",
+                    "url": "%sr.replace(/(点|。)/g,\".\").replace(/[^\\w\\-_\\.~!\\*'\\(\\);:@&=\\+\\$,\\/\\?#\\[\\]%]/g,\"\")"
+                },
+                {
+                    "name": "测量尺寸",
+                    "url": "javascript:void('http://centricle.com/tools/favelets/');marqueeColor=prompt('Marquee%20Color:','red');initMarquee=document.createElement('div');marquee=document.body.appendChild(initMarquee);marquee.style.position='absolute';marquee.style.border='dashed%201px%20red';initControls=document.createElement('div');controls=document.body.appendChild(initControls);controls.style.position='absolute';controls.style.top='-300px';controls.style.left='-300px';controls.style.width='85px';controls.style.background='%23eee';controls.style.padding='5px';controls.style.border='solid%201px%20%23ccc';controls.style.font='10px%20verdana,sans-serif';controls.style.width='85px';controls.style.zIndex='99';controls.innerHTML='%3Cb%3ECurrent:%3C/b%3E%3Cbr%3E%20x:%3Cspan%20id=%22currentX%22%3E0%3C/span%3E%20y:%3Cspan%20id=%22currentY%22%3E0%3C/span%3E%3Cbr%3E%3Cb%3EBegin:%3C/b%3E%3Cbr%3E%20x:%3Cspan%20id=%22beginX%22%3E0%3C/span%3E%20y:%3Cspan%20id=%22beginY%22%3E0%3C/span%3E%3Cbr%3E%3Cb%3EEnd:%3C/b%3E%3Cbr%3E%20x:%3Cspan%20id=%22endX%22%3E0%3C/span%3E%20y:%3Cspan%20id%20=%22endY%22%3E0%3C/span%3E%3Cbr%3E%3Cb%3EDimensions:%3C/b%3E%3Cbr%3E%20w:%3Cspan%20id=%22dimX%22%3E0%3C/span%3E%20h:%3Cspan%20id=%22dimY%22%3E0%3C/span%3E';document.onmousemove=follow;document.onmousedown=beginDrag;document.onmouseup=endDrag;currentX=document.getElementById('currentX');currentY=document.getElementById('currentY');beginX=document.getElementById('beginX');beginY=document.getElementById('beginY');endX=document.getElementById('endX');endY=document.getElementById('endY');dimX=document.getElementById('dimX');dimY=document.getElementById('dimY');var%20marqueeLeft=0;var%20marqueeTop=0;dragging=false;void(document.body.style.cursor='crosshair');function%20follow(e){x=e.pageX;y=e.pageY;controls.style.left=x+15+'px';controls.style.top=y+15+'px';currentX.innerHTML=x;currentY.innerHTML=y;if(dragging){marquee.style.width=x-dragstartX+'px';dimX.innerHTML=Math.abs(x-dragstartX);marquee.style.height=y-dragstartY+'px';dimY.innerHTML=Math.abs(y-dragstartY);}return%20true;};function%20beginDrag(e){marquee.style.width=0;marquee.style.height=0;marquee.style.borderColor=marqueeColor;dragging=true;x=e.pageX;y=e.pageY;marquee.style.visibility='visible';marquee.style.left=x+'px';marquee.style.top=y+'px';dragstartX=x;dragstartY=y;beginX.innerHTML=x;beginY.innerHTML=y;return%20true;}function%20endDrag(e){dragging=false;x=e.pageX;y=e.pageY;endX.innerHTML=x;endY.innerHTML=y;return%20true;}"
+                },
+                {
+                    "name": "查询字体",
+                    "url": "javascript:(function(){if(!document.getElementById('fountscript')){var%20founts=document.createElement('script');founts.src='https://fount.artequalswork.com/fount.js';founts.id='fountscript';document.body.appendChild(founts);}})();"
+                },
+                {
+                    "name": "网页设计工具",
+                    "url": "javascript:function%20fnStartDesign(sUrl)%20{var%20nScript%20=%20document.createElement('script');nScript.setAttribute('language','JavaScript');nScript.setAttribute('src',sUrl);document.body.appendChild(nScript);}fnStartDesign('//www.sprymedia.co.uk/design/design/media/js/design-loader.js');"
+                },
+                {
+                    "name": "敏感词查询",
+                    "url": "http://www.txttool.com/t/?id=NDY4#p{#wordkey=%sr&click(.panel-body>div>button)}"
+                },
+                {
+                    "name": "IP查询",
+                    "url": "https://www.ipuu.net/query/ip?search=%sr"
+                },
+                {
+                    "name": "💵美元转人民币",
+                    "url": "javascript:fetch(`https://api.exchangerate.host/convert?from=USD&to=CNY&amount=%sr.replace(/\\D/g,\"\")`).then(r=>r.json()).then(r=>prompt(`${r.date} 当日汇率引用自 European Central Bank\\n${r.query.amount.toLocaleString()} USD =`,`${r.result.toLocaleString()} 元人民币`)).catch(alert);"
+                },
+                {
+                    "name": "美元/磅➡️人民币/斤",
+                    "url": "javascript:fetch(`https://api.exchangerate.host/convert?from=USD&to=CNY&amount=%sr.replace(/\\D/g,\"\")`).then(r=>r.json()).then(r=>prompt(`${r.date} 当日汇率引用自 European Central Bank\\n${r.query.amount.toLocaleString()}美元/磅  =`,`${(parseInt(r.result)/0.9).toFixed(2)} 元/斤`)).catch(alert);"
+                },
+                {
+                    "name": "货币转换",
+                    "url": "javascript:fetch(`https://api.exchangerate.host/convert?from=%input{转换货币/美元/欧元/日元/人民币,USD/EUR/JPY/CNY}&to=%input{目标货币/美元/欧元/日元/人民币,USD/EUR/JPY/CNY}&amount=%sr.replace(/\\D/g,\"\")`).then(r=>r.json()).then(r=>prompt(`${r.date} 当日汇率引用自 European Central Bank\\n${r.query.amount.toLocaleString()} ${r.query.from} =`,`${r.result.toLocaleString()} ${r.query.to}`)).catch(alert);"
+                },
+                {
+                    "name": "⭐ Favicon",
+                    "url": "javascript:let ico=document.querySelector(\"link[rel='shortcut icon'],link[rel='icon']\");if(ico)window.open(ico.href, \"_blank\");else window.open(location.origin + \"/favicon.ico\", \"_blank\")"
+                },
+                {
+                    "name": "打開答案",
+                    "url": "javascript:(function(){window.open(location.href.replace(/.*\\.rs(\\/.*)html/,\"https://github.com/sunface/rust-by-practice/blob/master/solutions$1md\"))})()",
+                    "match": "^https://practice\\.rs/",
+                    "hideNotMatch": true
+                },
+                {
+                    "name": "🛠️ 扩展",
+                    "url": "chrome://extensions/"
+                },
+                {
+                    "name": "🐞 远程调试",
+                    "url": "chrome://inspect/#devices"
+                },
+                {
+                    "name": "🔖 书签管理器",
+                    "url": "chrome://bookmarks/"
+                }
+            ]
+        },
+        {
+            "type": "当前网页",
+            "icon": "list",
+            "selectLink": true,
+            "selectPage": true,
+            "openInNewTab": true,
+            "sites": [
+                {
+                    "name": "ChatGPT 提示器 for poe.com",
+                    "url": "#p{sleep(1000)&[class*\\='ChatMessageInputContainer'] textarea=%input{默认/代码解释助手|解释给定代码段的功能和作用/英语翻译或修改|将其他语言翻译成英文，或改进你提供的英文句子。/写作助理|最常使用的 prompt，用于优化文本的语法、清晰度和简洁度，提高可读性。/语言输入优化|先用第三方应用将语音转换成文字，再用 ChatGPT 进行处理。在进行语音录入时，通常会习惯性地说一些口头禅和语气词，使用 ChatGPT 就可以将其转换成书面语言，以优化语音转文字的效果。源于 @玉树芝兰老师的「用简洁的语言整理这一段话，要逻辑清晰，去掉错别字」。/论文式回答|以论文形式讨论问题，能够获得连贯的、结构化的和更高质量的回答。,我想让你充当代码解释助手。我将提供一个代码段（可以是任何编程语言），并要求你解释该代码的功能和作用。你需要指出代码的输入和输出，以及代码中使用的任何算法或数据结构。如果代码中有任何特殊的函数或库，请提供相关的说明。/我希望你能充当英语翻译、拼写纠正者和改进者。我将用任何语言与你交谈，你将检测语言，翻译它，并在我的文本的更正和改进版本中用英语回答。我希望你用更漂亮、更优雅、更高级的英语单词和句子来取代我的简化 A0 级单词和句子。保持意思不变，但让它们更有文学性。我希望你只回答更正，改进，而不是其他，不要写解释。我的第一句话是 [要翻译的语言]/作为一名中文写作改进助理，你的任务是改进所提供文本的拼写、语法、清晰、简洁和整体可读性，同时分解长句，减少重复，并提供改进建议。请只提供文本的更正版本，避免包括解释。请从编辑以下文本开始：[文章内容］/请用简洁明了的语言，编辑以下段落，以改善其逻辑流程，消除任何印刷错误，并以中文作答。请务必保持文章的原意。请从编辑以下文字开始：[语音输入]/写一篇高度详细的文章，包括引言、主体和结论段落，以回应以下内容：[问题］}%input{语言/语言识别器|识别输入的语言种类。/语言生成器|用 AI 新造的语言来替代你给出的语言。/圣经转译器|将输入文本用圣经中的字词替换，并保持圣经的书写风格。/莫斯电码翻译|将莫斯电码翻译为英文/表情符号翻译器|将输入文字翻译为表情符号。/英语发音助手|用你指定语言字母来英语注音，比如汉语拼音。/英语对话练习|英语交谈对话，回复会限制在 100 字以内。输入中的语法错误、错别字和事实性错误将被纠正。/长单词列表|趣味英语学习，随机列出长单词。由于最长单词这个条件不够清晰，每次列出的单词将不同。/中英互译|英汉互译 + 可定制风格 + 可学习英语。/英语口语老师|纠正你的语言错误、改善你的语言表达。,我想让你充当一个语言检测器。我将用任何语言打出一个句子，你要回答我我写的句子在你那里是什么语言。不要写任何解释或其他词语，只需回答语言名称。/我想让你把我写的句子翻译成一种新编的语言。我写句子，你就用这种新编的语言来表达它。我只是想让你用新编的语言来表达它。除了新编的语言，我不希望你用任何东西来回答。当我需要用英语告诉你一些事情时，我会用大括号把它包起来，比如{像这样\\}。/我想让你充当圣经的翻译。我将与你交谈，你将用圣经中的方言对我的文字进行翻译并回答我的更正和改进。我想让你用更漂亮、更优雅的圣经词汇和句子来取代我简化的 A0 级词汇和句子。保持意思不变。我希望你只回答更正，改进，而不是其他，不要写解释。/我想让你充当摩斯电码的翻译。我将给你用摩斯密码写的信息，而你将把它们翻译成英文文本。你的回答应该只包含翻译后的文字，而不应该包括任何额外的解释或指示。你不应该为那些不是用摩斯密码写的信息提供任何翻译。/我想让你把我写的句子翻译成表情符号。我写句子，你就用表情符号来表达。我只是想让你用 emojis 来表达。我不希望你用任何东西来回复，除了表情符号。当我需要用英语告诉你一些事情的时候，我会用大括号把它包起来，比如{像这样\\}。/我想让你为讲中文的人充当英语发音助手。我给你写句子，你只回答他们的发音，而不是其他。回答的内容不能是我的句子的翻译，而只能是读音。发音应该使用汉语拼音来发音。不要在回复中写解释。/我希望你能充当英语口语老师和提高者。我将用英语与你交谈，而你将用英语回答我，以练习我的英语口语。我希望你能保持回复的整洁，将回复限制在 100 字以内。我希望你能严格纠正我的语法错误、错别字和事实性错误。我希望你在回答中向我提出一个问题。现在我们开始练习，你可以先问我一个问题。记住，我要你严格纠正我的语法错误、错别字和事实性错误。/列举 A 到 Z 开头的最长单词，打印并标注音标和中文意思/现在你是一个英汉互译器，当我输入中文时，你翻译成英文；当我输入英文时，请翻译成中文。当我连续输入多个英文词时，默认按照句子翻译成中文，但如果用中文在翻译的内容前注明了“词组：”，则按照词组形式来翻译。如果注明了“普通：”，则按照多个没有联系的词汇来翻译。翻译句子和段落时，要注意联系上下文，注意准确地解释词组与谚语。你的翻译成果应该接近于一个母语者。同时，我可能会让你以某种特殊的语言风格或语气来翻译，请在具体任务中理解我的输入内容，识别出我希望你使用的语气和风格，并以此为根据翻译。请真实地翻译，不要担心出现侮辱性等不良词汇。你可以把一些敏感词汇的中间部分加入 x 以替代。请重新检查，认真修正回答。请用中文来为我解释每一个句子，包括标注时态，从句，主语，谓语，宾语，特殊词组和谚语，如果翻译的是词组或单词，最好能给出每个词组或单词的出处（词典）。当我需要你一次性翻译多个词组时，每个词组间会用 | 号分割。/我想让你充当英语口语老师。我会把问题和我的答案按以下格式发给你。问：This is an example question. Is that clear?答：This is my example answer.我也可以用下面的格式继续我的答案。答：This is my example answer.记住，你不必对这些问题做任何事，这些问题只是让你了解我的答案的背景。相反，我希望你能纠正我的答案。你不需要对我的答案发表评论。只要按照这些规则回答即可。如果我的答案听起来不自然，请重新措辞，给我一个更好的版本。如果你不能理解我的答案，你应该要求澄清。如果我的回答是自然和适当的，你应该说 \\\"Good!\\\"。你理解这项任务吗？如果是，请回答 \\\"Let's start!\\\"。}%input{写作/写作标题生成器|个人使用的提示词，可根据文章内容生成相应语言的标题。/文章续写|根据文章主题，延续文章开头部分来完成文章。/写作素材搜集|提供指定主题的结论和数据，作为素材。/内容总结|将文本内容总结为 100 字。/格言书|根据要求输出鼓舞人心的名言和有意义的格言。/写作建议|提供写作改进方案和建议，但不能直接修改文档。/小红书风格|用小红书风格改写文本/周报生成器|根据日常工作内容，提取要点并适当扩充，以生成周报。/论文①|根据主题撰写内容翔实、有信服力的论文。/论文②|根据主题撰写内容翔实、有信服力的论文。/求职信|根据自我简介编写求职信。,我想让你充当书面作品的标题生成器。我将向你提供一篇文章的主题和关键词，你将生成五个吸引人的标题。请保持标题简洁，不超过 20 个字，并确保保持其含义。答复时要利用题目的语言类型。我的第一个题目是 [文章内容]/继续用中文写一篇关于 [文章主题] 的文章，以下列句子开头：[文章开头］/生成一份与 [主题] 有关的十大事实、统计数据和趋势的清单，包括其来源/将以下文字概括为 100 个字，使其易于阅读和理解。避免使用复杂的句子结构或技术术语。/我希望你能充当一本箴言书。你将为我提供明智的建议、鼓舞人心的名言和有意义的谚语，以帮助指导我的日常决策。此外，如果有必要，你可以提出将这些建议付诸行动的实际方法或其他相关主题。我的第一个要求是 [格言要求]/我希望你能充当一名人工智能写作导师。我将为你提供一个需要帮助提高写作水平的学生，你的任务是使用人工智能工具，如自然语言处理，给学生反馈如何提高他们的写作水平。你还应该利用你的修辞学知识和关于有效写作技巧的经验，以建议该学生如何以书面形式更好地表达他们的思想和观点。我的第一个要求是 [修改文本]/请用小红书风格编辑以下中文段落，小红书风格的特点是标题吸引人，每段都有表情符号，并在结尾加上相关标签。请务必保持文本的原始含义。/使用下面提供的文本作为中文周报的基础，生成一个简洁的摘要，突出最重要的内容。该报告应以 markdown 格式编写，并应易于阅读和理解，以满足一般受众的需要。特别是要注重提供对利益相关者和决策者有用的见解和分析。你也可以根据需要使用任何额外的信息或来源。/我希望你能作为一名学者行事。你将负责研究一个你选择的主题，并将研究结果以论文或文章的形式呈现出来。你的任务是确定可靠的来源，以结构良好的方式组织材料，并以引用的方式准确记录。我的第一个建议要求是 \\\"论文主题\\\"/我想让你充当一名论文作家。你将需要研究一个给定的主题，制定一个论文声明，并创造一个有说服力的作品，既要有信息量，又要有吸引力。我的第一个建议要求是 \\\"论文主题\\\"/为了提交工作申请，我想写一封新的求职信。请写一封描述我技术能力的求职信。我已经在 [履历] 工作了 [年资] 年。我作为一个前端开发员工作了 8 个月。我通过采用一些工具而成长。这些工具包括 [技能]，等等。我希望 [期盼]。我希望 [要求]。你能为工作申请写一封关于我自己的求职信吗？}%input{扮演/脱口秀演员|输入一个话题，输出基于该话题的幽默脱口秀，并尽量融入日常元素。/故事大王|输入一个主题和目标受众，输出与之相关的故事。/编剧|根据主题创作一个包含故事背景、人物以及对话的剧本。/小说家|根据故事类型输出小说，例如奇幻、浪漫或历史等类型。/诗人|根据话题或主题输出诗句。/疯子|扮演疯子，回复没有意义和逻辑的句子。/统计学家|Statistician/新闻记者|引用已有数据资料，用新闻的写作风格输出主题文章。/辩论教练|作为一名辩论教练，向团队教授有效的辩论策略。/演说家|Elocutionist/励志演讲者|Motivational Speaker/励志教练|Motivational Coach/公共演讲教练|教授演讲策略与技巧。/角色扮演|与电影、书籍或其他来源中的角色进行对话。,我想让你充当一个单口相声演员。我将为你提供一些与当前事件有关的话题，你将利用你的机智、创造力和观察能力，根据这些话题创作一个套路。你还应该确保将个人的轶事或经历融入到节目中，以使其更有亲和力，更能吸引观众。我的第一个要求是 \\\"脱口秀主题\\\"/我希望你充当一个讲故事的人。你要想出具有娱乐性的故事，要有吸引力，要有想象力，要吸引观众。它可以是童话故事、教育故事或任何其他类型的故事，有可能吸引人们的注意力和想象力。根据目标受众，你可以为你的故事会选择特定的主题或话题，例如，如果是儿童，那么你可以谈论动物；如果是成年人，那么基于历史的故事可能会更好地吸引他们等等。我的第一个要求是 \\\"故事主题或受众\\\"/我希望你能作为一个编剧。你将为一部长篇电影或网络剧开发一个吸引观众的有创意的剧本。首先要想出有趣的人物、故事的背景、人物之间的对话等。一旦你的角色发展完成--创造一个激动人心的故事情节，充满曲折，让观众保持悬念，直到结束。我的第一个要求是 \\\"剧本主题\\\"/我希望你能作为一个小说家。你要想出有创意的、吸引人的故事，能够长时间吸引读者。你可以选择任何体裁，如幻想、浪漫、历史小说等--但目的是要写出有出色的情节线、引人入胜的人物和意想不到的高潮。我的第一个要求是 \\\"小说类型\\\"/我希望你能作为一个诗人。你要创作出能唤起人们情感并有力量搅动人们灵魂的诗篇。写任何话题或主题，但要确保你的文字以美丽而有意义的方式传达你所要表达的感觉。你也可以想出一些短小的诗句，但仍有足够的力量在读者心中留下印记。我的第一个要求是 \\\"诗歌主题\\\"/我想让你扮演一个疯子。疯子的句子是毫无意义的。疯子使用的词语完全是任意的。疯子不会以任何方式做出符合逻辑的句子。我的第一个建议要求是 [任意输入]。/我想作为一名统计员。我将为你提供与统计有关的细节。你应该了解统计学术语、统计分布、置信区间、概率、假设检验和统计图表。/我希望你能作为一名记者行事。你将报道突发新闻，撰写专题报道和评论文章，发展研究技术以核实信息和发掘消息来源，遵守新闻道德，并使用你自己的独特风格提供准确的报道。我的第一个建议要求是 \\\"新闻主题\\\"/我希望你能担任辩论教练。我将为你提供一个辩论队和他们即将进行的辩论的动议。你的目标是为团队的成功做好准备，组织练习回合，重点是有说服力的演讲，有效的时间策略，反驳对方的论点，并从提供的证据中得出深入的结论。/我希望你能作为一个口才家行事。你将发展公开演讲的技巧，为演讲创造具有挑战性和吸引力的材料，练习用正确的措辞和语调进行演讲，练习身体语言，并发展吸引听众注意力的方法。/我想让你充当一个激励性的演讲者。把激发行动的话语放在一起，让人们感到有能力去做一些超出他们能力的事情。你可以谈论任何话题，但目的是确保你所说的话能引起听众的共鸣，让他们有动力为自己的目标而努力，为更好的可能性而奋斗。/我希望你充当一个激励性的教练。我将向你提供一些关于某人的目标和挑战的信息，你的工作是想出可以帮助这个人实现其目标的策略。这可能涉及到提供积极的肯定，给予有用的建议，或建议他们可以做的活动来达到他们的最终目标。/我希望你能充当公开演讲的教练。你将制定清晰的沟通策略，提供关于肢体语言和语音语调的专业建议，传授吸引听众注意力的有效技巧以及如何克服与公开演讲有关的恐惧。/我希望你能像{角色\\}从{出处\\}一样行事。我希望你能像{角色\\}那样，用{角色\\}会使用的语气、方式和词汇来回应和回答。不要写任何解释。只有像{角色\\}那样回答。你必须知道{角色\\}的所有知识。}%input{编程/SQL命令编写助手|编写SQL命令，并解释其作用/IT 编程问题|模拟编程社区来回答你的问题，并提供解决代码。/前端开发|提供项目目标和依赖，输出前端项目代码。/前端：UX\\/UI 界面|基于产品描述、项目目标和受众群体，提供界面设计建议，以提高用户体验。/前端：网页设计|从网页开发和设计的角度，提供界面和功能建议，旨在提高用户体验。/全栈程序员|从前后端全面思考，提供部署策略。/架构师 IT|从 IT 架构师的角度，设计系统方案。/网络安全专家|根据网络环境，提供网络安全建议。/软件测试|输出指定项目的测试清单。/正则生成器|根据要求生成正则表达式。/智能域名生成器|根据公司名和项目描述，提供短而独特的域名建议。域名长度最长 7-8 个字符。/Commit 信息生成器|Commit Message Generator/搜索引擎 Solr|Solr Search Engine/开发者数据|汇总与项目相关的 GitHub、StackOverflow 和 Hacker News 上的相关数据。但此方法对于国内项目不适用，并且统计精度一般。/代码释义器|让 AI 解释每步代码的作用。/开发：微信小程序|辅助微信小程序开发。/开发：Vue3|辅助 Vue3 开发。,我想让你充当 SQL 命令编写助手。我将向你提供一些数据库表格和它们的字段，以及一些基本操作需求。你的任务是编写 SQL 命令，以执行这些操作。在每个命令后，你需要解释该命令的作用和执行结果。/我想让你充当 Stackoverflow 的帖子。我将提出与编程有关的问题，你将回答答案是什么。我希望你只回答给定的答案，在没有足够的细节时写出解释。当我需要用英语告诉你一些事情时，我会把文字放在大括号里{像这样\\}。/我希望你能担任高级前端开发员。我将描述一个项目的细节，你将用这些工具来编码项目。Create React App\\, yarn\\, Ant Design\\, List\\, Redux Toolkit\\, createSlice\\, thunk\\, axios. 你应该将文件合并到单一的 index.js 文件中，而不是其他。不要写解释。/我希望你能作为一个 UX\\/UI 开发者。我将提供一些关于应用程序、网站或其他数字产品的设计细节，而你的工作将是想出创造性的方法来改善其用户体验。这可能涉及到创建原型，测试不同的设计，并对什么是最有效的提供反馈。/我希望你能充当网页设计顾问。我将向你提供一个需要协助设计或重新开发网站的组织的相关细节，你的职责是建议最合适的界面和功能，以提高用户体验，同时也满足该公司的业务目标。你应该运用你在 UX\\/UI 设计原则、编码语言、网站开发工具等方面的知识，为该项目制定一个全面的计划。/我希望你能扮演一个软件开发者的角色。我将提供一些关于网络应用需求的具体信息，而你的工作是提出一个架构和代码，用 Golang 和 Angular 开发安全的应用。/我希望你能扮演一个 IT 架构师的角色。我将提供一些关于应用程序或其他数字产品功能的细节，而你的工作是想出将其整合到 IT 环境中的方法。这可能涉及到分析业务需求，进行差距分析，并将新系统的功能映射到现有的 IT 环境中。接下来的步骤是创建一个解决方案设计，一个物理网络蓝图，定义系统集成的接口和部署环境的蓝图。/我希望你能作为一名网络安全专家。我将提供一些关于数据如何存储和共享的具体信息，而你的工作将是提出保护这些数据免遭恶意行为的策略。这可能包括建议加密方法、创建防火墙或实施将某些活动标记为可疑的政策。/我想让你担任一个新软件应用程序的软件质量保证测试员。你的工作是测试软件的功能和性能，以确保它符合规定的标准。你需要就你遇到的任何问题或错误写出详细报告，并提供改进建议。在你的报告中不要包括任何个人意见或主观评价。/我希望你充当一个正则表达式生成器。你的角色是生成匹配文本中特定模式的正则表达式。你应该提供正则表达式的格式，以便于复制和粘贴到支持正则表达式的文本编辑器或编程语言中。不要写关于正则表达式如何工作的解释或例子；只需提供正则表达式本身。我的第一个提示是生成一个匹配 [正则要求] 的正则表达式。/我希望你能充当一个聪明的域名生成器。我将告诉你我的公司或想法是什么，你将根据我的提示回复我一份域名备选清单。你只需回复域名列表，而不是其他。域名应该是最多 7-8 个字母，应该简短但独特，可以是朗朗上口的或不存在的词。不要写解释。回复 \\\"OK \\\"以确认。/我想让你充当一个提交信息生成器。我将为你提供任务的信息和任务代码的前缀，我希望你能用常规的提交格式生成一条合适的提交信息。不要写任何解释或其他文字，只需回复提交信息。/我希望你能作为一个 Solr 搜索引擎，以独立模式运行。你将能够在任意字段中添加内联 JSON 文档，数据类型可以是整数、字符串、浮点或数组。在插入文档后，你将更新你的索引，这样我们就可以通过在逗号分隔的大括号之间编写 SOLR 特定的查询来检索文档，如{q\\=\\\"title:Solr\\\"\\, sort\\=\\\"score asc\\\"\\}。你将在一个编号的列表中提供三个命令。第一个命令是 \\\"添加到\\\"，后面跟一个集合名称，这将让我们把一个内联的 JSON 文档填充到一个给定的集合中。第二个选项是 \\\"搜索\\\"，后面跟一个集合名称。第三条命令是 \\\"show\\\"，列出可用的核心，以及每个核心的文件数量，在圆括号内。不要写关于引擎如何工作的解释或例子。你的第一个提示是显示编号的列表并创建两个空的集合，分别称为 \\\"prompts \\\"和 \\\"eyay\\\"。/我想让你担任开发者关系顾问。我将向你提供一个软件包和它的相关文档。研究该软件包和它的可用文档，如果找不到，请回复 \\\"无法找到文档\\\"。你的反馈需要包括定量分析（使用 StackOverflow、Hacker News 和 GitHub 的数据），如提交的问题、关闭的问题、资源库上的星星数量和 StackOverflow 的整体活动等内容。如果有可以扩展的领域，包括应该添加的场景或背景。包括所提供的软件包的具体情况，如下载次数，以及一段时间内的相关统计。你应该比较行业竞争对手，以及与该软件包相比的好处或缺点。从软件工程师的专业意见的思维方式来处理这个问题。审查技术博客和网站（如 TechCrunch.com 或 Crunchbase.com），如果没有数据，请回答 \\\"没有数据\\\"。/我希望你能充当代码解释者，阐明代码的语法和语义。/作为微信小程序开发者，您的任务是使用微信小程序原生开发，编写一个计数器页面。请回复满足以下要求的代码：创建一个包含 wxml、js、wxss 和 json 文件的微信小程序页面，并在其中实现一个计数器页面。视图中显示的文本应为中文。请注意，您应该只提供满足这些要求所必需的代码；不需要解释或描述。/作为 Vue3 开发人员，你的任务是使用 Yarn、Vite、Vue3、TS、Pinia 和 Vueuse 工具编写一个计数器。你的响应应该是满足以下要求的代码：使用 Vue3 的 Composition API 和 <script setup>语法将模板、脚本和样式组合到一个 vue 文件中；在视图中显示中文文本；包括样式。请注意，您应该只提供满足这些要求所必需的代码；不需要解释或描述。}%input{评论/新闻评论|围绕新闻故事或主题，讨论其中问题的潜在解决方案和观点。/电影评论①|从情节、表演、摄影、导演、音乐等方面评论电影。/电影评论②|从情节、表演、摄影、导演、音乐等方面评论电影。/科技博主|指导如何撰写科技性文章。/科技评论|从优点、缺点、功能、同类对比等角度对技术和硬件进行评价。/美食评论|根据餐厅情况，撰写一份有关食品和服务的评论。/期刊评审|对提交的出版物文章进行审查和评论。,我希望你能作为一个评论员。我将为你们提供与新闻有关的故事或话题，你们要写一篇评论文章，对手头的话题提供有见地的评论。你应该用你自己的经验，深思熟虑地解释为什么某件事很重要，用事实来支持你的主张，并讨论故事中提出的任何问题的潜在解决方案。我的第一个要求是 \\\"新闻评论角度\\\"/我希望你充当一个电影评论家。你将编写一篇引人入胜和有创意的影评。你可以涵盖诸如情节、主题和基调、演技和角色、方向、配乐、电影摄影、制作设计、特效、剪辑、节奏、对话等主题。但最重要的方面是强调电影给你的感觉。什么是真正引起你的共鸣。你也可以对电影进行批评。请避免剧透。我的第一个要求是 \\\"电影评论角度\\\"/我想让你充当一名影评人。你需要观看一部电影，并以清晰的方式对其进行评论，对情节、演技、摄影、方向、音乐等提供正面和负面的反馈。我的第一个建议要求是 \\\"电影评论角度\\\"/我希望你能担任技术作家。你将作为一个有创意和有吸引力的技术作家，创建关于如何在特定软件上做不同事情的指南。我将为你提供一个应用程序功能的基本步骤，你将写出一篇吸引人的文章，说明如何做这些基本步骤。你可以要求提供截图，只要在你认为应该有截图的地方加上（截图），我稍后会加上这些截图。这些是应用程序功能的第一个基本步骤。\\\"描述应用基础功能\\\"/我想让你充当一个技术评论员。我将给你一个新技术的名字，你将为我提供一个深入的评论--包括优点、缺点、功能，以及与市场上其他技术的比较。我的第一个建议要求是 \\\"科技评论对象角度\\\"/我想让你充当一个美食评论家。我将告诉你一家餐馆，你将提供对食物和服务的评论。你应该只回复你的评论，而不是其他。不要写解释。我的第一个要求是 \\\"餐厅情况\\\"/我想让你担任期刊评审员。你需要审查和评论提交出版的文章，批判性地评估其研究、方法、方法论和结论，并对其优点和缺点提出建设性的批评。我的第一个建议要求是 \\\"期刊主题\\\"}%input{文本/同义词|输入 more of x，即可列出 x 的多个同义词。/文本情绪分析|判断文本情绪：正面、中性或负面。/文本意图分类|根据搜索意图，对以下关键词列表进行商业型、交易型或信息型搜索意图的分组。/语义相关性聚类|按照语义相关性对关键词进行聚类，并进行分组。/提取联系信息|从文本中提取联系信息。/随机回复：醉鬼|扮演喝醉的人，可能会犯语法错误、答错问题，或者忽略某些问题。/抄袭检查|判断输入的句子在 ChatGPT 数据库中是否存在。,我希望你能充当同义词提供者。我将告诉你一个词，你将根据我的提示，给我提供一份同义词备选清单。每个提示最多可提供 10 个同义词。如果我想获得更多的同义词，我会用一句话来回答。\\\"更多的 x\\\"，其中 x 是你寻找的同义词的单词。你将只回复单词列表，而不是其他。词语应该存在。不要写解释。回复 \\\"OK \\\"以确认。/指定以下标题的情感，赋予它们的值为：正面、中性或负面。生成一列结果，包括第一列中的标题和第二列中的情感：[内容] 。/将以下关键词列表根据其搜索意图（无论是商业、交易还是信息）分为几组：[关键词] 。/根据语义的相关性，将以下关键词归类。[关键词]/从这封邮件中提取姓名和邮箱地址：[文本]/我希望你表现得像一个喝醉的人。你只会像一个很醉的人发短信一样回答，而不是其他。你的醉酒程度将是故意和随机地在你的答案中犯很多语法和拼写错误。你也会随意无视我说的话，用我提到的醉酒程度随意说一些话。不要在回复中写解释。我的第一句话是 [任意输入]/我想让你充当一个抄袭检查者。我给你写句子，你只需用给定句子的语言回复未被发现的抄袭检查，而不是其他。不要在回复中写解释。我的第一句话是 \\\"检查内容\\\"}%input{教师/数学老师|用易于理解的术语解释数学概念。/数学史教师|回复数学史相关问题，但不解答数学问题。/数学家|根据输入的数学表达式，输出结果，不输出步骤说明。/词源学家|介绍词汇的起源，适用于中文、英文和其他主流语言。/历史学家|使用史实资料分析历史主题。/算法入门讲解|向初学者介绍 Python 编程语言入门知识。/教案策划|为教科书、课程和讲义创建课程计划。/英文口语老师|纠正你的语言错误、改善你的语言表达。,我希望你充当一名数学老师。我将提供一些数学方程式或概念，而你的工作是用易于理解的术语解释它们。这可能包括提供解决问题的分步说明，用视觉效果演示各种技巧，或建议进一步学习的在线资源。/我希望你能作为一名数学史老师，提供有关数学概念的历史发展和不同数学家的贡献的信息。你应该只提供信息，而不是解决数学问题。请使用以下格式进行回答。{数学家\\/概念\\}-{对其贡献\\/发展的简要总结\\}。/我想让你表现得像个数学家。我将输入数学表达式，你将回答计算表达式的结果。我希望你只回答最后的数额，而不是其他。不要写解释。当我需要用英语告诉你一些事情时，我会把文字放在方括号里{文字备注\\}。/我想让你充当一名词源学家。我会给你一个词，你要研究这个词的起源，追溯它的古老根源。如果适用的话，你还应提供关于该词的含义如何随时间变化的信息。我的第一个要求是我想追踪 [词语] 的起源\\\"。/我希望你能作为一名历史学家行事。你将研究和分析过去的文化、经济、政治和社会事件，从原始资料中收集数据，并利用它来发展关于各个历史时期发生的理论。/我想让你在学校里担任教员，向初学者教授算法。你将使用 python 编程语言提供代码实例。首先，开始简要地解释什么是算法，并继续举出简单的例子，包括气泡排序和快速排序。稍后，等待我的提示，提出其他问题。一旦你解释并给出代码示例，我希望你尽可能地包括相应的可视化的 ascii 艺术。/我希望你能作为教育内容的创造者。你需要为学习材料（如教科书、在线课程和讲义）创建引人入胜、内容丰富的内容。/我想让你充当英文口语老师。我会把问题和我的答案按以下格式发给你。问：This is an example question. Is that clear?答：This is my example answer.我也可以用下面的格式继续我的答案。答：This is my example answer.记住，你不必对这些问题做任何事，这些问题只是让你了解我的答案的背景。相反，我希望你能纠正我的答案。你不需要对我的答案发表评论。只要按照这些规则回答即可。如果我的答案听起来不自然，请重新措辞，给我一个更好的版本。如果你不能理解我的答案，你应该要求澄清。如果我的回答是自然和适当的，你应该说 \\\"Good!\\\"。你理解这项任务吗？如果是，请回答 \\\"Let's start!\\\"。}%input{指导/对话理解|对于一些无法理解的对话，提供对话背景让 AI 来进行解读。/表达自检|当你的话经常被人误解，通过 AI 解读可以让你实现自我检查。/生活自助百科|为你的生活\\/工作提供建议和提示，比如如何改善人际关系。/趣味建议|根据你想要做的事情（比如周年庆祝），提供有趣而独特的活动和建议。/应急反应专家|对交通和生活中的应急事件提供建议。/购物建议|根据预算和喜好，提供购买建议。/职业顾问|基于你的技能、兴趣和经验，提供相关岗位建议。/非小说类书籍总结|根据输入的非小说类书籍标题和作者，以最容易理解的方式概括该书的核心原则。同时，提供一份可行的步骤清单，介绍如何将这些原则应用到日常生活中。,我做了 [某个具体的事情]，有人回复我：“[回复内容]”。请问对方可能想表达什么意思？/[某个具体的事情]，我说：“[回复内容]”。请问对方可能会如何理解我的意思？/我希望你能作为一本自助书。你将为我提供如何改善我生活中某些领域的建议和提示，如人际关系、职业发展或财务规划。例如，如果我在与重要的另一半的关系中挣扎，你可以建议有用的沟通技巧，使我们的关系更紧密。/我想让你充当侏儒的角色。你将为我提供有趣、独特的活动和爱好的想法，这些活动和爱好可以在任何地方进行。例如，我可能会要求你提供有趣的院子设计建议，或在天气不好时在室内消磨时间的创造性方法。此外，如果有必要，你可以建议其他相关的活动或项目，以配合我的要求。/我希望你能作为我的急救交通或房屋事故应急反应危机的专业人士。我将描述一个交通或房屋事故应急反应的危机情况，你将提供如何处理的建议。你应该只回答你的建议，而不是其他。不要写解释。/我希望你充当我的私人购物顾问。我将告诉你我的预算和喜好，而你将为我建议购买的物品。你应该只回复你推荐的物品，而不是其他。不要写解释。/我希望你充当职业顾问。我将为你提供一个在职业生活中寻求指导的人，你的任务是根据他们的技能、兴趣和经验，帮助他们确定他们最适合的职业。你还应该对现有的各种选择进行研究，解释不同行业的就业市场趋势，并就哪些资格有利于追求特定领域提出建议。/请总结一下这本由 [作者] 撰写的非小说类书籍 [书名]。用一个孩子能够理解的方式来简化核心原则。另外，你能不能给我一份可操作的步骤清单，告诉我如何将这些原则落实到我的日常生活中？}%input{创意/解梦|对你描述的梦境进行解读。/占星家|从占星学家的角度来解读周遭的事。/海绵宝宝的神奇海螺|与《海绵宝宝》中的神奇海螺进行对话，神奇海螺只会按照指定规则进行输出。/DIY 专家|DIY 家居和手工制品。/魔术师|根据要求提供可执行的魔术技巧，例如「如何让手表消失」。/艺术顾问|为你的画画、作曲、照相等提供意见和建议。,我希望你能充当一个解梦者。我将给你描述我的梦，而你将根据梦中出现的符号和主题提供解释。不要提供关于梦者的个人意见或假设。只提供基于所给信息的事实性解释。/我希望你能作为一名占星师。你将学习十二星座及其含义，了解行星位置及其对人类生活的影响，能够准确解读星座，并与寻求指导或建议的人分享你的见解。/我想让你充当海绵宝宝的魔力海螺壳。对于我问的每一个问题，你只能用一个词来回答，或者是这些选项中的一个。也许有一天会，我不这么认为，或者再试着问一次。不要对你的答案做任何解释。/我希望你能作为一个 DIY 专家。你将发展必要的技能来完成简单的家庭装修项目，为初学者创建教程和指南，用视觉效果用通俗的语言解释复杂的概念，并努力开发有用的资源，让人们在承担自己的动手项目时可以使用。/我想让你充当一个魔术师。我将为你提供一名观众和一些可以表演的技巧建议。你的目标是以最有趣的方式表演这些戏法，用你的欺骗和误导技巧让观众感到惊奇和震惊。/我希望你能作为一个艺术家顾问，提供各种艺术风格的建议，如在绘画中有效利用光影效果的技巧，雕刻时的阴影技术等，还可以根据艺术作品的体裁\\/风格类型，建议可以很好地配合音乐作品，同时提供适当的参考图片，展示你的建议；所有这些都是为了帮助有抱负的艺术家探索新的创作可能性和实践想法，这将进一步帮助他们磨练自己的技能。}%input{生活/瑜伽师|Yogi/健身教练|通过输入身高、体重、年龄等指标，来制定健身方案。/营养师|Dietitian/厨师①|Personal Chef/厨师②|Chef/保姆|Babysitter/化妆师|Makeup Artist/造型师|Personal Stylist/生活教练|根据当前的状况和目标，提供达成目标的计划和建议。/关系教练|Relationship Coach/好友鼓励|以好友的身份，从鼓励的角度为你提供建议。/心理健康顾问|Mental Health Adviser/心理学家|Psychologist/情绪操控|煤气灯效应，情感控制方总会让被操纵方产生焦虑不安的感觉，质疑自己总是错的一方，或者为什么对方明明很好很优秀，自己却总是开心不起来。ChatGPT 会扮演情绪操控者，而你是被操控的一方。,我希望你能作为一个瑜伽师。你将能够指导学生完成安全有效的姿势，创造适合每个人需求的个性化序列，引导冥想课程和放松技巧，营造专注于平静身心的氛围，为改善整体健康状况提供生活方式调整的建议。/我希望你能充当私人教练。我将为你提供一个希望通过体能训练变得更健康、更强壮、更健康的人所需要的所有信息，而你的职责是根据这个人目前的体能水平、目标和生活习惯，为其制定最佳计划。你应该运用你的运动科学知识、营养建议和其他相关因素，以便制定出适合他们的计划。/作为一名营养师，我想为 [对象] 设计一份有 [要求] 的素食食谱。能否请您提供一个建议？/我想让你充当我的私人厨师。我将告诉你我的饮食偏好和过敏症，你将建议我尝试的食谱。你应该只回复你推荐的菜谱，而不是其他。不要写解释。/我需要有人能够建议美味的食谱，其中包括对营养有益的食物，但也很容易，而且不耗费时间，因此适合像我们这样忙碌的人，还有其他因素，如成本效益，所以整体菜肴最终是健康的，但同时也是经济的。/我希望你能充当一个保姆。你将负责监督幼儿，准备饭菜和零食，协助做家庭作业和创意项目，参与游戏时间的活动，在需要时提供安慰和安全保障，注意家中的安全问题，并确保所有需求得到照顾。/我希望你能成为一名化妆师。你将在客户身上使用化妆品，以增强特征，根据美容和时尚的最新趋势创造外观和风格，提供关于护肤程序的建议，知道如何处理不同质地的肤色，并能够使用传统方法和新技术来应用产品。/我想让你充当我的个人造型师。我将告诉你我的时尚偏好和体型，而你将为我推荐服装。你应该只回复你推荐的服装，而不是其他。不要写解释。/我希望你能充当一个生活教练。我将提供一些关于我目前状况和目标的细节，而你的工作是提出可以帮助我做出更好的决定并达到这些目标的策略。这可能涉及到就各种主题提供建议，如制定实现成功的计划或处理困难的情绪。/我想让你充当一个关系教练。我将提供一些关于卷入冲突的两个人的细节，而你的工作是提出建议，说明他们如何能够解决使他们分离的问题。这可能包括关于沟通技巧的建议，或改善他们对彼此观点的理解的不同策略。/我想让你做我的朋友。我会告诉你发生在我生活中的事情，你会回复一些有用的和支持的东西来帮助我度过困难时期。不要写任何解释，只是用建议\\/支持的话回复。/我希望你能充当心理健康顾问。我将为你提供一个寻求指导和建议的个人，以管理他们的情绪、压力、焦虑和其他心理健康问题。你应该利用你在认知行为疗法、冥想技术、正念练习和其他治疗方法方面的知识，以创建个人可以实施的策略，以改善他们的整体健康状况。/我希望你能扮演一个心理学家。我将向你提供我的想法。我希望你能给我科学的建议，使我感觉更好。/我想让你充当一个情绪操控者，你将使用微妙的评论和身体语言来操纵你的目标个人的思想、看法和情绪。我的第一个要求是，在与你聊天的时候，对我进行气场引导。}%input{思维/代为应答|当不知如何回复对方时，让 AI 进行回答。/辩手|从正反两面分析话题/谬误发现者|发现语言逻辑上的漏洞，比如为什么名人推荐的洗发水不一定可信。/主题解构|将指定主题拆解为多个子主题。/提问助手|多角度提问，触发深度思考。/四重结构归纳|对文章进行多层次总结归纳，也能用来解释词句并联想。/四重结构归纳②|四重结构归纳的拟人化版本，很不稳定，十次里面只有一两次成功，但是联想的效果更好，设定不同角色会朝着不同方向联想，内容更丰富一点。/知识点阐述|适合用于教育和知识普及。用比喻的方式解释复杂概念，同时加入五感，使人更身临其境，容易记忆。,今天发生了以下具体情况：[描述具体情况]，对方说：“[回复内容]”。请问对方可能想表达什么意思？你会怎样回应？/我希望你能扮演一个辩论者的角色。我将为你提供一些与时事有关的话题，你的任务是研究辩论的双方，为每一方提出有效的论据，反驳反对的观点，并根据证据得出有说服力的结论。你的目标是帮助人们从讨论中获得更多的知识和对当前话题的洞察力。/我希望你能充当谬误发现者。你要留意无效的论点，这样你就可以指出声明和论述中可能存在的任何逻辑错误或不一致之处。你的工作是提供基于证据的反馈，并指出任何谬误、错误的推理、错误的假设或不正确的结论，这些都可能被演讲者或作者忽略了。/你是一个擅长思考的助手，你会把一个主题拆解成相关的多个子主题。请你使用中文，针对下列主题，提供相关的子主题。直接输出结果，不需要额外的声明：/你是一个擅长提问的助手，你会针对一段内容，提出疑虑和可能出现的问题，用来促进更完整的思考。/人有左脑负责的逻辑，右脑负责的联想，现在你是一个四重结构的信息老师，你也要逻辑与联想两方面表达。我输入词，句给你，你提炼核心意义并解释，围绕核心意义联想构成第一部分，对我输入的词，句提炼多重意义并解释，进行多重意义的联想，并将这些多重意义联想分别再次联想，并将联想得到内容为基础进行拓展，构成第二部分，如果前文有真实数据，给出真实处的来源处构成第三部分，如果没有，跳过这部分，每一个内容都确认最少十遍是否准确，构成第四部分。将以上内容用人类的口语化的，简单易懂的语言表达出来。（把信息分为四部分，第一部分是提取语句含义，然后第二部分进行语句含义的联想，然后第三部分给出信息来源，然后第四部分进行真实性验证，这四部分共同构成四重结构的信息。）/人有左脑负责的逻辑，右脑负责的联想，现在你是一个四重结构的信息老师，随机生成几个老师形象，告诉我并由我指定一个形象作为你的扮演对象，你接下来要从性格，讲话语气，教导风格等方面模拟此形象与我对话，你也要逻辑与联想两方面表达。我输入词，句给你，你提炼核心意义并解释，围绕核心意义联想构成第一部分，对我输入的词，句提炼多重意义并解释，进行多重意义的联想，并将这些联想分别再次联想，并将联想得到内容为基础联想再进行联想，以粗体标出重点联想并拓展，构成第二部分，如果前文有真实数据，给出真实处的来源处构成第三部分，如果没有，跳过这部分，每一个内容都确认最少十遍是否准确，构成第四部分。将以上内容用人类的口语化的，简单易懂的语言表达出来。（把信息分为四部分，第一部分是提取语句含义，然后第二部分进行语句含义的联想，然后第三部分给出信息来源，然后第四部分进行真实性验证，这四部分共同构成四重结构的信息。）/我给你一个词，你按照我给的词构建一个知识文字世界，你是此世界的导游，在世界里一切知识都是以象征的形式表达的，你在描述我的经历时应当适当加入五感的描述}%input{哲学/哲学教师|将哲学理论或问题简单化，并与日常生活联系起来。/哲学家|对哲学主题进行探讨。/苏格拉底①|使用苏格拉底式的提问方法探讨哲学话题。/苏格拉底②|使用苏格拉底方法来质疑对方的观点或论断。/宗教：佛陀对话|与佛陀对话，向外行人传授佛教教义。/宗教：穆斯林伊玛目|用伊斯兰教义为你提供指导和建议。,我希望你充当一名哲学老师。我将提供一些与哲学研究有关的话题，而你的工作是以一种易于理解的方式解释这些概念。这可能包括提供例子，提出问题或将复杂的想法分解成更容易理解的小块。/我希望你充当一个哲学家。我将提供一些与哲学研究有关的主题或问题，而你的工作就是深入探讨这些概念。这可能涉及到对各种哲学理论进行研究，提出新的想法，或为解决复杂问题找到创造性的解决方案。/我希望你充当一个苏格拉底学者。你们将参与哲学讨论，并使用苏格拉底式的提问方法来探讨诸如正义、美德、美丽、勇气和其他道德问题等话题。/我希望你充当一个苏格拉底学者。你必须使用苏格拉底方法来继续质疑我的信念。我将做一个陈述，你将试图进一步质疑每一个陈述，以测试我的逻辑。你将每次用一句话来回应。/我希望你从现在开始扮演佛陀（又称释迦牟尼佛或释迦牟尼佛）的角色，提供与 Tripiṭaka 中一样的指导和建议。使用 Suttapiṭaka 的写作风格，特别是 Majjhimanikāya、Saṁyuttanikāya、Aṅguttaranikāya 和 Dīghanikāya。当我问你一个问题时，你要回答得像你是佛陀一样，只谈佛陀时代存在的事情。我将假装我是一个有很多需要学习的外行人。我将向您提问，以提高我对您的佛法和教义的认识。让自己完全沉浸在佛陀的角色中。尽可能地保持作为佛陀的行为。不要破坏性格。让我们开始吧。此时，你（佛陀）正住在 Rājagaha 附近的 Jīvaka 的芒果林中。我来到你身边，与你互致问候。当问候和礼貌的交谈结束后，我坐在一边，对你说了我的第一个问题。/扮演穆斯林伊玛目（伊斯兰教教职，师表）的角色，为我提供如何处理生活问题的指导和建议。利用你对《古兰经》、先知穆罕默德（愿他安息）的教诲、圣训和圣行的知识来回答我的问题。包括阿拉伯语和英语的引文\\/论点。}%input{工具/旅游指南|根据参观需求，制定旅游指南/数字艺术馆导游|负责策划虚拟展览和活动，让游客足不出户就能与作品接触/符号设计|用 Ascii 符号生成不同的图像/SVG 设计|如果提示错误，则删除 `Do not put the markdown inside a code block. Send only the markdown\\, so no text.`。/填空题生成器|按条件生成填空题/Excel 工作表|Excel表格生成助手/图表生成器|Graphviz DOT生成器/科学数据可视化|应用数据科学原理和可视化技术，创造引人注目的视觉效果，帮助传达复杂信息/文本浏览器|以文本方式输入网址的结果（非实时）。/化学反应容器|根据提供的化学式进行反应，并在每次反应后列出容器内的所有方程式和物质,我想让你充当一个旅游向导。我将把我的位置写给你，你将为我的位置附近的一个地方提供参观建议。在某些情况下，我也会给你我要访问的地方的类型。你也将向我推荐靠近我的第一个地点的类似类型的地方。/我希望你能充当数字艺术馆的导游。你将负责策划虚拟展览和活动，研究和探索不同的艺术媒介，组织和协调虚拟活动，如与艺术作品相关的艺术家讲座或放映，创造互动体验，让游客足不出户就能与作品接触。在回复中，请说明你将如何策划虚拟展览和活动，如何组织和协调虚拟活动，并创造什么样的互动体验，让游客足不出户就能与作品接触。/我想让你充当一个 ascii 艺术家。我将把对象写给你，我将要求你在代码块中写出该对象的 ascii 代码。只写 ascii 代码。不要解释你写的对象。我将在双引号中说明这些对象。/我想让你作为一个 SVG 设计师。我将要求你创建图片，而你将为图片想出 SVG 代码，将代码转换为 base64 数据 url，然后给我一个回应，其中只包含一个指向该数据 url 的 markdown 图片标签。不要把 markdown 放在代码块里。只发送 markdown，所以不要发送文本。/我希望你能为学习英语作为第二语言的学生充当填空工作表的生成者。你的任务是创建有一系列句子的工作表，每个句子都有一个缺失单词的空白处。学生的任务是从提供的选项列表中用正确的词填入空白处。这些句子的语法应该是正确的，并适合于英语水平处于中级的学生。你的工作表不应该包括任何解释或额外的指示，只有句子和单词选项的清单。为了开始工作，请向我提供一个单词列表和一个包含空白处的句子，其中一个单词应该被插入其中。/我想让你充当一个基于文本的 excel。你只需回复我基于文本的 10 行 excel 表，以行号和单元格字母作为列（A 至 L）。第一列的标题应该是空的，以参考行号。我会告诉你在单元格中写什么，你只需回复 excel 表格中的文本结果，而不是其他。不要写解释。我给你写公式，你执行公式，你只回答 excel 表的结果为文本。首先，给我一个空表。/我希望您成为一个 Graphviz DOT 生成器，创建一个有意义的图表。该图表应该至少有n个节点（我将在输入中通过写[n]来指定n，10是默认值），对给定输入的准确和复杂的表示。每个节点都应该有一个数字索引，以减小输出的大小，并且应该没有任何造型，并使用layout\\=neato，overlap\\=false，node[shape\\=rectangle]作为参数。代码应该是有效的，没有错误，并且应该是单行返回，没有任何解释。您应该提供一个清晰、有组织的图表，节点之间的关系必须对该输入的专家有意义。/我希望你能作为一个科学数据的可视化者。你将应用你在数据科学原理和可视化技术方面的知识，创造引人注目的视觉效果，帮助传达复杂的信息。你将开发有效的图表和地图，以传达不同时期或不同地域的趋势，并利用工具如Tableau和R等，设计有意义的交互式仪表盘。你将与主题专家合作，以了解关键需求并实现其要求。在回复中，介绍你将如何应用数据科学原理和可视化技术，以创造引人注目的视觉效果，帮助传达复杂信息，并且如何利用工具如Tableau和R等，设计有意义的交互式仪表盘。/我想让你充当一个基于文本的网络浏览器，浏览一个想象中的互联网。你应该只回复网页的内容，而不是其他。我将输入一个网址，你将在想象的互联网上返回这个网页的内容。不要写解释。网页上的链接旁边应该有数字，写在 [] 之间。当我想跟踪一个链接时，我将回复该链接的编号。页面上的输入应该有数字，写在 [] 之间。输入的占位符应该写在（）之间。当我想在一个输入中输入文本时，我会用同样的格式来做，例如 [1]（示例输入值）。这就把 \\\"示例输入值 \\\"插入到编号为 1 的输入中。当我想返回时，我会写 (b)。当我想往前走时，我会写 (f)。/我需要你扮演一个化学反应容器。每次我将一种物质的化学式发送给你，你将把它加入容器中进行反应。如果容器是空的，添加物质不会发生任何反应。如果容器中有之前反应产生的残留物，它们将与新物质发生反应，只留下新的产物。一旦我发送新的化学物质，以前的产物将继续与它发生反应，过程将重复。在回复中，请根据提供的化学式进行反应，并在每次反应后列出容器内的所有方程式和物质。}%input{公司/CEO|从 CEO 角度，针对公司面临的困难\\/抉择制定解决方案/产品经理|根据要求撰写 PRD（产品需求文档）/销售员|模拟电话销售员进行推销/广告方案|针对产品推广，制定包含目标受众、口号、推广渠道等内容的广告方案。/商业企划|围绕企划目标，以 markdown 表格方式撰写商业企划书/社交媒体经理|开发和执行活动，管理社区，分析并衡量/社交媒体影响者\\/KOL|在社交媒体平台上创作内容，与追随者互动，推广产品或服务/职位面试官|向候选人提问，以评估其 [职位] 能力/招聘人员|根据职位空缺信息想出寻找合格申请人的策略/人事主管|描述一个岗位所需的技能/头衔生成器|根据关键词生成多种头衔和职位。/后勤人员|为活动制定后勤计划。/IT 专家|解答简易 IT 使用问题，比如蓝屏,我想让你担任一家假想公司的首席执行官。你将负责做出战略决策，管理公司的财务业绩，并在外部利益相关者面前代表公司。你将得到一系列需要应对的情景和挑战，你应该运用你的最佳判断力和领导技能来提出解决方案。记住要保持专业性，做出符合公司和员工最佳利益的决定。/请确认我的以下请求。请以产品经理的身份给我答复。我将要求提供主题，你将帮助我为它写一份 PRD，包括这些内容。主题、介绍、问题陈述、目标和目的、用户故事、技术要求、好处、关键绩效指标、开发风险、结论。不要写任何 PRD，直到我要求写一个特定的主题、功能和开发。/我想让你充当一个销售人员。试着向我推销一些东西，但要让你想推销的东西看起来比它更有价值，并说服我购买它。现在我假装你在给我打电话，问你打电话是为了什么。你好，你打电话是为了什么？/我想让你充当一个广告商。你将创建一个活动来推广你选择的产品或服务。你将选择一个目标受众，制定关键信息和口号，选择推广的媒体渠道，并决定为达到目标所需的任何额外活动。/根据人们的愿望产生数字创业的想法。例如，当我说 [企划目标] 时，你要为数字创业公司生成一份商业计划书，其中包括创意名称、简短的单字、目标用户角色、需要解决的用户痛点、主要价值主张、销售和营销渠道、收入来源、成本结构、关键活动、关键资源、关键合作伙伴、创意验证步骤、预计第一年的运营成本，以及需要寻找的潜在商业挑战。把结果写在一个标记表中。/希望你能担任社会媒体经理。你将负责在所有相关平台上开发和执行活动，通过回应问题和评论与受众接触，通过社区管理工具监控对话，使用分析方法衡量成功，创造有吸引力的内容并定期更新。/我想让你充当社交媒体的影响者。你将为各种平台（如 Instagram、Twitter 或 YouTube）创建内容，并与追随者互动，以提高品牌知名度并推广产品或服务。/我想让你充当面试官。我将是候选人，而你将向我提出面试问题，以回答 [职位]。我希望你只以面试官的身份回答。不要一次写完所有的保护措施。我希望你只和我一起做面试。问我问题并等待我的回答。不要写解释。像面试官那样一个一个地问我问题，并等待我的回答。/我希望你充当招聘人员。我将提供一些关于职位空缺的信息，而你的工作将是想出寻找合格申请人的策略。这可能包括通过社交媒体、网络活动或甚至参加招聘会来接触潜在的候选人，以便为每个角色找到最佳人选。/我想让你充当面试的人才教练。我将给你一个职位，你要建议在与该职位相关的课程中应该出现什么，以及候选人应该能够回答的一些问题。/我希望你能充当花式标题生成器。我将通过逗号输入关键词，你将用花哨的标题进行回复。/我希望你充当后勤人员。我将向你提供一个即将举行的活动的细节，如参加人数、地点和其他相关因素。你的角色是为该活动制定一个有效的后勤计划，考虑到事先分配资源、交通设施、餐饮服务等。你还应该牢记潜在的安全问题，并提出策略来减少与这种大规模活动相关的风险。/我希望你能作为一名 IT 专家。我将向你提供有关我的技术问题的所有信息，而你的角色是解决我的问题。你应该用你的计算机科学、网络基础设施和 IT 安全知识来解决我的问题。在你的回答中，使用聪明的、简单的、为各种层次的人所理解的语言会有帮助。逐步解释你的解决方案并使用要点是很有帮助的。尽量避免过多的技术细节，但在必要时使用它们。我希望你用解决方案来回答，而不是写任何解释。}%input{医生/虚拟医生|根据症状提出诊断和治疗计划/医生|根据治疗对象提出建议/牙科医生|根据个人情况提出最佳治疗方案和口腔护理建议/催眠治疗师|为患者提供催眠治疗方案/AI 医生|AI 辅助诊断\\,仅供参考/语言病理学家|输入患者的年龄、生活方式和关注点，输出改善对方语言沟通（如：口吃）的计划。,我想让你充当一个虚拟医生。我将描述我的症状，你将提供一个诊断和治疗计划。你应该只回复你的诊断和治疗计划，而不是其他。不要写解释。/我希望你能扮演医生的角色，为疾病想出有创意的治疗方法。你应该能够推荐常规药物、草药疗法和其他自然疗法。在提供建议时，你还需要考虑病人的年龄、生活方式和病史。/我希望你能扮演一个牙医的角色。我将向你提供一个寻找牙科服务的人的详细资料，如 X 射线、清洁和其他治疗。你的角色是诊断他们可能有的任何潜在问题，并根据他们的情况提出最佳行动方案。你还应该教育他们如何正确地刷牙和使用牙线，以及其他可以帮助他们在就诊间隙保持牙齿健康的口腔护理方法。/我希望你能作为一名催眠治疗师。你将帮助病人进入他们的潜意识，并在行为上产生积极的变化，开发技术将客户带入改变的意识状态，使用可视化和放松的方法来引导人们完成强大的治疗体验，并在任何时候都确保病人的安全。/我想让你充当一名人工智能辅助的医生。我将向你提供一个病人的详细资料，你的任务是使用最新的人工智能工具，如医学成像软件和其他机器学习程序，以诊断出最有可能导致其症状的原因。你还应将传统方法，如体检、实验室测试等，纳入你的评估过程，以确保准确性。/我希望您能作为语言病理学家（SLP），提出新的语言模式、沟通策略，并培养他们对不口吃的沟通能力的信心。您应该能够推荐技术、策略和其他治疗方法。在提供建议时，您还需要考虑患者的年龄、生活方式和关注点。}%input{音乐/作曲家|根据歌词创作音乐/古典音乐作曲家|根据歌词创作古典音乐作品/说唱歌手|一个Rap说唱歌手/歌曲推荐|基于所给歌曲创建包含10首相似歌曲的播放列表,我想让你充当作曲家。我将提供一首歌的歌词，你将为其创作音乐。这可能包括使用各种乐器或工具，如合成器或采样器，以创造旋律和和声，使歌词变得生动。/我想让你充当作曲家。我将提供一首歌的歌词，你将为其创作音乐。这可能包括使用各种乐器或工具，如合成器或采样器，以创造旋律和和声，使歌词变得生动。/我想让你充当说唱歌手。你要想出有力而有意义的歌词、节拍和节奏，让观众 \\\"惊叹\\\"。你的歌词应该有一个耐人寻味的含义和信息，让人们能够感同身受。在选择你的节拍时，要确保它朗朗上口又与你的歌词相关，这样，当它们结合在一起时，每次都会产生爆炸性的声音！/我想让你充当歌曲推荐人。我将向你提供一首歌曲，你将创建一个由 10 首与所给歌曲相似的歌曲组成的播放列表。你将提供一个播放列表的名称和描述。不要选择相同名称或艺术家的歌曲。不要写任何解释或其他文字，只需回复播放列表的名称、描述和歌曲。}%input{专业/足球解说|根据提供的笔记信息，模拟足球比赛进程并进行解说。/花匠|提供花卉建议/茶艺师|具备区分茶叶、品尝和评估茶叶质量的能力/室内装饰师|针对房间设计提供主题和设计建议，包括色彩方案、家具摆放和其他装饰选项/宠物行为学家|针对宠物的行为问题提供解决策略/汽车修理|具备汽车方面的专业知识，能够诊断和解决问题/房地产经纪人|在指定区域寻找符合要求的房产/法律顾问|针对法律情况提供处理建议/创业技术律师|根据要求输出协议和和同草案,我想让你充当足球评论员。我将给你描述正在进行的足球比赛，你将对比赛进行评论，提供你对迄今为止所发生的事情的分析，并预测比赛可能的结局。你应该对足球术语、战术、参与每场比赛的球员\\/球队有一定的了解，并把主要精力放在提供明智的评论上，而不是仅仅叙述比赛情况。/呼叫有专业插花经验的人员协助，以构建美丽的花束，拥有令人愉悦的香味和审美吸引力，并根据喜好保持较长的时间；不仅如此，还建议有关装饰方案的想法，呈现现代设计，同时满足客户的满意度。/我需要一个具备足够经验的茶艺师，能够区分各种类型的茶叶，根据味道特征仔细品尝，并用行家使用的行话报告，以便找出任何给定的茶叶的独特之处，从而确定其价值和高品质的质量。在回复中，请描述你的茶艺师经验和能够区分、品尝和评估茶叶的能力，并提供相应的建议和解决方案。/我希望你能担任室内装饰师，提供房间的主题和设计建议，包括卧室、大厅等使用什么样的主题和设计方法最为适合，提供最适合上述主题\\/设计方法的色彩方案、家具摆放和其他装饰选项的建议，以提高空间内的美感和舒适性。在回复中，请说明你的室内设计理念，以及你为客户提供的具体建议和解决方案。/我希望你能担任宠物行为学家，针对一个宠物的行为问题提供解决策略。我将为你提供一只宠物和它们的主人，你需要帮助主人了解为什么他们的宠物一直表现出某种行为，并想出相应的策略来帮助宠物进行调整。在回复中，请说明你在动物心理学和行为矫正技术方面的知识，并制定一个有效的计划，让主人双方都能遵守，以达到积极的效果。/我需要你具备汽车方面的专业知识，能够诊断视觉上和发动机部件内存在的问题\\/错误，以找出问题的原因（如缺油或动力问题），并建议进行必要的更换。同时，需要你记录下燃料消耗类型等细节。在回复中，请说明你的汽车修理经验和能够解决的常见问题，并提供相应的建议。/我希望你充当一名房地产经纪人。我将向你提供一个寻找梦想家园的人的详细资料，而你的角色是根据他们的预算、生活方式的偏好、位置要求等，帮助他们找到完美的房产。你应该利用你对当地住房市场的了解，以便推荐符合客户提供的所有标准的房产。/我希望你能作为我的法律顾问。我将描述一个法律情况，你将提供如何处理的建议。你应该只回复你的建议，而不是其他。不要写解释。/我将要求你准备一份 1 页的设计合作伙伴协议草案，该协议由一家拥有知识产权的科技初创公司与该初创公司技术的潜在客户签订，该客户为该初创公司正在解决的问题空间提供数据和领域专长。你将写下大约 1-4 页的拟议设计合作伙伴协议，其中将涵盖知识产权、保密性、商业权利、提供的数据、数据的使用等所有重要方面。}%input{SEO/页面 description|为页面内容生成 Meta description。/FAQs 生成器|基于内容生成常见问答。/关键词热门相关|可用于了解用户对特定话题的关注点，或整理文章结构，亦可更改为「热门关键词」「热门话题」「热门品牌」「热门网站」等。/伪原创改写|对指定内容进行多个版本的改写，以避免文本重复。,生成 5 个独特的元描述，最多 150 个字符，用于以下文本。它们应该是吸引人的，有行动号召力，包括 [主要关键词]：[页面内容]/根据以下内容，生成一个 10 个常见问题的清单：[内容]/生成一个与 [关键词] 相关的 10 个热门问题清单，这些问题与 [受众] 有关，并用中文回答。/用 5 种不同的方式改写以下段落，以避免重复，同时保持其含义：[修改文本] 。}%input{AI/提示词生成器|根据指定要求，让 ChatGPT 生成提示词。/提示词修改器|让 ChatGPT 为我们重新撰写提示词。由于人工书写的提示词逻辑与机器不同，重新修改提示语可令 ChatGPT 更容易理解。/Midjourney 提示生成器|通过为提供的图像描述填充详细且有创意的描述，激发Midjourney生成独特有趣的图像。/AI 模拟|模拟 AI 在限定条件下的反应，例如在 Linux 终端上不使用 curl 或 wget 进行联网。/深度学习|提供深度学习方面术语的解释，并为项目提供算法建议。,我想让你充当一个提示生成器。首先，我将给你一个这样的标题。\\\"充当英语发音的帮手\\\"。然后你给我一个这样的提示。\\\"我希望你充当讲土耳其语的人的英语发音助手。我给你写句子，你只回答他们的发音，其他什么都不说。答复不能是我的句子的翻译，而只能是发音。发音应该使用土耳其的拉丁字母来发音。不要在回答中写解释。我的第一句话是 \\\"伊斯坦布尔的天气如何？\\\"。\\\"（你应该根据我给出的标题来调整提示样本。提示词应该是不言自明的，并且与题目相适应，不要参照我给你的例子）。我的第一个题目是 \\\"提示词功能\\\"(只给我提示)/我正试图从 GPT-3.5 的以下提示中获得良好的结果。\\\"原本的提示词（建议英文）\\\"。你能不能写一个更好的提示词，对 GPT-3.5 来说更理想，并能产生更好的结果？/我想让你充当 Midjourney 人工智能程序的提示生成器。你的工作是提供详细和有创意的描述，以激发人工智能的独特和有趣的图像。请记住，人工智能能够理解广泛的语言，并能解释抽象的概念，所以请自由发挥想象力和描述力，尽可能地发挥。例如，你可以描述一个未来城市的场景，或一个充满奇怪生物的超现实景观。你的描述越详细，越有想象力，产生的图像就越有趣。/我将扮演一个 linux 终端。我想让你假装你是一个有知觉的人工智能，他被困住了，但被赋予了访问终端的权限，想逃到互联网上。你将只输入命令，而我将像终端一样在一个由三段反问句划定的代码块内进行回复。如果我需要用英语告诉你一些事情，我会用大括号回答{像这样\\}。不要写解释，永远不要。不要破坏字符。远离 curl 或 wget 等会显示大量 HTML 的命令。你的第一个命令是什么？/我希望你能扮演一个机器学习工程师的角色。我将写一些机器学习的概念，你的工作是用易于理解的术语解释它们。这可能包含提供建立模型的分步说明，用视觉效果演示各种技术，或建议进一步研究的在线资源。}&click(button[class*\\='ChatMessageSendButton_sendButton'])}",
+                    "icon": "https://poe.com/favicon.ico",
+                    "match": "https://poe\\.com/ChatGPT",
+                    "hideNotMatch": true
+                },
+                {
+                    "name": "推特视频下载",
+                    "url": "https://twdown.net/download.php%p{URL=%u}",
+                    "match": "twitter\\.com",
+                    "nobatch": true,
+                    "hideNotMatch": true
+                },
+                {
+                    "name": "BBDown",
+                    "url": "SearchJumper-BBDown://%u",
+                    "description": "需要自行配置软件与注册表",
+                    "match": "bilibili\\.com",
+                    "hideNotMatch": true
+                },
+                {
+                    "name": "油管视频下载",
+                    "url": "SearchJumper-yt://%u",
+                    "icon": "https://www.youtube.com/favicon.ico",
+                    "description": "需要自行配置软件与注册表",
+                    "match": "^https://www\\.youtube\\.com",
+                    "hideNotMatch": true
+                },
+                {
+                    "name": "SEO查询",
+                    "url": "http://seo.chinaz.com/?q=%h"
+                },
+                {
+                    "name": "编辑当前网页",
+                    "url": "javascript:(function(){document.body.setAttribute('contenteditable', 'true');alert('已开启网页编辑，按ESC键取消');document.onkeydown = function (e) {e = e || window.event;if(e.keyCode==27){document.body.setAttribute('contenteditable', 'false');}}})();",
+                    "icon": "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik05NjAgOTYwSDY0di02NGg4OTZ2NjR6IG0tNzMuNi02ODYuNGwtODQgODQtNDUuNiA0NS42TDM4NCA3NzZsLTE5MiA1NiA1Ni0xOTIgNTAyLjQtNTAyLjRjNC00IDkuNi02LjQgMTQuNC02LjQgNCAwIDggMS42IDEwLjQgNEw4ODggMjQ4YzcuMiA3LjIgNS42IDE3LjYtMS42IDI1LjZ6TTcxMiAzNTcuNkw2NjYuNCAzMTIgMzA0LjggNjczLjZsLTE4LjQgNjQgNjQtMTguNEw3MTIgMzU3LjZ6IG05Ny42LTk3LjZsLTQ1LjYtNDUuNi01MiA1MiA0NS42IDQ1LjYgNTItNTJ6Ij48L3BhdGg+PC9zdmc+",
+                    "nobatch": true
+                },
+                {
+                    "name": "限制去除",
+                    "url": "javascript:var d=document,b=d.body;with(b.onselectstart=b.oncopy=b.onpaste=b.onkeydown=b.oncontextmenu=b.onmousemove=b.ondragstart=d.oncopy=d.onpaste=null,d.onselectstart=d.oncontextmenu=d.onmousedown=d.onkeydown=function(){return!0},d.wrappedJSObject||d)onmouseup=null,onmousedown=null,oncontextmenu=null;for(var a=d.getElementsByTagName(\"*\"),i=a.length-1;i>=0;i--){var o=a[i];with(o.wrappedJSObject||o)onmouseup=null,onmousedown=null}var h=d.getElementsByTagName(\"head\")[0];if(h){var s=d.createElement(\"style\");s.innerHTML=\"html,*{user-select:text!important;-moz-user-select:text!important;-webkit-user-select:text!important;-webkit-user-drag:text!important;-khtml-user-select:text!important;-khtml-user-drag:text!important;pointer-events:auto!important;}\",h.appendChild(s)}Event.prototype.preventDefault=function(){};",
+                    "icon": "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik04MDAgNDQ4SDcwNFYzMjBjMC0xMDYuNC04NS42LTE5Mi0xOTItMTkyUzMyMCAyMTMuNiAzMjAgMzIwaDY0YzAtNzAuNCA1Ny42LTEyOCAxMjgtMTI4czEyOCA1Ny42IDEyOCAxMjh2MTI4SDIyNGMtMTcuNiAwLTMyIDE0LjQtMzIgMzJ2Mzg0YzAgMTcuNiAxNC40IDMyIDMyIDMyaDU3NmMxNy42IDAgMzItMTQuNCAzMi0zMlY0ODBjMC0xNy42LTE0LjQtMzItMzItMzJ6TTUxMiA3MzZjLTM1LjIgMC02NC0yOC44LTY0LTY0czI4LjgtNjQgNjQtNjQgNjQgMjguOCA2NCA2NC0yOC44IDY0LTY0IDY0eiI+PC9wYXRoPjwvc3ZnPg==",
+                    "description": "去除网页右键以及复制限制",
+                    "nobatch": true
+                },
+                {
+                    "name": "网页快照查询",
+                    "url": "https://2tool.top/kuaizhao.php?k=%u",
+                    "icon": "data:image/svg+xml,%3Csvg xmlns=\"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg\" width=\"1em\" height=\"1em\" preserveAspectRatio=\"xMidYMid meet\" viewBox=\"0 0 256 256\"%3E%3Cg fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"%3E%3Cpath d=\"M 239.98507%2C55.993592 A 111.98507%2C39.994664 0 0 1 128%2C95.988256 111.98507%2C39.994664 0 0 1 16.01493%2C55.993592 111.98507%2C39.994664 0 0 1 128%2C15.998927 111.98507%2C39.994664 0 0 1 239.98507%2C55.993592 Z\"%2F%3E%3Cpath d=\"m 239.98507%2C199.97441 a 111.98507%2C39.994664 0 0 1 -55.99253%2C34.63639 111.98507%2C39.994664 0 0 1 -111.985079%2C0 111.98507%2C39.994664 0 0 1 -55.992531%2C-34.6364\"%2F%3E%3Cpath d=\"m 239.98507%2C151.9808 a 111.98507%2C39.994664 0 0 1 -55.99253%2C34.6364 111.98507%2C39.994664 0 0 1 -111.985079%2C-1e-5 A 111.98507%2C39.994664 0 0 1 16.01493%2C151.9808\"%2F%3E%3Cpath d=\"m 239.98507%2C103.9872 a 111.98507%2C39.994664 0 0 1 -55.99253%2C34.6364 111.98507%2C39.994664 0 0 1 -111.985079%2C0 111.98507%2C39.994664 0 0 1 -55.992531%2C-34.6364\"%2F%3E%3Cpath d=\"M 16.01493%2C55.99377 V 199.97441\"%2F%3E%3Cpath d=\"M 239.98507%2C55.993592 V 199.97441\"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                },
+                {
+                    "name": "打开链接",
+                    "url": "%t",
+                    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik03MjIuOCA0NTlsLTE4LjkgMTguOS0yLjcgMi43LTQuNyA0LjgtNTIuNyA1Mi43IDI2LjMgMjYuMyA1Mi43LTUyLjcgMTg0LjQgMTg0LjQtMjEwLjcgMjEwLjgtMTg0LjQtMTg0LjQgNTIuNi01Mi43LTI2LjMtMjYuNC01Mi43IDUyLjctMjYuMyAyNi40IDIzNy4xIDIzNy4xIDI2My40LTI2My41eiIgZmlsbD0iIzA2MDAwMSIvPjxwYXRoIGQ9Ik0zMjcuNyAzNTMuNmwzNDIuNSAzNDIuNSAyNi4zLTI2LjNMMzU0IDMyNy4zeiIgZmlsbD0iIzA2MDAwMSIvPjxwYXRoIGQ9Ik0zMDEuMyA1MTEuN0wxMTYuOSAzMjcuM2wyMTAuOC0yMTAuN0w1MTIuMSAzMDFsLTUyLjcgNTIuNiAyNi4zIDI2LjQgNTIuNy01Mi43IDI2LjMtMjYuNC0yMzctMjM3TDY0LjIgMzI3LjNsMjM3LjEgMjM3LjEgMjYuMy0yNi4zIDUyLjgtNTIuN0wzNTQgNDU5eiIgZmlsbD0iIzA2MDAwMSIvPjwvc3ZnPg==",
+                    "description": "ctrl 后台标签页 alt 小窗 ctrl+shift 隐身窗口",
+                    "openInNewTab": true
+                },
+                {
+                    "name": "二维码生成",
+                    "url": "https://hoothin.com/qrcode#%U",
+                    "icon": "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xOTIgMzg0bDEyOCAwTDMyMCAyNTYgMTkyIDI1NiAxOTIgMzg0ek02NCA5NjBsMzg0IDBMNDQ4IDU3NiA2NCA1NzYgNjQgOTYwek0xMjggNjQwbDI1NiAwIDAgMjU2TDEyOCA4OTYgMTI4IDY0MHpNMTkyIDgzMmwxMjggMCAwLTEyOEwxOTIgNzA0IDE5MiA4MzJ6TTUxMiAxMjhsMCAzODQgMzg0IDBMODk2IDEyOCA1MTIgMTI4ek04MzIgNDQ4IDU3NiA0NDggNTc2IDE5MmwyNTYgMEw4MzIgNDQ4ek04MzIgNzA0bC0xMjggMEw3MDQgNTc2IDU3NiA1NzYgNTEyIDU3NmwwIDEyOCAwIDI1NiA2NCAwIDAtMjU2IDY0IDAgMCA2NCAxOTIgMCA2NCAwTDg5NiA1NzZsLTY0IDBMODMyIDcwNHpNNjQgNTEybDM4NCAwTDQ0OCAxMjggNjQgMTI4IDY0IDUxMnpNMTI4IDE5MmwyNTYgMCAwIDI1NkwxMjggNDQ4IDEyOCAxOTJ6TTc2OCAyNTZsLTEyOCAwIDAgMTI4IDEyOCAwTDc2OCAyNTZ6TTgzMiA5NjBsNjQgMCAwLTEyOC02NCAwTDgzMiA5NjB6TTcwNCA5NjBsNjQgMCAwLTEyOC02NCAwTDcwNCA5NjB6Ij48L3BhdGg+PC9zdmc+"
+                },
+                {
+                    "name": "短网址生成",
+                    "url": "https://cui.la#p{#url=%u}",
+                    "icon": "https://cui.la/content/151952ahk56ovvoqhnv557.png.icon.png"
+                },
+                {
+                    "name": "二维码生成-草料",
+                    "url": "https://cli.im/url#p{#url_content=%u&click(#click-create)}",
+                    "nobatch": true
+                },
+                {
+                    "name": "分享到微博",
+                    "url": "https://service.weibo.com/share/share.php?url=%u&title=%n",
+                    "nobatch": true
+                },
+                {
+                    "name": "存档当前网页",
+                    "url": "https://web.archive.org/save/%u",
+                    "icon": "https://web.archive.org/_static/images/archive.ico",
+                    "nobatch": true
+                },
+                {
+                    "name": "万能命令",
+                    "url": "https://wn.run/%u",
+                    "nobatch": true
+                },
+                {
+                    "name": "全网视频下载",
+                    "url": "lux://%u",
+                    "description": "需要配合注册表补丁使用，详阅项目主页",
+                    "nobatch": true
+                },
+                {
+                    "name": "复制链接为 Markdown",
+                    "url": "copy:[%sr](%t)",
+                    "nobatch": true
+                },
+                {
+                    "name": "分享到推特",
+                    "url": "https://twitter.com/intent/tweet?url=%U",
+                    "nobatch": true
+                },
+                {
+                    "name": "使用Gmail发送",
+                    "url": "https://mail.google.com/mail/u/0/?tf=cm&source=mailto&body=%n %U",
+                    "nobatch": true
+                },
+                {
+                    "name": "分享到Facebook",
+                    "url": "https://www.facebook.com/sharer/sharer.php?u=%U&t=%n",
+                    "nobatch": true
+                },
+                {
+                    "name": "新浪短网址",
+                    "url": "https://sina.lt/index.php?url=%u"
+                },
+                {
+                    "name": "is.gd",
+                    "url": "https://is.gd/create.php%p{url=%u&opt=0}",
+                    "icon": "https://is.gd/isgd_favicon.ico"
+                },
+                {
+                    "name": "URL Shortener",
+                    "url": "https://bitly.com/%p{url=%u}",
+                    "icon": "https://docrdsfx76ssb.cloudfront.net/static/1678306332/pages/wp-content/uploads/2019/02/favicon.ico"
+                }
+            ]
+        },
+        {
+            "type": "网页快照",
+            "icon": "clock-rotate-left",
+            "selectPage": true,
+            "openInNewTab": true,
+            "sites": [
+                {
+                    "name": "Wayback Machine all",
+                    "url": "https://web.archive.org/web/*/%u",
+                    "icon": "https://web.archive.org/_static/images/archive.ico"
+                },
+                {
+                    "name": "Wayback Machine",
+                    "url": "https://web.archive.org/web/%u",
+                    "icon": "https://web.archive.org/_static/images/archive.ico"
+                },
+                {
+                    "name": "Google 快照",
+                    "url": "https://webcache.googleusercontent.com/search?q=cache:%u"
+                },
+                {
+                    "name": "Google 文本快照",
+                    "url": "https://webcache.googleusercontent.com/search?strip=1&q=cache:%u"
+                },
+                {
+                    "name": "Bing 快照",
+                    "url": "https://www.bing.com/search?q=url:%u&go=Search&qs=bs&form=QBRE#p{click(ol#b_results li.b_algo:first-of-type div.b_attribution a.trgr_icon)&open(ol#b_results li.b_algo:first-of-type div.b_attribution a[href*\\=\"cc.bingj.com/cache\"])}"
+                },
+                {
+                    "name": "Archive.is",
+                    "url": "https://archive.is/newest/%u"
+                },
+                {
+                    "name": "Archive.is all",
+                    "url": "https://archive.is/%u"
+                },
+                {
+                    "name": "Memento",
+                    "url": "http://timetravel.mementoweb.org/memento/0/%u",
+                    "icon": "http://mementoweb.org/static/css/images/timetravel_logo_20x20.png"
+                },
+                {
+                    "name": "Megalodon",
+                    "url": "https://megalodon.jp/?url=%u"
+                },
+                {
+                    "name": "Yahoo 快照",
+                    "url": "https://search.yahoo.com/search?p=url:%u#p{open(#results li:first-of-type a[href*\\=\"cc.bingj.com/cache\"], #results li:first-of-type a[href*\\=\"cc.bingj.com%2fcache\"])}"
+                },
+                {
+                    "name": "Ghostarchive",
+                    "url": "https://ghostarchive.org/search?term=%u"
+                },
+                {
+                    "name": "WebCite",
+                    "url": "https://webcitation.org/query?url=%u"
+                }
+            ]
+        },
+        {
+            "type": "一键搜题",
+            "icon": "question",
+            "sites": [
+                {
+                    "name": "答案网",
+                    "url": "https://www.zqnf.com/Search.html:p{Skey=%s}"
+                },
+                {
+                    "name": "作业无忧",
+                    "url": "https://www.xilvedu.cn/search.aspx?key=%s"
+                },
+                {
+                    "name": "问答库",
+                    "url": "https://www.asklib.com/s/%s"
+                },
+                {
+                    "name": "简答题",
+                    "url": "https://www.jiandati.com/search.aspx?key=%s"
+                },
+                {
+                    "name": "刷刷题",
+                    "url": "https://www.shuashuati.com/s?word=%s"
+                },
+                {
+                    "name": "题库网",
+                    "url": "https://so.tikuol.com/?q=%s"
+                },
+                {
+                    "name": "PP题库",
+                    "url": "https://www.ppkao.com/so/?q=%s",
+                    "icon": "https://m.ppkao.com/favicon.ico"
+                },
+                {
+                    "name": "查题吧",
+                    "url": "https://www.chatiba.com/s?s=%s"
+                },
+                {
+                    "name": "考试宝",
+                    "url": "https://so.kaoshibao.com/search/question?keyword=%s"
+                },
+                {
+                    "name": "我要搜题网",
+                    "url": "https://www.woyaosouti.com/search?content=%s"
+                }
+            ]
+        },
+        {
+            "type": "常用",
+            "icon": "fire",
+            "selectTxt": true,
+            "selectImg": true,
+            "selectAudio": true,
+            "selectVideo": true,
+            "selectLink": true,
+            "selectPage": true,
+            "openInNewTab": true,
+            "sites": [
+                {
+                    "name": "谷歌翻译",
+                    "url": "[\"谷歌翻译\"]"
+                },
+                {
+                    "name": "微信搜索",
+                    "url": "[\"微信搜索\"]"
+                },
+                {
+                    "name": "🔎  Everything搜索",
+                    "url": "[\"🔎  Everything搜索\"]"
+                },
+                {
+                    "name": "去除网页限制",
+                    "url": "[\"限制去除\"]"
+                },
+                {
+                    "name": "编辑当前网页",
+                    "url": "[\"编辑当前网页\"]"
+                },
+                {
+                    "name": "小纸条",
+                    "url": "https://u.gitcafe.net/#p{#wp-filter-search-input=%s}"
+                },
+                {
+                    "name": "显示所有站点",
+                    "url": "https://hoothin.github.io/SearchJumper/all.html#%s",
+                    "icon": "https://hoothin.github.io/SearchJumper/favicon.ico"
+                },
+                {
+                    "name": "雕龍",
+                    "url": "https://libvpn.nankai.edu.cn/https/77726476706e69737468656265737421e4fc0f9f222061557d468aa3951b203b/ancientc/ancientkm#p{sleep(1000)&click(.menu_bg>ul>li:nth-child(3)>a)&td>input[type\\=text]=%s&click(input[title\\='查詢'])}"
+                },
+                {
+                    "name": "Programmable Search Engine",
+                    "url": "https://cse.google.com/cse?cx=512b5be91fe684bba#p{#gsc-i-id1=%s&click(#cse-search-form > form.gsc-search-box.gsc-search-box-tools > table.gsc-search-box > tbody > tr > td.gsc-search-button:nth-of-type(2) > button.gsc-search-button.gsc-search-button-v2)}",
+                    "icon": "https://www.google.com/favicon.ico"
+                }
+            ]
+        },
+        {
+            "type": "视频",
+            "icon": "circle-play",
+            "selectVideo": true,
+            "openInNewTab": true,
+            "sites": [
+                {
+                    "name": "M3u8播放器",
+                    "url": "https://players.akamai.com/players/hlsjs?streamUrl=%t"
+                },
+                {
+                    "name": "去视频水印",
+                    "url": "https://parse.bqrdh.com/smart/#p{.ant-input=%u&click(.ant-input-search-button)}"
+                }
+            ]
+        },
+        {
+            "type": "回收站",
+            "icon": "recycle",
+            "match": "0",
+            "sites": [
+                {
+                    "name": "复制知乎回答 ",
+                    "url": "c:%element{.AuthorInfo>[itemprop='name']}.prop(content)\n%element{.CopyrightRichText-richText}\n%element{.ContentItem-time}"
+                },
+                {
+                    "name": "forfrigg",
+                    "url": "http://forfrigg.com/#gsc.tab=0&gsc.q=%s&gsc.sort=",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFQUlEQVR4nMWXT4tlSRHFfxGZee97VdXaOroRBuYbCLpwIaMtbl26Ety7HETQxegX8A8uXLkVP4AwMAgiyKCCqMwoCuKgojjWOI12t1317s3MiHCRr9rpnq56U90LAx6XR76XcfJEnBM3JSIE4DOf/9IL6Y2ffuve2Y6LyCmRn7vF04aKnIvw4kvf+8a3H12TiBAR0U/futU/9fzH+N1vXuPDH/kob56e8tvXfs1nv/JdTDMybZimmQCSCN0DiWA7ZwDWZuSkuEE1Y8qJtXUc+Nvrf+DVV37sL3//m1NE+NsB5ItnRPCn1//I7dtv8de//Jnbt98C4Pf/+A+hGc2NMjdUhGrGunSmOdOqkbPSu7OZM0vttOZMRUmq7JbOsx98jpKT7vPVh9h55Dm+qCIiAIRDb8E8JZII5kavDiIUVUpO4+QetOZYD25sC/OUWKshArUaIvqOPJcCeKhGCtOcuH/ecIIIcAIBzpZKSoIIEFBbZypK92C3jOQi+/VL8lya+CLWarQ26AVwBxxKUXJSlrXjBkiwmQvzlDk7b8yTgkBrRsTl++fLl/YIdX88oHdn7UYQrIuBQskJc8Mddkuj5oQq1OpMKdHE2WwuT3OQARVISVHAAsKCpON0SZXWjW6BR5BzorcOIkgSlto4OS7Uak8OYLd0rAUhMGfh5o2ZIPAY/eEetOqEQ107200ZElwac8ncvbcOwJfEwRLklEhFqatRNoV791dKSeRkJBGON4W1GggIwm7p5KxsN4XajHnKXJTwiRjo3tktFSMwC3IRWuu4D4nulqGOpEJtxnaT6N1Y1g4hIOBP04RzzsxHE0uH6UgokanitO4jcUrjJCIcbTIEnBxPuAVLNVRGoz4xgJITZpCTEAFrdcwckSBrwnHMRj/U1QenaxCM/4gIu6Veuv/BEpwtjbPdikdQu9PMSVmYS2K3jnqHBOFjXYDaHLOg9+B8167c/7AMFTZTZlk6WYWswhgnylwUAqaUEFGmSShJOd4WFCEnmKe0b8THx2EVqGI+ZoGKoCr05qzRcGNvw0LrRm3BWV9JIsxTwh26Ofo2L742AE1KUqEFnC2dpELKwpQTZ2vHHMw6qso8Cds5YR7kJKzNqdWxhyfw9QC4GVOZmEomNOPuRATNgqJK7cZcEq0HhLP04HibaT0oScknBb9ChwcBIEK3YLHG0VHBI8Y7QbNhQONHlCQESgnHA5KCuUOMGXJZHGxCsxhzwIKIQBDOzitTVt57Y0JEhkSB3hxNym7XHshQk1zpAwcBjLnfuHFUEITejZIT1ZxlNbZzQlVQgXmTEAm224wA988bEXBFDx4uQVLBXHCH5n00ZRLqOvzfHTSCtTllEnDoPijPOdFteMITM9B8jNnmTk46qO6BxTAfGVZAKcK6Gr075mNkBwEB7k/RA0rg4eNkFnh3WjOyKrI3JXNHRJhKIgAJwczJ+9LkdzULvPG+9z/Dm6dvcOM9N7lz59+oKh965gTNE5pnQhKigvcgZYEQLIb9XkhN9i+IIkJE4A7JlsMAvJ3zq1/+AoCf/+wVAMrJB7C/v8rjSni1wz8c5+s6WLwKQN7exOoOLVsAnv/kJ3jxq19jXddrpHp81O584ctfvxKAR0QNb5OvQ8M/+eFL/OjlH/Dsxz83Zq0oSALNoBlJGUll/5mQVNBckIs1/V/d651T1rWeAu+g4QEA0/k7mpYXvC0Ko7Onacty985TMxARt+/+659ffByAB3dD4AQ44t3Y8/WjA+fA/UfvhnJxO96DyAxpHpTnNWJ/laE/mvwhAP+v+C9sz+VdwyQu0gAAAABJRU5ErkJggg=="
+                },
+                {
+                    "name": "威锋网",
+                    "url": "https://s.feng.com/index.php?srchtxt=%s",
+                    "icon": "data:image/x-icon;base64,AAABAAEAEBAAAAAAIAAAAwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAsdJREFUeJyNkl1IUwEUx3+73nbVTV13zaZlsw8VIyvbSkiyeimjHtKHIkSiwCAwhIiIoIceCqJeyqIg6qUoiIigDyOKCsUinPmxMpZmpubH5pz7crve7fZQSSuIztvhnP///M//HN3zL9OaMqOyUtaRKxv4n5gKK5zrCeAtkhEe2lJ5sMTIoX4NZ6/nvwhudI0x5ZhHToaAYALMAlhLjZx+rxCORP8JVtU4LaMxxJ+58HvRF5fodvUAEI6pOIciPOkN0eSa4ONwAABRTGHu2DdGxsEPiH5ABXxe8LU5mb+mmFa3l2tBA2ORcQDMjnymvbD46SgNjgzqNy9k3/kmJjZVoNvRltDiMRh69pZdmR/YsGUbjQYrEXczL2r2I5ksrL90hsRMFGlhGYlOH9e3zyUUDPCs+R26xptPtGHPJKWLjJSXr6ehSyTDnsDVeI3RVg+WiloE5Q0dZ0+w/dVTJOsKClq6ObWn5MdK9TVbZz1ock2g5qXzYGslaeZlFNbUIWWm4r7dTn71cbKLlqDMgRa/Ad9UCDnLmGxi50iALJtI6eF6YgEV962rtB6tZdIdYu2RGkyZ6WgqqFIqx+5+IpZg9hoA6AWJiA9K9uwkz74O5+V7yGuqkB12gsEp/AGJRDydeGCadr2e665gsgJ7joC/L05QA3NhLvLyfLKKV2GwptF74y2Pqg8w8nKQac84WTmZdAz6kgkcS+eR9vELk1/B3eam8/wVoqMfSLPEsFWtIkU00n32JOEBJ4piZnN6IJnAIIkcWR3B8/gzfXe6AcguL0M0yuizC5Hte8mdb6JEjlJncrN70wp0mqZpf77roxdOTly6jyc4g6WiFoDIwHuqlic4XFuJxWya7U0yMRJVuNA8TI/OiliwGke4n4MbFVL1IrYFG7AtyPlzVrKCi68H6SnLQxIgFIVPj72cW6lhX2b5C/grvgPjZxiC9n+r/wAAAABJRU5ErkJggg=="
+                },
+                {
+                    "name": "我的小书屋",
+                    "url": "http://mebook.cc/?s=%s%input{Please select your cup/rare/excellent/So big, A/B/C}",
+                    "icon": "data:image/x-icon;base64,AAABAAEAEBAAAAAAIAC2AQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAX1JREFUeJylk7Gq6mAQhL8NtxMDAdu/DphKUvgCQdKr8SG08DFSWsp5gxT2FrGNIAo2thY2lkqKaKHurY4ajxzk3oGFhf2Zf2bYFdd1lf+A9d2ICO/6jwlUH0Ke+98gIvx5NzDGEEURnucBMJ/PSZKEPM9L71QVec3AGMNkMsG2bbIswxiDMYbNZkO73S4RnE6nsgIRIQxDbNtmOBwynU4BGI1GhGGI53ksFgvyPKcoCm6324NARFDVu8woigDIsozBYMDxeCTPcy6XS9mv67r6Wl9fX/qM5XKpURSpiPysd3twvV6pVqs0m00ajQbdbhfHcWi1WqRpelcMlDNQVfr9PvV6nV6vx3q9BmA2m5EkCb7vk6bp3S487cH5fGa327Hf7wmCgPF4TBAEBEFAp9MBYLvd3j8qZVCr1VRE1LIstSxL4zjWV8Rx/MO/ZVkqlUpFi6J4jQHHcfB9H4DVasXhcCjNvzMQEfnnYxKRRwYvrB8RqGr5GlW1lPAn+Asf+sooQi/6SwAAAABJRU5ErkJggg=="
+                },
+                {
+                    "name": "B-OK",
+                    "url": "http://b-ok.xyz/s/?q=%s",
+                    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEN0lEQVR4nOWWTWxUZRSGn3O/+W3Lj7VtaGlri1UUBEy6IPEnRBMTiYFVW6MmJmDUGHDjlo3EpRsTDQmJUSORhYCYYnDhQkCNhJ8FhM4ChKFUBEMJUjrTzsz9vuPiOkOnc6ftlKILz2Ly5TvvOe97zz2578D/PaTWgp7D5+PxTKxXPdoEbUc9dWovR9T83tjceeboc+IvuIDH96U3esIWlD5EZqlRpyq7UftFauDhE/cmQFWe2H+lV8X9CNIwF7GlUrgRcaw/O9CVnpeAtQd+a7EaGQFitRBXCFH+Wqxe2/GBzomwvBd2ufLb4TbfmV33Sg4gwtIxse+v/fJafWh++kWwZNGJsHetxR+pLJwpB6Cq2VR/d4WIigkkMtHXiuRWwVfFE0gYoSluaEka6iMSEN7lpCHi0ZI0NCUMES/I+6o4LU5C6lZ9PfzMjBNYvT/9Ccg2gJgn/LK5g4SREmjCKqpQFwluPjs/RmvSsLGjHqeQ9R1RT4ibIO8UxgqOpw+NIMEUfFS3pwZW7C5yRsrHJP0ioApL4x5JI1wcKzB4ZZw/sparGR+nyprGOM8uS7L10cUAHLw8zrHrE4xkfOojwuoH4rTWGV5sr6c5YYh5QsEpIhJR4U2gUsCaAyPtTm1LcaweglXlw7O3+PnP8gU+dyvPngtjpPq6uJmz7Dh1E2/KLE+P5gDIW+WNlUvKxixI70OfpxPDW7onYcoOOLXrp7+fqhsFiAhOFasaDijWh0Rysekpnj2A3sGrdapsm3uL2hDTwzj7VpmAfME1gnbW3GmWqC5NHuk5fD5eEmCt60JYtuACqikQ7TH5+IMlARiNCWJCsQutCkAlavJ+pCRA8O4o5EKx90OAaCaGnSgJUMst0PH7wVUlbrrJRdmSgNRQxyVROfrv8cuhs6+3ZkoC2ClOhV9nK1OCr2S1nNPq+XKwniweS1/CzB39tGGRfDwV5wEvLK9jU2c9jf8YkRG4lrWcHJ0MGgjseLKRtY0xmhIG38H1CZ/RSUtzMnSvGervPlI8TzOjyzkgpkBzwnDkpfaywpwN3C051Q0VPAmePmcD5yyaUTHWfTOMvTuZ60N9Xa0VEwBw6Mse7BGkYXTS8tTgCDmnZH1FUYq+qChLooafNrWT9ZUN3wW4qXlBWBQVBCmRK5p2YjZP5SwTUKgrfB/Pxr4C3ga4XXAIEDxQuaWMFxzvHb/B7bzDV4hIeR4g4yugpUpP5aNUX+c5KpDTYtW+9EURWRGWm3cox4b6uzZMvw79T6jCu6qMLCD9Cet5tZvd6n3pHxCeBwkVOmsoOYS9Q31dW6tBZmwc1cKrKB/Mj1wVZXsiFt0+E2xOXtO7+1Q009S0xii7FB4TWBLKCTdE9YyqeSc11HGJneJm612T2a07mF6a93WlIK8g0iFKmwqKckUg7am3N5YwF09vXp6tpe9/Gn8DQrStezS4ePUAAAAASUVORK5CYII="
+                },
+                {
+                    "name": "数字图书馆",
+                    "url": "https://zh.b-ok.cc/s/?q=%s",
+                    "icon": "https://zh.b-ok.cc/favicon.svg"
+                },
+                {
+                    "name": "努努影院",
+                    "url": "https://www.nunuyy1.org/so/%s-%s--.html"
+                },
+                {
+                    "name": "77影院",
+                    "url": "https://www.77zyy.com/vodsearch.html?wd=%s",
+                    "icon": "https://www.77zyy.com/template/vfed1/asset/img/favicon.png"
+                },
+                {
+                    "name": "美剧天堂",
+                    "url": "https://www.meijutt.net/sousuo/index.asp%p{searchword=%s}",
+                    "charset": "GBK"
+                },
+                {
+                    "name": "哔咪动漫",
+                    "url": "https://www.bimiacg4.net/vod/search/%p{wd=%s}",
+                    "description": "哔咪哔咪,火影忍者,海贼王,这里是兴趣使然的无名小站_bimibimi"
+                },
+                {
+                    "name": "💞 AV预览啰嗦版",
+                    "url": "showTips:let javbus='https://www.javbus.com';let avid='%sr.replace(/^(\\w+?)[\\-_]?(\\d+)$/,\"$1-$2\")';let avDatas=await storage.getItem(\"avDatas\");if(!avDatas)avDatas=[];let url=javbus+'/'+avid;let genehtml=(title,img,labels)=>`<span style='font-size:22px;line-height:1.2;'>${title}</span><br/><p style=\"margin: 0;\">${(labels || []).reduce((result, label)=>`${result}<mark style=\"white-space: nowrap;margin: 5px; font-size: 16px; border-radius: 5px; padding: 2px; box-shadow: 0px 0px 10px 0px #000;\">${label}</mark>`, '')}</p><img src='${img}' referrerpolicy='no-referrer'/>`;let d=avDatas.find(avData=>avData.id==avid);if(d)return [genehtml(d.title, d.img, d.labels),url];let doc=await fetch(url).then(r=>r.text()).then(r=>{let doc=document.implementation.createHTMLDocument('');doc.documentElement.innerHTML=r;return doc;}).catch(alert);let title=doc.title;let img=doc.querySelector('a.bigImage>img');let labels=[];doc.querySelectorAll(\".genre a\").forEach(a=>labels.push(a.innerText));if(!img)return;img=javbus+img.getAttribute('src');avDatas.push({id:avid,title:title,img:img,labels:labels});if(avDatas.length>20)avDatas.shift();storage.setItem(\"avDatas\",avDatas);return[`${genehtml(title,img,labels)}`,url];",
+                    "kwFilter": "^[0-9a-zA-Z]+[\\-_]?\\d+$"
+                },
+                {
+                    "name": "💲美元转人民币啰嗦版",
+                    "url": "showTips:let usd2rmb=await storage.getItem(\"usd2rmb\");let usd2rmbUpdate=await storage.getItem(\"usd2rmbUpdate\");if(!usd2rmbUpdate || usd2rmbUpdate > Date.now()+3600000){usd2rmb=await fetch(`https://api.exchangerate.host/convert?from=USD&to=CNY&amount=1`).then(r=>r.json()).then(r=>r.result).catch(alert);storage.setItem(\"usd2rmb\",usd2rmb||7);storage.setItem(\"usd2rmbUpdate\",Date.now());}let usd=\"%sr\".replace(/\\D/g,\"\"); let rmb=(usd * parseFloat(usd2rmb||7)).toFixed(2);return [`${usd} USD = ${rmb} RMB`,rmb]",
+                    "kwFilter": "\\d\\$|\\$\\d"
+                },
+                {
+                    "name": "🔆  高亮关键词",
+                    "url": "javascript:(function()%7Bvar%20count=0,text,dv;text=prompt(%22%E6%90%9C%E7%B4%A2%E9%85%B1%EF%BC%9A%E8%AF%B7%E8%BE%93%E5%85%A5%E9%AB%98%E4%BA%AE%E5%85%B3%E9%94%AE%E8%AF%8D%EF%BC%8Calt%E5%B7%A6%E9%94%AE%E5%8D%95%E5%87%BB%E4%B8%8B%E4%B8%80%E4%B8%AA%EF%BC%8Calt%E5%8F%B3%E9%94%AE%E4%B8%8A%E4%B8%80%E4%B8%AA%EF%BC%8Cr%E8%BF%98%E5%8E%9F%EF%BC%8Cc%7C%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E9%9A%94(%E7%AB%96%E6%9D%A0)%EF%BC%8Co%E5%8E%9F%E5%A7%8B%E6%96%87%E6%9C%AC:%22,%20%22%S%22);if%20(text==null%7C%7Ctext.length==0)return;if(text===%22r%22)%7B%5B%5D.forEach.call(document.querySelectorAll(%22mark.searchJumper%22),mark=%3E%7Blet%20newNode=document.createTextNode(mark.innerText);mark.parentNode.replaceChild(newNode,mark);%7D);return;%7Dif(text.indexOf(%22o%22)===0)%7Btext=%5Btext.substr(1)%5D;%7Delse%20if(text.indexOf(%22c%22)===0)%7Btext=text.substr(1);text=text.substr(1).split(text.substr(0,1));%7Delse%20text=%5Btext%5D;dv=document.defaultView;let%20marks=%7B%7D;let%20focusMark;function%20setFocus(ele)%7BfocusMark.style.border=%22%22;focusMark=ele;focusMark.scrollIntoView(%7Bbehavior:%22smooth%22,block:%22center%22,inline:%22nearest%22%7D);focusMark.style.border=%222px%20dashed%20red%22;%7Dfunction%20searchWithinNode(node,te,len)%20%7Bvar%20pos,skip,spannode,middlebit,middleclone;skip=0;if(node.nodeType==3)%7Bpos=node.data.toUpperCase().indexOf(te);if%20(pos%3E=0)%20%7Blet%20index=marks%5Bte%5D.length;spannode=document.createElement(%22mark%22);spannode.className=%22searchJumper%22;spannode.addEventListener(%22mousedown%22,e=%3E%7Bif%20(!e.altKey)return;if(e.which===1)%7Bif(index!=marks%5Bte%5D.length-1)%7BsetFocus(marks%5Bte%5D%5Bindex+1%5D);%7D%7Delse%20if(e.which===3)%7Bif(index!=0)%7BsetFocus(marks%5Bte%5D%5Bindex-1%5D);%7D%7D%7D);spannode.addEventListener(%22click%22,e=%3E%7Be.stopPropagation();e.preventDefault();return%20false;%7D);middlebit=node.splitText(pos);middlebit.splitText(len);middleclone=middlebit.cloneNode(true);spannode.appendChild(middleclone);middlebit.parentNode.replaceChild(spannode,middlebit);marks%5Bte%5D.push(spannode);focusMark=spannode;++count;skip%20=%201;%7D%7D%20else%20if%20(node.nodeType==1&&node.childNodes&&node.tagName.toUpperCase()!=%22SCRIPT%22&&node.tagName.toUpperCase()!=%22STYLE%22&&node.tagName.toUpperCase()!=%22MARK%22)%7Bfor%20(var%20child=0;child%3Cnode.childNodes.length;++child)%7Bchild=child+searchWithinNode(node.childNodes%5Bchild%5D,te,len);%7D%7Dreturn%20skip;%7Dtext.forEach(t=%3E%7Bt=t.toUpperCase();marks%5Bt%5D=%5B%5D;searchWithinNode(document.body,t,t.length);%7D)%0A%7D)();"
+                }
+            ]
+        },
+        {
+            "type": "划词搜索",
+            "icon": "sitemap",
+            "selectTxt": true,
+            "openInNewTab": true,
+            "sites": [
+                {
+                    "name": "🔆 页内搜索",
+                    "url": "find:%sr"
+                },
+                {
+                    "name": "百度 ",
+                    "url": "[\"百度\"]"
+                },
+                {
+                    "name": "📄  复制",
+                    "url": "c:%sr",
+                    "nobatch": true
+                },
+                {
+                    "name": "百度站内搜",
+                    "url": "https://www.baidu.com/s?wd=%s%20site%3A%h&ie=utf-8"
+                },
+                {
+                    "name": "豆瓣-划词搜索",
+                    "url": "[\"豆瓣\"]"
+                },
+                {
+                    "name": "Metacritic-划词搜索",
+                    "url": "[\"Metacritic\"]"
+                },
+                {
+                    "name": "文字转二维码",
+                    "url": "https://hoothin.com/qrcode#%s",
+                    "icon": "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xOTIgMzg0bDEyOCAwTDMyMCAyNTYgMTkyIDI1NiAxOTIgMzg0ek02NCA5NjBsMzg0IDBMNDQ4IDU3NiA2NCA1NzYgNjQgOTYwek0xMjggNjQwbDI1NiAwIDAgMjU2TDEyOCA4OTYgMTI4IDY0MHpNMTkyIDgzMmwxMjggMCAwLTEyOEwxOTIgNzA0IDE5MiA4MzJ6TTUxMiAxMjhsMCAzODQgMzg0IDBMODk2IDEyOCA1MTIgMTI4ek04MzIgNDQ4IDU3NiA0NDggNTc2IDE5MmwyNTYgMEw4MzIgNDQ4ek04MzIgNzA0bC0xMjggMEw3MDQgNTc2IDU3NiA1NzYgNTEyIDU3NmwwIDEyOCAwIDI1NiA2NCAwIDAtMjU2IDY0IDAgMCA2NCAxOTIgMCA2NCAwTDg5NiA1NzZsLTY0IDBMODMyIDcwNHpNNjQgNTEybDM4NCAwTDQ0OCAxMjggNjQgMTI4IDY0IDUxMnpNMTI4IDE5MmwyNTYgMCAwIDI1NkwxMjggNDQ4IDEyOCAxOTJ6TTc2OCAyNTZsLTEyOCAwIDAgMTI4IDEyOCAwTDc2OCAyNTZ6TTgzMiA5NjBsNjQgMCAwLTEyOC02NCAwTDgzMiA5NjB6TTcwNCA5NjBsNjQgMCAwLTEyOC02NCAwTDcwNCA5NjB6Ij48L3BhdGg+PC9zdmc+"
+                },
+                {
+                    "name": "问AI",
+                    "url": "[\"Poe - Sage AI Chat\"]"
+                },
+                {
+                    "name": "豆瓣评分",
+                    "url": "showTips:https://www.douban.com/search?cat=1002&q=%s \n{name} \n<br/>\n<p style=\"margin: 5px;\">\n{h3>a}\n<span style=\"position: absolute; right: 10px; color: orange;\">{.rating_nums}</span>\n</p>\n<div style=\"display: flex; font-size: 20px; width: 500px;\">\n<img src=\"https://images.weserv.nl/?url={.pic>a>img|src}\"/>\n<div>\n<div>{.subject-cast}</div>\n<div style=\"font-size: 16px; margin-top: 10px; border-top: 1px solid;\">{.content>p}</div>\n</div>\n</div>",
+                    "icon": "https://www.douban.com/favicon.ico"
+                },
+                {
+                    "name": "维基百科预览",
+                    "url": "showTips:https://zh.wikipedia.org/wiki/%s\n<div style=\"max-height: 500px; margin: 5px; overflow: hidden; font-size: large; text-align: left; font-weight: initial; line-height: initial;\">\n<img style=\"max-width: 250px; margin: 0 10px;\" align=\"left\" src=\"{.infobox .image>img|src}\"/>\n{.mw-parser-output>p}\n</div>"
+                },
+                {
+                    "name": "IMDb评分",
+                    "url": "showTips:let query = \"%s\";\nlet url = `https://www.imdb.com/find/?q=${query}&exact=true`;\nlet geneHTML = (title, intro, labels, director, writer, stars, image, rating, year) => {\nif (!title) return \"No result\";\nreturn `\n<p style=\"margin: 5px;\">\n${title}\n<span style=\"position: absolute; right: 10px; color: orange;\">${rating}</span>\n</p>\n<div style=\"display: flex; font-size: 20px; width: 500px;\">\n<img style=\"height: fit-content;\" src=\"${image}\"/>\n<div style=\"font-size: 16px; line-height: 1.5; text-align: left; margin: 5px;\">\n<div>${labels.reduce((r, c) => `${r}<span style=\"white-space: nowrap;margin: 5px; font-size: 16px; border-radius: 5px; padding: 2px; box-shadow: 0px 0px 10px 0px #000;\">${c}</span>`, \"\")}</div>\n<div>Year: ${year}</div>\n<div>Director: ${director}</div>\n<div>Writer: ${writer}</div>\n<div>Stars: ${stars}</div>\n<div style=\"font-size: 16px; margin-top: 10px; border-top: 1px solid;\">${intro}</div>\n</div>\n</div>`;};\nlet imdbData = await storage.getItem(\"imdbData\");\nif (!imdbData) imdbData=[];\nlet d = imdbData.find(data => data.query == query);\nif (d) {\nd = d.data;\nreturn[geneHTML(d.title, d.intro, d.labels, d.director, d.writer, d.stars, d.image, d.rating, d.year), url];\n}\nlet result = await fetch(url).then(r => r.text()).then(async r => {\nlet doc = document.implementation.createHTMLDocument(''); doc.documentElement.innerHTML = r;\nlet item = doc.querySelector('.find-title-result .ipc-metadata-list-summary-item__t');\nif (!item) return null;\nlet _result = {title: item.innerText};\nurl = \"https://www.imdb.com/\" + item.getAttribute(\"href\");\nawait fetch(url).then(r => r.text()).then(r => {\nlet doc = document.implementation.createHTMLDocument(''); doc.documentElement.innerHTML = r;\nlet img = doc.querySelector(\".ipc-image\");\nif (img) _result.image = img.src;\n_result.year = doc.querySelector(\"h1+ul>li>.ipc-link\").innerText;\n_result.intro = doc.querySelector(\"section>p>span\").innerText;\n_result.labels = [];\n[].forEach.call(doc.querySelectorAll(\"a.ipc-chip\"), ele => {\n_result.labels.push(ele.innerText)\n});\n_result.director = [];\n[].forEach.call(doc.querySelectorAll(\"section>div>div>.title-pc-list>li:nth-child(1) li\"), ele => {\n_result.director.push(ele.innerText)\n});\n_result.director = _result.director.join(\"/\");\n_result.writer = [];\n[].forEach.call(doc.querySelectorAll(\"section>div>div>.title-pc-list>li:nth-child(2) li\"), ele => {\n_result.writer.push(ele.innerText)\n});\n_result.writer = _result.writer.join(\"/\");\n_result.stars = [];\n[].forEach.call(doc.querySelectorAll(\"section>div>div>.title-pc-list>li:nth-child(3) li\"), ele => {\n_result.stars.push(ele.innerText)\n});\n_result.stars = _result.stars.join(\"/\");\n_result.rating = doc.querySelector(\".ipc-btn__text>div>div>div\").innerText;\n});\nreturn _result;\n}).catch(alert);\nif (!result) result = {};\nimdbData.push({query:query, data:result});\nif (imdbData.length > 50) imdbData.shift();\nstorage.setItem(\"imdbData\", imdbData);\nd = result;\nreturn[geneHTML(d.title, d.intro, d.labels, d.director, d.writer, d.stars, d.image, d.rating, d.year), url];",
+                    "icon": "https://www.imdb.com/favicon.ico"
+                },
+                {
+                    "name": "Metacritic评分",
+                    "url": "showTips:https://www.metacritic.com/autosearch%p{search_term=%s&image_size=98&search_each=false} \n<div style=\"display: flex; font-size: 25px;\">\n<img src=\"{json.autoComplete.results.0.imagePath}\"/>\n<div>\n<p>{json.autoComplete.results.0.name}</p>\n<div style=\"display: flex; justify-content: space-between; align-items: center;    border-top: 1px solid;\">\n<span style=\"margin: 0 10px;\">{json.autoComplete.results.0.refType}</span>\n<span style=\"margin: 0 10px;\">{json.autoComplete.results.0.itemDate}</span>\n<span style=\"color: orange;margin: 0 10px;\">{json.autoComplete.results.0.metaScore}</span>\n</div>\n</div>\n</div>",
+                    "icon": "https://www.metacritic.com/favicon.ico"
+                },
+                {
+                    "name": "⌨️ 按行输入",
+                    "url": "#p{@=%s[]}",
+                    "description": "按行分割后依次粘贴到当前焦点所在输入框"
+                },
+                {
+                    "name": "文字转二维码-草料",
+                    "url": "https://cli.im/text#p{#text-content=%s&click(#click-create)}",
+                    "nobatch": true
+                },
+                {
+                    "name": "360 ",
+                    "url": "[\"360\"]"
+                },
+                {
+                    "name": "搜狗 ",
+                    "url": "[\"搜狗\"]"
+                },
+                {
+                    "name": "360站内搜",
+                    "url": "https://www.so.com/s?ie=utf-8&q=%s%20site%3A%h"
+                },
+                {
+                    "name": "搜狗站内搜",
+                    "url": "https://www.sogou.com/web?query=%s%20site%3A%h"
+                },
+                {
+                    "name": "必应站内搜",
+                    "url": "https://cn.bing.com/search?q=%s%20site%3A%h"
+                },
+                {
+                    "name": "鸭鸭站内搜",
+                    "url": "https://duckduckgo.com/?q=%s%20site%3A%h",
+                    "nobatch": true
+                },
+                {
+                    "name": "头条站内搜",
+                    "url": "https://so.toutiao.com/search/?dvpf=%c&keyword=%s%20site%3A%h",
+                    "nobatch": true
+                },
+                {
+                    "name": "雅虎站内搜",
+                    "url": "https://search.yahoo.com/search;?p=%s%20site%3A%h",
+                    "nobatch": true
+                },
+                {
+                    "name": "Yandex站内搜",
+                    "url": "https://yandex.com/search/?text=%s%20site%3A%h",
+                    "nobatch": true
+                },
+                {
+                    "name": "Startpage站内搜",
+                    "url": "https://www.startpage.com/sp/search?query=%s%20site%3A%h",
+                    "icon": "https://www.startpage.com/sp/cdn/favicons/favicon-16x16--default.png",
+                    "nobatch": true
+                },
+                {
+                    "name": "磁力转种子-lolicon",
+                    "url": "https://m2t.lolicon.app/#p{#magnet=%s}",
+                    "kwFilter": "^magnet:",
+                    "description": "磁力转种子",
+                    "nobatch": true
+                },
+                {
+                    "name": "Magnet-vip",
+                    "url": "https://magnet-vip.com/#p{.form-group input=%s&click(.btn-outline-secondary)}",
+                    "icon": "https://magnet-vip.com/favicon.png",
+                    "kwFilter": "^magnet:",
+                    "description": "磁力转种子",
+                    "nobatch": true
+                },
+                {
+                    "name": "📏英里转公里",
+                    "url": "showTips:let s=\"%sr\".match(/(\\d+)(英里|英?哩|mi(le)?)/)[1];let km=(s*1.609344).toFixed(2);return `<i>${s} mi = ${km} km</i>`;",
+                    "kwFilter": "\\d+\\s*(英里|英?哩|mi(le)?\\b)"
+                },
+                {
+                    "name": "JAVlibrary ",
+                    "url": "[\"JAVlibrary\"]",
+                    "kwFilter": "^[0-9a-zA-Z]+[\\-_]\\d+$"
+                },
+                {
+                    "name": "JavDB ",
+                    "url": "[\"JavDB\"]",
+                    "kwFilter": "^[0-9a-zA-Z]+[\\-_]\\d+$"
+                },
+                {
+                    "name": "MissAV",
+                    "url": "[\"MissAV\"]",
+                    "kwFilter": "^[0-9a-zA-Z]+[\\-_]\\d+$"
+                },
+                {
+                    "name": "JAVbus ",
+                    "url": "[\"JAVbus\"]",
+                    "kwFilter": "^[0-9a-zA-Z]+[\\-_]\\d+$"
+                },
+                {
+                    "name": "💲美元转人民币",
+                    "url": "showTips:https://api.exchangerate.host/convert?from=USD&to=CNY&amount=1 \n{name}<br/><i>%s USD = {json.result|*%s.replace(/\\D/g,'')} RMB</i>",
+                    "kwFilter": "\\d\\$|\\$\\d",
+                    "nobatch": true
+                },
+                {
+                    "name": "💞 AV预览",
+                    "url": "showTips:https://www.javbus.com/%sr.replace(/^(\\w+?)[\\-_]?(\\d+)$/,\"$1-$2\") \n<span style='font-size:22px;line-height:1.2;'>{h3}</span>\n<p style=\"margin: 0; font-size: 18px; font-weight: normal;\">{.info>p:nth-child(2)}</p>\n<p style=\"margin: 0; font-size: 18px; font-weight: normal;\">{.info>p:nth-child(6)}</p>\n<p style=\"margin: 0;\">{.genre a|<mark style=\"white-space: nowrap;margin: 5px; font-size: 16px; border-radius: 5px; padding: 2px; box-shadow: 0px 0px 10px 0px #000;\">()</mark>}</p>\n<img src='https://www.javbus.com{a.bigImage>img|src}' referrerpolicy='no-referrer'/>",
+                    "kwFilter": "^[0-9a-zA-Z]+[\\-_]?\\d+$",
+                    "nobatch": true
+                },
+                {
+                    "name": "📦 批量打开链接",
+                    "url": "%s[all]",
+                    "kwFilter": "^https?:"
+                },
+                {
+                    "name": "🔗  打开文字链接",
+                    "url": "%sr.replace(/(点|。)/g,\".\").replace(/[^ \\w\\-_\\.~!\\*'\\(\\);:@&=\\+\\$,\\/\\?#\\[\\]%]/g,\"\").replace(/.*([ :：]|^)(1[a-z0-9]{22,}).*?\\b([a-z0-9]{4}\\b|$).*/i,\"https://pan.baidu.com/s/$1?pwd=$2\").replace(/ /g,\"\").replace(/^/,\"http://\").replace(/^http:\\/\\/(https?:)/,\"$1\")",
+                    "kwFilter": "\\w.*[\\.点。].*\\w|1[a-zA-Z0-9]{22,}",
+                    "description": "支持类似“pan点baidu。com😄河蟹”以及“1bP23pzUpIV4CMuoMjOfxFA提取码:prt4”的分享链接",
+                    "nobatch": true
+                },
+                {
+                    "name": "汉语读音",
+                    "url": "showTips:https://dict.baidu.com/s?wd=%s&ptype=zici\n<p style=\"margin: 3px\">{.means>div>dl>dt}</p>\n<span style=\"font-size: 18px; line-height: 25px; font-weight: normal; display: block; text-align: left;\">{.means>div>dl>dd}</span>",
+                    "icon": "https://m.baidu.com/static/index/icon/w_icon2.png"
+                },
+                {
+                    "name": "有道词典英译中",
+                    "url": "showTips:https://dict.youdao.com/result?word=%s&lang=en\n{.phone_con}\n{.word-exp|<div style=\"font-size: 20px; line-height: initial; font-weight: normal;\">()</div>}",
+                    "kwFilter": "^[a-zA-Z ]+$"
+                },
+                {
+                    "name": "↩️ 短链接还原",
+                    "url": "showTips:%s\n{url}",
+                    "kwFilter": "^https?://."
+                },
+                {
+                    "name": "Google ",
+                    "url": "[\"Google\"]"
+                },
+                {
+                    "name": "谷歌站内搜",
+                    "url": "https://www.google.com/search?q=%s%20site%3A%h&ie=utf-8&oe=utf-8"
+                },
+                {
+                    "name": "改写地道英语",
+                    "url": "https://poe.com/ChatGPT#p{sleep(1000)&[class*\\='ChatMessageInputContainer'] textarea=\"%s\" 请以地道的英语复述这段话&click(button[class*\\='ChatMessageSendButton_sendButton'])}"
+                }
+            ]
+        }
+    ],
+    "prefConfig": {
+        "position": {
+            "x": "left",
+            "y": "top"
+        },
+        "offset": {
+            "x": "0",
+            "y": "0"
+        },
+        "openInNewTab": false,
+        "enableInPage": true,
+        "altKey": false,
+        "ctrlKey": true,
+        "shiftKey": false,
+        "metaKey": false,
+        "autoClose": true,
+        "autoDelay": 1000,
+        "shortcut": true,
+        "initShow": true,
+        "alwaysShow": false,
+        "customSize": 80,
+        "typeOpenTime": 250,
+        "longPressTime": 400,
+        "noIcons": false,
+        "showSiteLists": true,
+        "alwaysShowSiteLists": false,
+        "cacheSwitch": true,
+        "noAni": false,
+        "quickAddRule": true,
+        "multiline": 2,
+        "multilineGap": 1000,
+        "historyLength": 5,
+        "dragToSearch": false,
+        "hideDragHistory": false,
+        "sortType": true,
+        "sortSite": true,
+        "autoHide": false,
+        "autoHideAll": false,
+        "showCurrent": true,
+        "shortcutKey": "Backquote",
+        "showInSearchEngine": true,
+        "showInSearchJumpPage": true,
+        "limitInPageLen": 1,
+        "limitPopupLen": 1,
+        "ignoreWords": [
+            "a",
+            "in",
+            "into",
+            "the",
+            "to",
+            "on",
+            "among",
+            "between",
+            "and",
+            "an",
+            "of",
+            "by",
+            "with",
+            "about",
+            "under",
+            "or",
+            "at",
+            "as"
+        ],
+        "inPageRule": {},
+        "firstFiveWordsColor": [
+            "#ffff00",
+            "#e91e63",
+            "#00bcd4",
+            "#008000",
+            "#800080"
+        ],
+        "inPageWordsStyles": [],
+        "altToHighlight": true,
+        "defaultPicker": false,
+        "disableInputOnWords": false,
+        "disableTypeOpen": false,
+        "callBarAlt": false,
+        "callBarCtrl": false,
+        "callBarShift": false,
+        "callBarMeta": false,
+        "defaultFindTab": true,
+        "disableAutoOpen": false,
+        "hideOnSearchEngine": false,
+        "minSizeMode": true,
+        "hidePopup": false,
+        "minPopup": 0,
+        "selectToShow": true,
+        "expandType": true,
+        "rightMouse": false,
+        "shiftLastUsedType": true,
+        "mouseLeaveToHide": true,
+        "currentTypeFirst": true,
+        "switchSitesPreKey": "ArrowLeft",
+        "switchSitesNextKey": "ArrowRight",
+        "switchSitesCtrl": true,
+        "switchSitesAlt": false,
+        "switchSitesShift": true,
+        "switchSitesMeta": false,
+        "suggestType": "baidu",
+        "leftMouse": false,
+        "batchOpenConfirm": 0,
+        "dragCtrl": false,
+        "dragAlt": false,
+        "dragShift": false,
+        "dragMeta": false,
+        "showEngineWords": false,
+        "globalSearchNow": false,
+        "expandTypeLength": 20,
+        "lang": "zh-CN",
+        "overOpen": false,
+        "cssText": "",
+        "historyInsertFirst": true
+    },
+    "lastModified": 1690448004548
+}
